@@ -1402,13 +1402,16 @@
 
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
               holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1">
-	  <StatusEffect type="OnUse" target="This" Condition="-600">
+	  <StatusEffect type="OnUse" target="This" Condition="-112">
 	    <RequiredItems name="5.7x28mm Magazine" type="Contained"/>
+	  <StatusEffect type="Always" target="This" Condition="100"/>
+    </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="1">
 	  </StatusEffect>
-	  <StatusEffect type="Always" target="This" Condition="1000"/>
-	  <StatusEffect type="OnBroken" target="This" Condition="1000" delay="0.1">
-	    <sound file="Mods/BTEB/Items/Weapons/reload.ogg"/>
-	  </StatusEffect>
+    <StatusEffect type="OnBroken" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/reload.ogg"/>
+    </StatusEffect>
+
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
 	  </StatusEffect>
@@ -2429,11 +2432,11 @@
 
   <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
               holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1">
-    <StatusEffect type="OnUse" target="This" Condition="-600">
+    <StatusEffect type="OnUse" target="This" Condition="-112">
       <RequiredItems name="4.6x30mm Magazine" type="Contained"/>
     </StatusEffect>
-    <StatusEffect type="Always" target="This" Condition="1000"/>
-    <StatusEffect type="OnBroken" target="This" Condition="1000" delay="0.1">
+    <StatusEffect type="Always" target="This" Condition="100"/>
+    <StatusEffect type="OnBroken" target="This" Condition="100" delay="1">
       <sound file="Mods/BTEB/Items/Weapons/reload.ogg"/>
     </StatusEffect>
     <StatusEffect type="OnImpact" target="This">
