@@ -1202,7 +1202,7 @@
     </Wearable>
 
     <ItemContainer capacity="8">
-      <Containable name="alien,rtfct,bigitem,meditem,smallitem,clothes"/>
+      <Containable name="weapon,alien,rtfct,bigitem,meditem,smallitem,clothes"/>
     </ItemContainer>
   </Item>
 
