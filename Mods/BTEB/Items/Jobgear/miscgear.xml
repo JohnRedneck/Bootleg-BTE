@@ -1202,7 +1202,63 @@
     </Wearable>
 
     <ItemContainer capacity="8">
-      <Containable name="bigitem,meditem,smallitem"/>
+      <Containable name="alien,rtfct,bigitem,meditem,smallitem,clothes"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Utility Backpack"
+    category="Misc"
+  cargocontainername="Standard Shipping Box"
+  price="100"
+    tags="meditem,clothing"
+    description="A pretty big civilian backpack, can keep tools and small objects safe from water.">
+
+  <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="util_bag.png" sourcerect="0,0,0,0" depth="0"/>
+
+    <Body width="10" height="10" density="10"/>
+
+    <Wearable limbtype="Torso" slots="Any,Head">
+      <sprite texture="util_bag2.png" limb="Torso" depthlimb="RightArm" origin="1, .4" sourcerect="0,0,0,0"/>
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.10" disabledeltatime="true"/> <!-- oxygen="-0.001" /> -->
+
+    </Wearable>
+
+    <ItemContainer capacity="8">
+      <Containable name="tool,smallitem"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Civilian Backpack"
+    category="Misc"
+  cargocontainername="Standard Shipping Box"
+  price="100"
+    tags="meditem,clothing"
+    description="A big civilian backpack, can keep medium objects safe from water.">
+
+  <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="civ_bag.png" sourcerect="0,0,0,0" depth="0"/>
+
+    <Body width="10" height="10" density="10"/>
+
+    <Wearable limbtype="Torso" slots="Any,Head">
+      <sprite texture="civ_bag2.png" limb="Torso" depthlimb="RightArm" origin="1, .4" sourcerect="0,0,0,0"/>
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.10" disabledeltatime="true"/> <!-- oxygen="-0.001" /> -->
+
+    </Wearable>
+
+    <ItemContainer capacity="8">
+      <Containable name="tool,smallitem"/>
     </ItemContainer>
   </Item>
 </Items>
