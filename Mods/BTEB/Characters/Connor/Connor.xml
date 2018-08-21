@@ -3,7 +3,7 @@
 
   <name firstname="Content/Characters/Human/firstnames.txt" lastname="Content/Characters/Human/lastnames.txt"/>
 
-  <sound file="Mods/BTEB/Characters/Connor/Connor.ogg" state="Attack"/>
+  <sound file="Mods/BTEB/Characters/Connor/Connor.ogg" state="None"/>
 
   <ai
     combatstrength="90"
