@@ -2636,5 +2636,90 @@ impacttolerance="3"
               holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7"/>
   </Item>
 
+</Item>
+
+	<Item
+    name="MP5"
+    category="Equipment"
+	tags="bigitem,weapon"
+    description="The MP5 is an automatic that uses 7.62x51mm magazines."
+    impacttolerance="3">
+
+    <Deconstruct time="20">
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/MP5.png" sourcerect="0,39,99,26" depth="0.55"/>
+
+    <Body width="97" height="24" density="35"/>
+
+	<ItemContainer capacity="1" itempos="3,-6" hideitems="false">
+      <Containable name="7.62x51mm Magazine"/>
+    </ItemContainer>
+
+	<RepairTool structurefixamount="-2" limbfixamount="-8" range="2000" barrelpos="57,6" particles="arfire">
+	  <ParticleEmitter particle="arfire" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1"/>
+      <sound file="Mods/BTEB/Items/Weapons/AR.ogg" type="OnUse" range="800" loop="true"/>
+	  <RequiredItems name="7.62x51mm Magazine" type="Contained" msg="The loaded magazine is depleted"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="100" force="0.18" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.2" disabledeltatime="true"/>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+    </RepairTool>
+
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1">
+	  <StatusEffect type="OnUse" target="This" Condition="-112">
+	    <RequiredItems name="7.62x51mm Magazine" type="Contained"/>
+	  <StatusEffect type="Always" target="This" Condition="100"/>
+    </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="1">
+	  </StatusEffect>
+    <StatusEffect type="OnBroken" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/reload.ogg"/>
+    </StatusEffect>
+
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+
+	<Item
+    name="7.62x51mm Magazine"
+	aliases="5.7x28mm Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description="5.7x28mm magazines are the main rounds used for the MP5"
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Steel Bar"/>
+	  <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/MP5.png" sourcerect="88,74,14,10" depth="0.55"/>
+
+    <Body width="12" height="8" density="16" friction="0.95"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTEB/Items/Weapons/MagHit.ogg"/>
+	  </StatusEffect>
+	</Throwable>
+  </Item>
 	
 </Items>
