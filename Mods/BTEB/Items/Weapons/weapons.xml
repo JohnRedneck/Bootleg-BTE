@@ -2629,9 +2629,6 @@ impacttolerance="3"
     </RepairTool>
 
     <ItemContainer capacity="1" hideitems="false" itempos="-17,-21">
-      <Containable name="Oxygen Tank"/>
-	  <Containable name="Oxygenite Tank"/>
-	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
     </ItemContainer>
 
