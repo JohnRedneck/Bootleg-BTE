@@ -2580,8 +2580,6 @@ impacttolerance="3"
              aimpos="75,18" handle1="-12,-3" handle2="-1,-7"/>
  </Item>
 
-</Item>
-
 	<Item
     name="Flamethrower"
 	aliases="Flamethrower"
@@ -2635,8 +2633,6 @@ impacttolerance="3"
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
               holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7"/>
   </Item>
-
-</Item>
 
 	<Item
     name="MP5"
