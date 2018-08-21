@@ -2000,7 +2000,7 @@
 
   <Item
     name="Plasma Torcher"
-	aliases="Torcher,Flamethrower"
+	aliases="Torcher"
     category="Equipment"
     Tags="meditem,weapon"
 	description="A modified plasma cutter that uses an unstable jet of ionized gas as a crude form of flamethrower."
