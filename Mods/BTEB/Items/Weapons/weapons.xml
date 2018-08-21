@@ -2595,7 +2595,7 @@ impacttolerance="3"
 	  <Item name="Spare Electronics"/>
     </Deconstruct>
 
-    <Sprite texture="Flamethrower.png" sourcerect="0,0,98,33" depth="0.55"/>
+    <Sprite texture="FlameThrower.png" sourcerect="0,0,98,33" depth="0.55"/>
 
     <Body width="90" height="30" density="40"/>
 
