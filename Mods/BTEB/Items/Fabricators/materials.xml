@@ -9,7 +9,7 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="15">
-   
+
     <Deconstruct time="5">
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
     </Deconstruct>
@@ -20,7 +20,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Polycarbonate Bar"
 	aliases="Plastic Bar"
@@ -30,7 +30,7 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="30">
-   
+
     <Deconstruct time="5">
       <Item name="Polycarbonate Sliver"/>
 	  <Item name="Polycarbonate Sliver"/>
@@ -42,7 +42,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Polycarbonate Block"
 	aliases="Plastic Block"
@@ -52,7 +52,7 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="60">
-   
+
     <Deconstruct time="5">
       <Item name="Polycarbonate Bar"/>
 	  <Item name="Polycarbonate Bar"/>
@@ -74,7 +74,7 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="20">
-   
+
     <Deconstruct time="5">
 	  <Item name="Aluminium Sliver" mincondition="0.99"/>
     </Deconstruct>
@@ -85,7 +85,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Aluminium Bar"
 	aliases="Aluminum Bar"
@@ -95,10 +95,10 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="40">
-   
+
     <Deconstruct time="5">
       <Item name="Aluminium Sliver"/>
-      <Item name="Aluminium Sliver"/>     
+      <Item name="Aluminium Sliver"/>
     </Deconstruct>
 
     <Sprite texture="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
@@ -107,7 +107,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Aluminium Block"
 	aliases="Aluminum Block"
@@ -117,10 +117,10 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="80">
-   
+
     <Deconstruct time="5">
       <Item name="Aluminium Bar"/>
-      <Item name="Aluminium Bar"/>     
+      <Item name="Aluminium Bar"/>
     </Deconstruct>
 
     <Sprite texture="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
@@ -129,7 +129,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Copper Sliver"
     category="Material"
@@ -139,7 +139,7 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="25">
-   
+
     <Deconstruct time="5">
 	  <Item name="Copper Sliver" mincondition="0.99"/>
     </Deconstruct>
@@ -150,7 +150,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Copper Bar"
     category="Material"
@@ -160,10 +160,10 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="50">
-   
+
     <Deconstruct time="5">
       <Item name="Copper Sliver"/>
-      <Item name="Copper Sliver"/>     
+      <Item name="Copper Sliver"/>
     </Deconstruct>
 
     <Sprite texture="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
@@ -172,7 +172,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Copper Block"
     category="Material"
@@ -182,10 +182,10 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="100">
-   
+
     <Deconstruct time="5">
       <Item name="Copper Bar"/>
-      <Item name="Copper Bar"/>     
+      <Item name="Copper Bar"/>
     </Deconstruct>
 
     <Sprite texture="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
@@ -194,7 +194,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Bronze Sliver"
     category="Material"
@@ -204,7 +204,7 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="30">
-   
+
     <Deconstruct time="5">
 	  <Item name="Bronze Sliver" mincondition="0.99"/>
     </Deconstruct>
@@ -215,7 +215,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Bronze Bar"
     category="Material"
@@ -225,10 +225,10 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="60">
-   
+
     <Deconstruct time="5">
       <Item name="Bronze Sliver"/>
-      <Item name="Bronze Sliver"/>     
+      <Item name="Bronze Sliver"/>
     </Deconstruct>
 
     <Sprite texture="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
@@ -237,7 +237,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Bronze Block"
     category="Material"
@@ -247,10 +247,10 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="120">
-   
+
     <Deconstruct time="5">
       <Item name="Bronze Bar"/>
-      <Item name="Bronze Bar"/>     
+      <Item name="Bronze Bar"/>
     </Deconstruct>
 
     <Sprite texture="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
@@ -259,7 +259,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Steel Sliver"
     category="Material"
@@ -280,7 +280,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Steel Bar"
     category="Material"
@@ -293,7 +293,7 @@
 
     <Deconstruct time="5">
       <Item name="Steel Sliver"/>
-      <Item name="Steel Sliver"/>     
+      <Item name="Steel Sliver"/>
     </Deconstruct>
 
     <Sprite texture="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
@@ -302,7 +302,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Steel Block"
     category="Material"
@@ -315,7 +315,7 @@
 
     <Deconstruct time="5">
       <Item name="Steel Bar"/>
-      <Item name="Steel Bar"/>     
+      <Item name="Steel Bar"/>
     </Deconstruct>
 
     <Sprite texture="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
@@ -324,7 +324,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Uranium Sliver"
     category="Material"
@@ -367,7 +367,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Uranium Block"
     category="Material"
@@ -389,7 +389,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Fulgurium Sliver"
     category="Material"
@@ -397,7 +397,7 @@
     description="Fulgurium is a rare metal with some very unique properties. It's only found in Europa."
     spritecolor="1.0,0.7,0.05,1.0"
     canbepicked="true">
-   
+
     <Deconstruct time="5">
 	  <Item name="Fulgurium Sliver" mincondition="0.99"/>
     </Deconstruct>
@@ -408,7 +408,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Fulgurium Bar"
     category="Material"
@@ -416,7 +416,7 @@
     description="Fulgurium is a rare metal with some very unique properties. It's only found in Europa."
     spritecolor="1.0,0.7,0.05,1.0"
     canbepicked="true">
-   
+
     <Deconstruct time="5">
       <Item name="Fulgurium Sliver"/>
       <Item name="Fulgurium Sliver"/>
@@ -436,7 +436,7 @@
     description="Fulgurium is a rare metal with some very unique properties. It's only found in Europa."
     spritecolor="1.0,0.7,0.05,1.0"
     canbepicked="true">
-   
+
     <Deconstruct time="5">
       <Item name="Fulgurium Bar"/>
       <Item name="Fulgurium Bar"/>
@@ -448,7 +448,7 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="Spare Parts"
     category="Material"
@@ -457,7 +457,7 @@
     canbepicked="true"
 	cargocontainername="Workshop Shipping Box"
     price="175">
-   
+
     <Deconstruct time="5">
       <Item name="Steel Bar"/>
       <Item name="Aluminium Bar"/>
@@ -470,14 +470,14 @@
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
-  
+
   <Item
     name="ByPass - Handcuffs"
     category="Material"
     Tags="smallitem,wllt,docs"
     description="A security bypass card that unlocks the construction of handcuffs."
     canbepicked="true">
-   
+
     <Deconstruct time="10">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
 	  <Item name="Iron Powder" outcondition="0.25"/>
@@ -489,14 +489,14 @@
 
     <Pickable slots="Any"/>
   </Item>
-  
+
   <Item
     name="ByPass - Stun Baton"
     category="Material"
     Tags="smallitem,wllt,docs"
     description="A security bypass card that unlocks the construction of stun batons."
     canbepicked="true">
-   
+
     <Deconstruct time="10">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
 	  <Item name="Iron Powder" outcondition="0.25"/>
@@ -508,14 +508,14 @@
 
     <Pickable slots="Any"/>
   </Item>
-  
+
   <Item
     name="ByPass - Diving Knife"
     category="Material"
     Tags="smallitem,wllt,docs"
     description="A security bypass card that unlocks the construction of diving knieves."
     canbepicked="true">
-   
+
     <Deconstruct time="10">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
 	  <Item name="Iron Powder" outcondition="0.25"/>
@@ -527,14 +527,14 @@
 
     <Pickable slots="Any"/>
   </Item>
-  
+
   <Item
     name="ByPass - Spear Gun"
     category="Material"
     Tags="smallitem,wllt,docs"
     description="A security bypass card used to allow harpoon guns to be upgraded to spear guns."
     canbepicked="true">
-   
+
     <Deconstruct time="10">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
 	  <Item name="Iron Powder" outcondition="0.25"/>
@@ -546,14 +546,14 @@
 
     <Pickable slots="Any"/>
   </Item>
-  
+
   <Item
     name="ByPass - Dart Gun"
     category="Material"
     Tags="smallitem,docs"
     description="A security bypass card that unlocks the construction of dart guns."
     canbepicked="true">
-   
+
     <Deconstruct time="10">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
 	  <Item name="Iron Powder" outcondition="0.25"/>
@@ -565,14 +565,14 @@
 
     <Pickable slots="Any"/>
   </Item>
-  
+
   <Item
     name="ByPass - Tactical Grenade"
     category="Material"
     Tags="smallitem,docs"
     description="A security bypass card that unlocks the construction of tactical grenades."
     canbepicked="true">
-   
+
     <Deconstruct time="10">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
 	  <Item name="Iron Powder" outcondition="0.25"/>
@@ -584,14 +584,14 @@
 
     <Pickable slots="Any"/>
   </Item>
-  
+
   <Item
     name="Blueprints - Advanced Reactor Rods"
     category="Material"
     Tags="smallitem,docs"
     description="Blueprints that allow the construction of different fuel and coolant rods."
     canbepicked="true">
-   
+
     <Deconstruct time="15">
 	  <Item name="Polycarbonate Sliver" outcondition="0.25"/>
     </Deconstruct>
@@ -601,17 +601,17 @@
     <Body width="24" height="36" density="10.02"/>
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
-	
+
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
-  
+
   <Item
     name="Blueprints - Fulgurium Energy"
     category="Material"
     Tags="smallitem,docs"
     description="Blueprints that allow the construction of Fulgurium Battery Cells and Fuel Rods."
     canbepicked="true">
-   
+
     <Deconstruct time="15">
 	  <Item name="Polycarbonate Sliver" outcondition="0.25"/>
     </Deconstruct>
@@ -621,17 +621,17 @@
     <Body width="24" height="36" density="10.02"/>
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
-	
+
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
-  
+
   <Item
     name="Blueprints - HTM"
     category="Material"
     Tags="smallitem,docs"
     description="Blueprints that allow the construction of Hand Thrown Munitions."
     canbepicked="true">
-   
+
     <Deconstruct time="15">
 	  <Item name="Polycarbonate Sliver" outcondition="0.25"/>
     </Deconstruct>
@@ -641,17 +641,17 @@
     <Body width="24" height="36" density="10.02"/>
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
-	
+
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
-  
+
   <Item
     name="Blueprints - Soundwave Weapons"
     category="Material"
     Tags="smallitem,docs"
     description="Blueprints that allow the construction of Sonar Blasters and Shockwave Charges."
     canbepicked="true">
-   
+
     <Deconstruct time="15">
 	  <Item name="Polycarbonate Sliver" outcondition="0.25"/>
     </Deconstruct>
@@ -661,17 +661,17 @@
     <Body width="24" height="36" density="10.02"/>
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
-	
+
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
-  
+
   <Item
     name="Blueprints - EMP Weapons"
     category="Material"
     Tags="smallitem,docs"
     description="Blueprints that allow the construction of EMP Blasters and EMP Charges."
     canbepicked="true">
-   
+
     <Deconstruct time="15">
 	  <Item name="Polycarbonate Sliver" outcondition="0.25"/>
     </Deconstruct>
@@ -681,17 +681,17 @@
     <Body width="24" height="36" density="10.02"/>
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
-	
+
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
-  
+
   <Item
-    name="Blueprints - Gauss Weapons"
+    name="Blueprints - Auto Weapons"
     category="Material"
     Tags="smallitem,docs"
     description="Blueprints that allow the construction of advanced handheld weapons."
     canbepicked="true">
-   
+
     <Deconstruct time="15">
 	  <Item name="Polycarbonate Sliver" outcondition="0.25"/>
     </Deconstruct>
@@ -701,17 +701,17 @@
     <Body width="24" height="36" density="10.02"/>
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
-	
+
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
-  
+
   <Item
     name="Blueprints - Fusion Weapons"
     category="Material"
     Tags="smallitem,docs"
     description="Blueprints that allow the construction of Fusion Railgun Shells and Fusion Depth Charges."
     canbepicked="true">
-   
+
     <Deconstruct time="15">
 	  <Item name="Polycarbonate Sliver" outcondition="0.25"/>
     </Deconstruct>
@@ -721,7 +721,7 @@
     <Body width="24" height="36" density="10.02"/>
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
-	
+
 	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
   </Item>
 </Items>
