@@ -2579,4 +2579,65 @@ impacttolerance="3"
 <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
              aimpos="75,18" handle1="-12,-3" handle2="-1,-7"/>
  </Item>
+
+</Item>
+
+	<Item
+    name="Flamethrower"
+	aliases="Flamethrower"
+    category="Equipment"
+    Tags="meditem,weapon"
+	description="A Flamethrower"
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+	  <Item name="Polycarbonate Block"/>
+	  <Item name="Aluminium Block"/>
+	  <Item name="Steel Block"/>
+	  <Item name="Spare Electronics"/>
+    </Deconstruct>
+
+    <Sprite texture="FlameThrower.png" sourcerect="0,0,98,33" depth="0.55"/>
+
+    <Body width="90" height="30" density="40"/>
+
+    <RepairTool structurefixamount="-0.1" limbfixamount="-2.2" range="1200" barrelpos="49,10" particles="largeplasma">
+		<Fire size="75.0"/>
+      <ParticleEmitter particle="flamethrower" particlespersecond="50"/>
+      <ParticleEmitterHitStructure particle="flamefire" particlespersecond="25" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitItem particle="flamefire" particlespersecond="25" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="flamefire" particlespersecond="25" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <RequiredItems name="Oxygen Tank,Oxygenite Tank,Sulphurite Tank,Thermite Tank" type="Contained" msg="Gas tank depleted"/>
+      <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-2"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-1.0"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-4" oxygen="-3750"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-8"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+      <sound file="Mods/BTEB/Items/Weapons/PlasmaTorcher.ogg" type="OnUse" range="650" loop="true"/>
+      <Fixable name="structure"/>
+      <RequiredSkill name="Construction" level="50"/>
+      <StatusEffect type="OnFailure" target="Contained" Condition="-0.5"/>
+      <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
+      </LightComponent>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="10" force="5" damage="3" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RepairTool>
+
+    <ItemContainer capacity="1" hideitems="false" itempos="-17,-21">
+      <Containable name="Oxygen Tank"/>
+	  <Containable name="Oxygenite Tank"/>
+	  <Containable name="Sulphurite Tank"/>
+	  <Containable name="Thermite Tank"/>
+    </ItemContainer>
+
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7"/>
+  </Item>
+
+	
 </Items>
