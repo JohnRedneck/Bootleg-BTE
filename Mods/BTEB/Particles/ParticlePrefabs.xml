@@ -710,4 +710,34 @@
     velocitychange="0.0, 0.0">
     <sprite texture="Mods/BTEB/Particles/arfire.png" sourcerect="0,64,128,64" origin="0.15,0.5"/>
   </arfire>
+	
+<flamethrower
+    startsizemin="0.9,3.0" startsizemax="10.0,10.0"
+    sizechange="5.0,-0.5"
+    startcolor="200.0, 1.0, 12.0" startalpha="1.0"
+    colorchange="0.0, 0.0, 0.0, -4.0"
+    lifetime="0.5"
+    drawtarget="both"
+    blendstate="additive"
+    velocitychange="0.0, -0.5">
+    <sprite texture="Mods/BTEB/Particles/Flamethrower.png" sourcerect="0,64,128,64" origin="0.0,0.5"/>
+  </flamethrower>
+
+  <flamefire
+    startsizemin="0.25,0.15" startsizemax="0.5,0.25"
+    sizechangemin="0.2,0.2" sizechangemax="0.3,0.3"
+    startrotationmin ="-50.0" startrotationmax="50"
+    startcolor="1.0, 1.0, 1.0" startalpha="1.0"
+    colorchange="-0.6, -0.6, -0.6, -0.1"
+    lifetime="250.0"
+    growtime ="0.05"
+    drawtarget="air"
+    collideswithwalls="true"
+    collisionradius="100"
+    blendstate="additive"
+    velocitychange="0.0, 1.0"
+    animduration="1.2"
+    loopanim="false">
+    <animatedsprite texture="Content/Particles/FlameRoundParticleSheet.png" sourcerect="0,0,2048,2048" columns="10" rows="5" origin="0.5,0.8"/>
+  </flamefire>
 </prefabs>
