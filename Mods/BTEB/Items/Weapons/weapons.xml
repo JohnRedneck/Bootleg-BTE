@@ -2635,7 +2635,7 @@ impacttolerance="3"
   </Item>
 
 	<Item
-    name="MP5"
+    name="MP5S"
     category="Equipment"
 	tags="bigitem,weapon"
     description="The MP5 is an automatic that uses 7.62x51mm magazines."
@@ -2666,7 +2666,7 @@ impacttolerance="3"
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
 	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1"/>
-      <sound file="Mods/BTEB/Items/Weapons/AR.ogg" type="OnUse" range="800" loop="true"/>
+      <sound file="Mods/BTEB/Items/Weapons/MP5S.ogg" type="OnUse" range="800" loop="true"/>
 	  <RequiredItems name="7.62x51mm Magazine" type="Contained" msg="The loaded magazine is depleted"/>
       <RequiredSkill name="Weapons" level="40"/>
 	  <StatusEffect type="OnUse" target="This">
@@ -2707,7 +2707,7 @@ impacttolerance="3"
 	  <Item name="Fulgurium Sliver"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEB/Items/Weapons/MP5.png" sourcerect="88,74,14,10" depth="0.55"/>
+    <Sprite texture="Mods/BTEB/Items/Weapons/MP5S.png" sourcerect="88,74,14,10" depth="0.55"/>
 
     <Body width="12" height="8" density="16" friction="0.95"/>
 
@@ -2717,5 +2717,4 @@ impacttolerance="3"
 	  </StatusEffect>
 	</Throwable>
   </Item>
-	
 </Items>
