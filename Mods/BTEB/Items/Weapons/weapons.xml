@@ -2595,7 +2595,7 @@ impacttolerance="3"
 	  <Item name="Spare Electronics"/>
     </Deconstruct>
 
-    <Sprite texture="FlameThrower.png" sourcerect="0,0,98,33" depth="0.55"/>
+    <Sprite texture="Flamethrower.png" sourcerect="0,0,98,33" depth="0.55"/>
 
     <Body width="90" height="30" density="40"/>
 
@@ -2648,7 +2648,7 @@ impacttolerance="3"
 	  <Item name="FPGA Circuit"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEB/Items/Weapons/MP5.png" sourcerect="0,39,99,26" depth="0.55"/>
+    <Sprite texture="Mods/BTEB/Items/Weapons/MP5S.png" sourcerect="0,39,99,26" depth="0.55"/>
 
     <Body width="97" height="24" density="35"/>
 
