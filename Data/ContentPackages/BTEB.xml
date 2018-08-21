@@ -101,10 +101,16 @@
   <Character file="Mods/BTEB/Characters/Fractalguardian2/fractalguardian2.xml" />
   <Character file="Mods/BTEB/Characters/Walker/walker.xml" />
   <Character file="Mods/BTEB/Characters/Carrier/carrier.xml" />
+  <Character file="Mods/BTEB/Characters/Elite/Elite.xml" />
+  <Character file="Mods/BTEB/Characters/Sentinel/Sentinel.xml" />
+  <Character file="Mods/BTEB/Characters/SynthElite/SynthElite.xml" />
+  <Character file="Mods/BTEB/Characters/SynthSoldier1/SynthSoldier1.xml" />
+  <Character file="Mods/BTEB/Characters/SynthSoldier2/SynthSoldier2.xml" />
   <Character file="Mods/BTEB/Characters/Teleglitch/teleglitch.xml" />
   <Character file="Mods/BTEB/Characters/Teleglitchboss/teleglitchboss.xml" />
   <Character file="Mods/BTEB/Characters/GuardDog/guarddog.xml" />
   <Character file="Mods/BTEB/Characters/Robot/robot.xml" />
+  <Character file="Mods/BTEB/Characters/Connor/Connor.xml" />
   <Character file="Mods/BTEB/Characters/Synth/synth.xml" />
   <Character file="Mods/BTEB/Characters/Synthette/synthette.xml" />
   <Character file="Mods/BTEB/Characters/Human/human.xml" />

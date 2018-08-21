@@ -29,7 +29,7 @@
 	  </StatusEffect>
     </Throwable>
   </Item>
-  
+
   <Item
     name="Oxygenite Tank"
     category="Equipment"
@@ -57,10 +57,9 @@
 	  </StatusEffect>
     </Throwable>
   </Item>
-  
+
   <Item
     name="Diving Mask"
-	aliases="Gas Mask"
     category="Equipment"
     Tags="meditem,diving"
 	description="Small enough to carry around in case of need, but won't protect you from the water pressure in the event of a full-blown hull breach."
@@ -71,9 +70,9 @@
       <Item name="Polycarbonate Sliver"/>
 	  <Item name="Aluminium Sliver"/>
     </Deconstruct>
-    
+
     <Sprite texture="DivingSuit.png" depth="0.6" sourcerect="61,98,18,30"/>
-  
+
     <Body height="13" radius="2" density="10.02"/>
 
     <Wearable limbtype="Head" slots="Any,Face">
@@ -113,7 +112,7 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.1" disabledeltatime="true">
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
       </StatusEffect>
-	  
+
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
       <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
@@ -124,16 +123,16 @@
       <Containable name="Oxygenite Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
-    </ItemContainer>  
+    </ItemContainer>
   </Item>
-  
+
   <Item
     name="Wetsuit"
     category="Equipment"
     tags="bigitem,diving,clothing"
 	description="A wetsuit allows faster movement underwater but it can't withstand the immense pressure under Europa's crust unless properly sealed."
     price="550">
-	
+
 	<Deconstruct time="30">
       <Item name="Polycarbonate Block"/>
 	  <Item name="Polycarbonate Bar"/>
@@ -146,7 +145,7 @@
 
     <Wearable slots="Torso+Legs,Any">
 	  <sprite texture="WetsuitTorso.png" limb="Head" depthlimb="Tail" sourcerect="26,52,22,28" origin="0.55,0.6"/>
-	  
+
 	  <sprite texture="WetsuitTorso.png" limb="Torso" sourcerect="0,0,29,58" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" hidelimb="true">
       </sprite>
 
@@ -164,11 +163,11 @@
 
       <sprite texture="WetsuitLegs.png" limb="RightFoot" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="WetsuitLegs.png" limb="LeftFoot" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
-	  
+
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
       <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
-	  
+
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
 	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
     </Wearable>
@@ -182,7 +181,7 @@
 	fireproof="true"
 	description="An atmospheric suit capable of withstanding the immense pressure under Europa's crust."
     price="1750">
-	
+
 	<Deconstruct time="30">
       <Item name="Spare Parts"/>
 	  <Item name="Spare Parts"/>
@@ -195,7 +194,7 @@
 
     <Wearable slots="Head+Torso+Legs">
       <sprite texture="DivingSuit.png" limb="Head" sourcerect="0,0,1,1" origin="0.5,0.5" hidelimb="true"/>
-	  
+
 	  <sprite texture="DivingSuit.png" limb="Torso" sourcerect="42,0,42,97" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" depthlimb="Head" hidelimb="true">
         <LightComponent range="100" lightcolor="1.0,1.0,1.0,0.1" powerconsumption="10" IsOn="true">
           <sprite texture="Mods/BTEB/Items/Diving/DivingSuitLight.png" depth="0.025" origin="0.1,0.82" alpha="1.0"/>
@@ -216,7 +215,7 @@
 
       <sprite texture="DivingSuit.png" limb="RightFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="DivingSuit.png" limb="LeftFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
-      
+
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" PressureProtection="100" SpeedMultiplier="-0.4" LowPassMultiplier="0.2" disabledeltatime="true"/>
       <StatusEffect type="OnWearing" target="Contained" targetnames="Oxygen Tank" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
@@ -265,7 +264,7 @@
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100"/>
-	  
+
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.4"/>
       <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
@@ -281,7 +280,7 @@
       </Containable>
     </ItemContainer>
   </Item>
-  
+
   <Item
     name="Assault Exosuit"
 	aliases="Power Armor"
@@ -290,7 +289,7 @@
 	fireproof="true"
 	description="An atmospheric military suit designed to be used in boarding missions against enemy vessels. It has increased armor but it's really cumbersome, unless powered."
     price="2750">
-	
+
 	<Deconstruct time="30">
       <Item name="Spare Parts"/>
 	  <Item name="Spare Parts"/>
@@ -303,7 +302,7 @@
 
     <Wearable slots="Head+Torso+Legs">
       <sprite texture="DivingSuit2.png" limb="Head" sourcerect="0,0,1,1" origin="0.5,0.5" hidelimb="true"/>
-	  
+
 	  <sprite texture="DivingSuit2.png" limb="Torso" sourcerect="42,0,42,97" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" depthlimb="Head" hidelimb="true">
         <LightComponent range="100" lightcolor="1.0,1.0,1.0,0.1" powerconsumption="10" IsOn="true">
           <sprite texture="Mods/BTEB/Items/Diving/DivingSuitLight2.png" depth="0.025" origin="0.1,0.82" alpha="1.0"/>
@@ -324,7 +323,7 @@
 
       <sprite texture="DivingSuit2.png" limb="RightFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="DivingSuit2.png" limb="LeftFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
-      
+
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" PressureProtection="100" SpeedMultiplier="-0.6" LowPassMultiplier="0.2" disabledeltatime="true"/>
       <StatusEffect type="OnWearing" target="Contained" targetnames="Oxygen Tank" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
@@ -376,7 +375,7 @@
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100"/>
-	  
+
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.2"/>
       <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
@@ -392,7 +391,7 @@
       </Containable>
     </ItemContainer>
   </Item>
-  
+
   <Item
     name="Derelict Exosuit"
 	aliases="Oldsuit"
@@ -401,7 +400,7 @@
 	fireproof="true"
 	description="An old exosuit used by the coalition years ago. It's heavily damaged and rusted."
     >
-	
+
 	<Deconstruct time="30">
       <Item name="Spare Parts"/>
 	  <Item name="Spare Parts"/>
@@ -413,7 +412,7 @@
 
     <Wearable slots="Head+Torso+Legs">
       <sprite texture="DivingSuit3.png" limb="Head" sourcerect="0,0,1,1" origin="0.5,0.5"/>
-	  
+
 	  <sprite texture="DivingSuit3.png" limb="Torso" sourcerect="42,0,42,97" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" depthlimb="Head" hidelimb="true">
       </sprite>
 
@@ -431,9 +430,9 @@
 
       <sprite texture="DivingSuit3.png" limb="RightFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="DivingSuit3.png" limb="LeftFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
-      
+
       <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.7" LowPassMultiplier="0.2" disabledeltatime="true"/>
-	  
+
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
       <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
@@ -462,7 +461,7 @@
 	  <Item name="Copper Coil"/>
 	  <Item name="FPGA Circuit"/>
     </Deconstruct>
-    
+
     <Sprite texture="Content/Items/Diving/Scooter.png" depth="0.55" sourcerect="0,0,64,64"/>
 
     <Body width="55" height="30" density="10.01"/>
@@ -482,6 +481,121 @@
     <ItemContainer capacity="1" hideitems="true">
       <Containable name="Battery Cell"/>
       <Containable name="Fulgurium Battery Cell"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Hazmat Suit"
+    category="Equipment"
+    tags="bigitem,diving,clothing"
+  description="A Hazmat suit protecting from the Husk parasite when  properly sealed."
+    price="550">
+
+  <Deconstruct time="30">
+      <Item name="Polycarbonate Block"/>
+    <Item name="Polycarbonate Bar"/>
+    <Item name="Aluminium Block"/>
+    </Deconstruct>
+
+    <Sprite texture="HazmatLegs.png" sourcerect="0,84,59,26" depth="0.55"/>
+
+    <Body width="56" height="23" density="12"/>
+
+    <Wearable slots="Torso+Legs,Any">
+    <sprite texture="HazmatTorso.png" limb="Head" depthlimb="Tail" sourcerect="26,52,22,28" origin="0.55,0.6"/>
+
+    <sprite texture="HazmatTorso.png" limb="Torso" sourcerect="0,0,29,58" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" hidelimb="true">
+      </sprite>
+
+      <sprite texture="HazmatTorso.png" limb="RightHand" sourcerect="49,2,13,47" origin="0.45,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="HazmatTorso.png" limb="LeftHand" sourcerect="49,2,13,47" origin="0.45,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="HazmatTorso.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="HazmatTorso.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="HazmatLegs.png" limb="RightThigh" sourcerect="0,32,26,48" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="HazmatLegs.png" limb="LeftThigh" sourcerect="0,32,26,48" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="HazmatLegs.png" limb="RightLeg" sourcerect="32,0,22,50" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="HazmatLegs.png" limb="LeftLeg" sourcerect="32,0,22,50" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="HazmatLegs.png" limb="RightFoot" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="HazmatLegs.png" limb="LeftFoot" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+
+    <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+
+    <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
+    <StatusEffect tags="Wetsuit" type="OnWearing" target="Character" duration="1"/>
+    </Wearable>
+  </Item>
+
+  <Item
+    name="Gas Mask"
+    category="Equipment"
+    Tags="meditem,diving"
+	description="A gas mask made to use with the Hazmat Suit."
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="Gasmask.png" depth="0.6" sourcerect="0,0,23,27"/>
+
+    <Body height="13" radius="2" density="10.02"/>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="Gasmask.png" limb="Head" sourcerect="0,0,23,27" origin="0.1,0.5"/>
+      <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="10">
+	    <Conditional hasstatustag="wetsuit"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.008">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3" Condition="-0.5">
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.006">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000" Condition="-0.1" PressureProtection="1">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.001">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.1" disabledeltatime="true">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Oxygen Tank"/>
+      <Containable name="Oxygenite Tank"/>
+	  <Containable name="Sulphurite Tank"/>
+	  <Containable name="Thermite Tank"/>
     </ItemContainer>
   </Item>
 </Items>
