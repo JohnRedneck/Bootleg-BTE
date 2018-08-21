@@ -720,7 +720,7 @@
     drawtarget="both"
     blendstate="additive"
     velocitychange="0.0, -0.5">
-    <sprite texture="Mods/BTEB/Particles/Flamethrower.png" sourcerect="0,64,128,64" origin="0.0,0.5"/>
+    <sprite texture="Mods/BTEB/Particles/flamethrower.png" sourcerect="0,64,128,64" origin="0.0,0.5"/>
   </flamethrower>
 
   <flamefire
