@@ -2638,7 +2638,7 @@ impacttolerance="3"
     name="MP5S"
     category="Equipment"
 	tags="bigitem,weapon"
-    description="The MP5 is an automatic that uses 7.62x51mm magazines."
+    description="The MP5S is a burst fire SMG that uses 7.62x51mm magazines."
     impacttolerance="3">
 
     <Deconstruct time="20">
@@ -2717,7 +2717,7 @@ impacttolerance="3"
 	  </StatusEffect>
 	</Throwable>
   </Item>
-	
+
 <Item
     name="Taser"
     category="Equipment"
@@ -2761,7 +2761,7 @@ impacttolerance="3"
 	  </StatusEffect>
     </ItemComponent>
 
-    <ItemContainer capacity="5" hideitems="true">
+    <ItemContainer capacity="1" hideitems="true">
       <Containable name="Taser Round"/>
     </ItemContainer>
 
@@ -2833,5 +2833,5 @@ impacttolerance="3"
       </StatusEffect>
     </Projectile>
   </Item>
-	
+
 </Items>

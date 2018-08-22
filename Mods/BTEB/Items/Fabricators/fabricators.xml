@@ -1341,6 +1341,40 @@
 		<ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.85,0.7" slotsperrow="1"/>
 	</Item>
 
+	<Item
+		name="Coffee machine"
+		category="Machine"
+		Tags="cntnr">
+
+			<Sprite texture="CoffeeMachine.png" depth="0.8" sourcerect="0,0,60,64"/>
+
+		<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+			<sprite texture="Mods/BTEB/Items/Fabricators/CoffeeLights.png" sourcerect="6,15,47,33" alpha="1.0"/>
+		<StatusEffect type="Always" target="This" IsOn="true"/>
+		</LightComponent>
+
+		<Fabricator canbeselected="true" powerconsumption="100">
+
+			<GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+			<sound file="Mods/BTEB/Items/Fabricators/Coffee.ogg" type="OnActive" range="2000" loop="true"/>
+
+		<fabricableitem name="Coffee Cup" requireditems="Cup" requiredtime="175"/>
+		<fabricableitem name="Cup" requiredtime="1"/>
+		</Fabricator>
+
+		<ConnectionPanel selectkey="Action" canbeselected="true">
+			<requireditem name="Pliers,Screwdriver" type="Equipped"/>
+			<output name="power_in"/>
+		</ConnectionPanel>
+
+		<ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.15,0.7" slotsperrow="1">
+				<Containable name="Cup,Coffee Cup"/>
+			</ItemContainer>
+
+		<ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.85,0.7" slotsperrow="1"/>
+	</Item>
+
   <Item
     name="Deconstructor"
 	description="Disassembles and breaks down items to reusable components and material bars."
