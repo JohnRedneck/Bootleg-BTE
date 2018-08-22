@@ -405,4 +405,87 @@
 	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
               aimpos="30,18" handle1="-1,0" handle2="-1,0"/>
   </Item>
+	
+<Item
+    name="Tobacco Pipe"
+	aliases="Pipe"
+    category="Misc"
+    Tags="smallitem"
+	description="Quality tobacco pipe."
+    price="500">
+
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="Other.png" sourcerect="1,30,29,18" depth="0.55"/>
+
+    <Body width="29" height="18" density="9.9"/>
+
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Tobacco"/>
+    </ItemContainer>
+
+    <RepairTool structurefixamount="0" limbfixamount="0" range="0" barrelpos="-5,0">
+	  <sound file="Mods/BTEB/Items/Medical/Cigarette.ogg" type="OnUse" range="300" loop="true"/>
+	  <StatusEffect type="OnUse" target="Hull" oxygen="-950"/>
+        <RequiredItem name="Tobacco" type="Contained"/>
+        <!--<StatusEffect type="OnUse" target="Contained" targetnames="Tobacco" Condition="-2"/>-->
+        <ParticleEmitter particle="cigsmoke" particlespersecond="10" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+    </RepairTool>
+	<LightComponent LightColor="1.0,0.5,0.5,0.2" Flicker="0.4" range="50" IsOn="false">
+      <StatusEffect type="OnUse" target="Character" oxygen="-0.01" SpeedMultiplier="0.01" disabledeltatime="true" stackable="false" duration="100"/>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="Contained,Hull" Condition="-1.0" oxygen="-50">
+        <ParticleEmitter particle="cigsmoke" particlespersecond="1" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" IsOn="false"/>
+	  <StatusEffect type="OnFire" target="This" Condition="-75"/>
+	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+    </LightComponent>
+
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              aimpos="30,18" handle1="0,0" handle2="0,0"/>
+  </Item>
+
+    <Item
+    name="Tobacco Bag"
+	aliases="Bag"
+    category="Misc"
+    Tags="smallitem"
+	description="Bag filled with good quality tobacco."
+    price="500">
+
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="Other.png" sourcerect="37,29,12,20" depth="0.55"/>
+
+    <Body width="12" height="20" density="9.9"/>
+
+    <ItemContainer capacity="5" hideitems="true">
+      <Containable name="Tobacco"/>
+    </ItemContainer>
+
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="false"
+              aimpos="30,18" handle1="0,0" handle2="0,0"/>
+  </Item>
+
+    <Item
+    name="Tobacco"
+	aliases=""
+    category="Misc"
+    Tags="smallitem"
+	description="High quality Tobacco."
+    price="100">
+
+    <Sprite texture="tobacco.png" sourcerect="0,0,0,0" depth="0.55"/>
+
+    <Body width="12" height="20" density="9.9"/>
+
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="false"
+              aimpos="30,18" handle1="0,0" handle2="0,0"/>
+  </Item>
 </Items>
