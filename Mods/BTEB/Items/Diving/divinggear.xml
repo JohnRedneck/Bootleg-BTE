@@ -71,12 +71,12 @@
 	  <Item name="Aluminium Sliver"/>
     </Deconstruct>
 
-    <Sprite texture="DivingSuit.png" depth="0.6" sourcerect="61,98,18,30"/>
+    <Sprite texture="divingmask.png" depth="0.6" sourcerect="0,0,0,0"/>
 
     <Body height="13" radius="2" density="10.02"/>
 
     <Wearable limbtype="Head" slots="Any,Face">
-      <sprite texture="DivingSuit.png" limb="Head" sourcerect="61,98,18,30" origin="0.1,0.5"/>
+      <sprite texture="divingmask.png" limb="Head" sourcerect="0,0,0,0" origin="0.5,0.5"/>
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
       <StatusEffect type="OnWearing" target="Character" PressureProtection="10">
 	    <Conditional hasstatustag="wetsuit"/>
@@ -544,12 +544,12 @@
 	  <Item name="Aluminium Sliver"/>
     </Deconstruct>
 
-    <Sprite texture="Gasmask.png" depth="0.6" sourcerect="0,0,23,27"/>
+    <Sprite texture="Gasmask.png" depth="0.6" sourcerect="0,0,0,0"/>
 
     <Body height="13" radius="2" density="10.02"/>
 
     <Wearable limbtype="Head" slots="Any,Face">
-      <sprite texture="Gasmask.png" limb="Head" sourcerect="0,0,23,27" origin="0.1,0.5"/>
+      <sprite texture="Gasmask.png" limb="Head" sourcerect="0,0,0,0" origin="0.5,0.5"/>
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
       <StatusEffect type="OnWearing" target="Character" PressureProtection="10">
 	    <Conditional hasstatustag="wetsuit"/>
