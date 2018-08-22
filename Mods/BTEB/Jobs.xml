@@ -33,7 +33,7 @@
 		<Item name="Coalition Captain"/>
 		<Item name="Basic Emergency Protocol"/>
 		<Item name="Outbreak Protocol"/>
-      </Item> 
+      </Item>
       <Item name="Captain's Cap" equip="true"/>
       <Item name="Captain's Uniform B" equip="true"/>
       <Item name="Headset" equip="true">
@@ -42,11 +42,19 @@
 	  <Item name="Diving Revolver" equip="false">
         <Item name="Revolver Round"/>
         <Item name="Revolver Round"/>
-		<Item name="Revolver Round"/>
-      </Item> 
+		    <Item name="Revolver Round"/>
+      </Item>
+      <Item name="Desert Eagle">
+       <Item name=".50 Action Express Round"/>
+       <Item name=".50 Action Express Round"/>
+       <Item name=".50 Action Express Round"/>
+       <Item name=".50 Action Express Round"/>
+       <Item name=".50 Action Express Round"/>
+       <Item name=".50 Action Express Round"/>
+       <Item name=".50 Action Express Round"/>
     </Items>
   </Job>
-  
+
   <Job name="Officer" description="The executive officer or second-in-command. The officer's duty is to help the captain with administrative and navigation responsibilities. If the captain is absent, the officer will temporarily assume command."
 	   maxnumber="1" minkarma="0.7">
     <Skills>
@@ -78,19 +86,31 @@
 		<Item name="Document about Prisoners"/>
 		<Item name="Classified Protocol A"/>
 		<Item name="Classified Protocol B"/>
-      </Item> 
+      </Item>
       <Item name="Officer's Cap" equip="true"/>
 	  <Item name="Officer's Jacket" equip="true"/>
 	  <Item name="Officer's Trousers A" equip="true"/>
 	  <Item name="Flashlight">
 	    <Item name="Battery Cell"/>
-	  </Item> 
+	  </Item>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item> 
+      </Item>
+      <Item name="Five Seven" equip="false">
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+      </Item>
     </Items>
   </Job>
-  
+
   <Job name="Enforcer" description="Enforcers are are responsible for keeping the submarine safe from potential attackers. The creatures inhabiting the ocean aren't the only threat they need to worry about, as several of the renegade groups opposing the Europa Coalition are known to have sent infiltrators on board the vessels."
 	   maxnumber="4" minkarma="0.6">
     <Skills>
@@ -121,18 +141,30 @@
 		<Item name="Document about Prisoners"/>
 		<Item name="Classified Protocol A"/>
 		<Item name="Classified Protocol B"/>
-      </Item> 
+      </Item>
       <Item name="Crewmember Beret" equip="true"/>
 	  <Item name="Crewmember Sweater B" equip="true"/>
 	  <Item name="Ballistic Trousers" equip="true"/>
 	  <Item name="Handcuffs"/>
-	  <Item name="Stun Baton"/> 
+	  <Item name="Stun Baton"/>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item>      
+      </Item>
+      <Item name="Beretta" equip="false">
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+      </Item>
     </Items>
   </Job>
-  
+
   <Job name="Scientist" description="Scientists are usually found in science vessels but they are often employed by military or private employers because of their knowledge of biochemistry and quantum physics."
 	   maxnumber="2" minkarma="0.5">
     <Skills>
@@ -165,11 +197,33 @@
 		<Item name="Document about Scorpions"/>
 		<Item name="Document about Molochs"/>
 		<Item name="Document about Endworms"/>
-      </Item> 
+      </Item>
       <Item name="Scientist's Uniform B" equip="true"/>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item>      
+      </Item>
+      <Item name="Glock" equip="false">
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+      </Item>
     </Items>
   </Job>
 
@@ -199,19 +253,41 @@
         <Item name="Coalition Doctor"/>
 		<Item name="Basic Emergency Protocol"/>
 		<Item name="Husk Treatment Information"/>
-      </Item> 
+      </Item>
       <Item name="Doctor's Coat A" equip="true"/>
       <Item name="Crewmember Trousers A" equip="true"/>
       <Item name="Health Scanner HUD"/>
 	  <Item name="MedKit">
         <Item name="Medical Syringe"/>
-      </Item>  
+      </Item>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item>      
+      </Item>
+      <Item name="Glock" equip="false">
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+      </Item>
     </Items>
   </Job>
-  
+
   <Job name="Engineer" description="Engineers have above-average electrician skills, but fixing complex mechanical devices is still usually out of their skill set. They are competent at fixing electrical devices however, and are the ones to turn to when the power grid starts failing."
 	   minnumber="1" minkarma="0.4" initialcount="1">
     <Skills>
@@ -236,14 +312,36 @@
         <Item name="Coalition Engineer"/>
 		<Item name="Basic Emergency Protocol"/>
 		<Item name="Document about Nuclear Reactors"/>
-      </Item> 
+      </Item>
       <Item name="Utility Vest" equip="true"/>
-	  <Item name="Crewmember Cargo Trousers A" equip="true"/>   
+	  <Item name="Crewmember Cargo Trousers A" equip="true"/>
       <Item name="Wire"/>
       <Item name="Screwdriver"/>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item>      
+      </Item>
+      <Item name="Glock" equip="false">
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+      </Item>
     </Items>
   </Job>
 
@@ -269,7 +367,7 @@
 	  <Item name="Clipboard">
         <Item name="Coalition Mechanic"/>
 		<Item name="Basic Emergency Protocol"/>
-      </Item> 
+      </Item>
 	  <Item name="Utility Jumpsuit" equip="true"/>
       <Item name="Wrench"/>
       <Item name="Welding Tool">
@@ -277,10 +375,32 @@
 	  </Item>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item>      
+      </Item>
+      <Item name="Glock" equip="false">
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+      </Item>
     </Items>
   </Job>
-  
+
   <Job name="Cook" description="The primary duty of a cook, or culinary specialist, is to provide cooking services for the rest of the crew. They are also responsible for keeping the storerooms stocked and the dinning areas clean."
 	   maxnumber="2" minkarma="0.2">
     <Skills>
@@ -303,14 +423,36 @@
 	  <Item name="Clipboard">
         <Item name="Coalition Cook"/>
 		<Item name="Basic Emergency Protocol"/>
-      </Item> 
+      </Item>
 	  <Item name="Frying Pan"/>
 	  <Item name="Crewmember Cap B" equip="true"/>
 	  <Item name="Crewmember Jumper B" equip="true"/>
 	  <Item name="Crewmember Trousers A" equip="true"/>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item>      
+      </Item>
+      <Item name="Glock" equip="false">
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+      </Item>
     </Items>
   </Job>
 
@@ -335,19 +477,41 @@
 	  <Item name="Clipboard">
         <Item name="Coalition Seamen"/>
 		<Item name="Basic Emergency Protocol"/>
-      </Item> 
+      </Item>
 	  <Item name="Crewmember Beanie"/>
 	  <Item name="Crewmember Cargo Trousers A" equip="true"/>
       <Item name="Flashlight">
 	    <Item name="Battery Cell"/>
-	  </Item> 
+	  </Item>
 	  <Item name="Utility Knife"/>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item>      
+      </Item>
+      <Item name="Glock" equip="false">
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+       <Item name="357 SIG Round"/>
+      </Item>
     </Items>
   </Job>
-  
+
   <Job name="Prisoner" description="Prisoners can range from petty individuals to dangerous and even reckless psychopaths. Coalition labor facilities make no distinctive outfits or safety measures for them so seeing low-risk prisoners sharing cell blocks with maximum security ones is commonplace."
 	   minkarma="0.0" allowalways="true">
     <Skills>
@@ -365,6 +529,52 @@
 	  <Item name="Ration Stamp A"/>
 	  <Item name="Ration Stamp A"/>
 	  <!-- <Item name="Handcuffs" equip="true"/> -->
+    </Items>
+  </Job>
+
+  <Job name="Diver" description="Divers are elite crew that have experience with going EVA and know the protocols in case of an Husk infection in and out of the submarine."
+     minkarma="0.1" allowalways="true">
+    <Skills>
+      <Skill name="Weapons" level="50,80"/>
+      <Skill name="Construction" level="20,40"/>
+      <Skill name="Electrical Engineering" level="20,40"/>
+    <Skill name="Science" level="50,80"/>
+      <Skill name="Medical" level="50,70"/>
+    <Skill name="Cooking" level="50,60"/>
+    </Skills>
+    <Items>
+      <Item name="Diver ID Card" equip="true"/>
+    <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+    <Item name="Ration Stamp B"/>
+    <Item name="Ration Stamp B"/>
+    <Item name="Ration Stamp C"/>
+      </Item>
+    <Item name="Clipboard">
+        <Item name="Coalition Seamen"/>
+    <Item name="Basic Emergency Protocol"/>
+      </Item>
+    <Item name="Crewmember Beanie"/>
+    <Item name="Crewmember Cargo Trousers A" equip="true"/>
+      <Item name="Flashlight">
+      <Item name="Battery Cell"/>
+    </Item>
+    <Item name="Wetsuit" equip="false"/>
+      <Item name="Headset" equip="true">
+        <Item name="Battery Cell"/>
+      </Item>
+      <Item name="Beretta" equip="false">
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+       <Item name="9mm Round"/>
+      </Item>
     </Items>
   </Job>
 </Jobs>

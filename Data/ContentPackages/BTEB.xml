@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Bootleg BTE 0.9.5B" path="Data/ContentPackages/BTEB">
+<contentpackage name="Bootleg BTE 0.9.6" path="Data/ContentPackages/BTEB">
   <!-- <Item file="Content/Items/idcard.xml" /> -->
   <!-- <Item file="Content/Items/itemlabel.xml" /> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml" /> -->
@@ -92,6 +92,7 @@
   <Item file="Mods/BTEB/Items/Weapons/railgun.xml" />
   <Item file="Mods/BTEB/Items/Weapons/weapons.xml" />
   <Character file="Mods/BTEB/Characters/Charybdis/charybdis.xml" />
+  <Character file="Mods/BTEB/Characters/RiotPolice/RiotPolice.xml" />
   <Character file="Mods/BTEB/Characters/Coelanth/coelanth.xml" />
   <Character file="Mods/BTEB/Characters/Crawler/crawler.xml" />
   <Character file="Mods/BTEB/Characters/Crawlersmall/crawlersmall.xml" />
