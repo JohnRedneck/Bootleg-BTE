@@ -93,17 +93,17 @@
 	  <Item name="Steel Bar"/>
     </Deconstruct>
 
-    <Sprite texture="securitygear.png" sourcerect="68,0,60,31" depth="0.6"/>
+    <Sprite texture="HeavyArmor.png" sourcerect="0,0,46,72" depth="0.6"/>
 
     <Body width="52" height="17" density="40"/>
 
     <Wearable slots="Any,Torso">
-      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
-	  
+      <sprite texture="HeavyArmor.png" limb="Torso" sourcerect="0,0,46,72" depthlimb="Head" origin="0.52,0.48"/>
+
 	  <sprite texture="securitygear.png" limb="RightHand" sourcerect="86,38,15,47" origin="0.45,0.55" hidelimb="true"/>
       <sprite texture="securitygear.png" limb="LeftHand" sourcerect="86,38,15,47" origin="0.45,0.55" hidelimb="true"/>
 
-      <sprite texture="securitygear.png" limb="RightArm" sourcerect="106,38,21,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="HeavyArmor.png" limb="RightArm" sourcerect="60,0,21,39" origin="0.5,0.4" hidelimb="true"/>
       <sprite texture="Sweater.png" limb="LeftArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
 	  
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
