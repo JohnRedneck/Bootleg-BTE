@@ -655,7 +655,7 @@
     <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="32,32,32,32"/>
 
     <ItemComponent>
-      <sound file="Mods/BTE/Items/Electricity/Klaxon.ogg" type="OnActive" range="5000" loop="true"/>
+      <sound file="Mods/BTEB/Items/Electricity/Klaxon.ogg" type="OnActive" range="5000" loop="true"/>
     </ItemComponent>
 
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -672,7 +672,7 @@
     <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="32,32,32,32"/>
 
     <ItemComponent>
-      <sound file="Mods/BTE/Items/Electricity/NostromoAlarm.ogg" type="OnActive" range="5000" loop="true"/>
+      <sound file="Mods/BTEB/Items/Electricity/NostromoAlarm.ogg" type="OnActive" range="5000" loop="true"/>
     </ItemComponent>
 
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -707,7 +707,7 @@
     <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="34,64,23,16"/>
 
     <ItemComponent>
-      <sound file="Mods/BTE/Items/Electricity/warningBeep2.ogg" type="OnActive" range="1000" loop="true"/>
+      <sound file="Mods/BTEB/Items/Electricity/warningBeep2.ogg" type="OnActive" range="1000" loop="true"/>
     </ItemComponent>
 
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -724,7 +724,7 @@
     <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="34,64,23,16"/>
 
     <ItemComponent>
-      <sound file="Mods/BTE/Items/Electricity/VideoBeep.ogg" type="OnActive" range="1000" loop="true"/>
+      <sound file="Mods/BTEB/Items/Electricity/VideoBeep.ogg" type="OnActive" range="1000" loop="true"/>
     </ItemComponent>
 
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -742,7 +742,7 @@
     <Sprite texture="signalcomp.png" depth="0.8" sourcerect="43,56,23,16"/>
 
     <ItemComponent>
-      <sound file="Mods/BTE/Items/Electricity/CHARLIEspacerwoman.ogg" type="OnActive" range="3000" loop="true"/>
+      <sound file="Mods/BTEB/Items/Electricity/CHARLIEspacerwoman.ogg" type="OnActive" range="3000" loop="true"/>
     </ItemComponent>
 
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -760,7 +760,7 @@
     <Sprite texture="signalcomp.png" depth="0.8" sourcerect="43,56,23,16"/>
 
     <ItemComponent>
-      <sound file="Mods/BTE/Items/Electricity/LASERlaser.ogg" type="OnActive" range="3000" loop="true"/>
+      <sound file="Mods/BTEB/Items/Electricity/LASERlaser.ogg" type="OnActive" range="3000" loop="true"/>
     </ItemComponent>
 
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -778,7 +778,7 @@
     <Sprite texture="signalcomp.png" depth="0.8" sourcerect="43,56,23,16"/>
 
     <ItemComponent>
-      <sound file="Mods/BTE/Items/Electricity/SPACEmagicfly.ogg" type="OnActive" range="3000" loop="true"/>
+      <sound file="Mods/BTEB/Items/Electricity/SPACEmagicfly.ogg" type="OnActive" range="3000" loop="true"/>
     </ItemComponent>
 
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -810,7 +810,7 @@
     </fixrequirement>
 	
 	<LightComponent lightcolor="1.0,0.0,0.0,1.0" range="50">
-      <sprite texture="Mods/BTE/Items/Electricity/signalcomp.png" sourcerect="16,33,16,26" alpha="1.0"/>
+      <sprite texture="Mods/BTEB/Items/Electricity/signalcomp.png" sourcerect="16,33,16,26" alpha="1.0"/>
 	  <StatusEffect type="Always" target="This" IsOn="true"/>
     </LightComponent>
 

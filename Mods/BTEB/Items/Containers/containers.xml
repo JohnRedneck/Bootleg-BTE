@@ -7,7 +7,7 @@
     <Sprite texture="Containers.png" depth="0.78" sourcerect="0,186,45,128"/>
 
 	<Controller direction="None" canbepicked="true">
-      <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
+      <sound file="Mods/BTEB/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
     </Controller>
 
 	<ItemContainer capacity="10" canbeselected="true" hideitems="true">
@@ -22,10 +22,10 @@
   	fireproof="true"
       pickdistance="150">
 
-      <Sprite texture="Mods/BTE/Items/Containers/Lockers.png" depth="0.78" sourcerect="0,0,45,128"/>
+      <Sprite texture="Mods/BTEB/Items/Containers/Lockers.png" depth="0.78" sourcerect="0,0,45,128"/>
 
   	<Controller direction="None" canbepicked="true">
-        <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
+        <sound file="Mods/BTEB/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
       </Controller>
 
   	<ItemContainer capacity="10" canbeselected="true" hideitems="true">
@@ -43,7 +43,7 @@
       <Sprite texture="Containers.png" depth="0.78" sourcerect="46,186,48,64" canflipx="false"/>
 
   	<Controller direction="None" canbepicked="true">
-        <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+        <sound file="Mods/BTEB/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
       </Controller>
 
       <ItemContainer capacity="20" canbeselected="true" hideitems="true">
@@ -58,10 +58,10 @@
   	fireproof="true"
       pickdistance="150">
 
-      <Sprite texture="Mods/BTE/Items/Containers/Lockers.png" depth="0.78" sourcerect="46,1,48,64" canflipx="false"/>
+      <Sprite texture="Mods/BTEB/Items/Containers/Lockers.png" depth="0.78" sourcerect="46,1,48,64" canflipx="false"/>
 
   	<Controller direction="None" canbepicked="true">
-        <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+        <sound file="Mods/BTEB/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
       </Controller>
 
       <ItemContainer capacity="20" canbeselected="true" hideitems="true">
@@ -134,11 +134,11 @@
       <Sprite texture="Containers.png" depth="0.78" sourcerect="95,186,71,135"/>
 
   	<Controller direction="None" canbepicked="true">
-        <sound file="Mods/BTE/Items/Containers/Fridge.ogg" type="OnUse" range="750"/>
+        <sound file="Mods/BTEB/Items/Containers/Fridge.ogg" type="OnUse" range="750"/>
       </Controller>
 
   	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
-        <sprite texture="Mods/BTE/Items/Containers/FridgeLights.png" sourcerect="0,0,71,135" alpha="1.0"/>
+        <sprite texture="Mods/BTEB/Items/Containers/FridgeLights.png" sourcerect="0,0,71,135" alpha="1.0"/>
   	  <StatusEffect type="Always" target="This" IsOn="true"/>
   	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
       </LightComponent>
@@ -155,7 +155,7 @@
   	  <StatusEffect type="OnActive" target="Contained" targetnames="Snailfish Meat,Crawler Meat,Mantis Meat" Condition="0.17"/>
   	  <StatusEffect type="OnActive" target="Contained" targetnames="Thresher Meat" Condition="0.18"/>
   	  <StatusEffect type="OnActive" target="Contained" targetnames="Human Meat" Condition="0.19"/>
-        <sound file="Mods/BTE/Items/Containers/FridgeHum.ogg" type="OnActive" range="500" loop="true"/>
+        <sound file="Mods/BTEB/Items/Containers/FridgeHum.ogg" type="OnActive" range="500" loop="true"/>
       </Powered>
 
   	<ItemContainer capacity="15" canbeselected="true" hideitems="true">
@@ -227,7 +227,7 @@
          <Sprite texture="Containers.png" depth="0.79" sourcerect="0,0,413,185"/>
 
      	<Controller direction="None" canbepicked="true">
-           <sound file="Mods/BTE/Items/Containers/CargoContainer.ogg" type="OnUse" range="1250"/>
+           <sound file="Mods/BTEB/Items/Containers/CargoContainer.ogg" type="OnUse" range="1250"/>
          </Controller>
 
          <ItemContainer capacity="60" canbeselected="true" hideitems="true"/>
@@ -290,7 +290,7 @@
 
 	<Holdable slots="RightHand+LeftHand" holdpos="0,-80" aimpos="40,-20" handle1="-40,14" handle2="40,14" aimable="false" controlpose="false">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEB/Items/Weapons/BatHit.ogg"/>
+	    <sound file="Mods/BTEBB/Items/Weapons/BatHit.ogg"/>
         <Explosion range="75" damage="2" stun="3.8" force="12" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
 	</Holdable>
@@ -320,7 +320,7 @@
 
 	<Throwable slots="RightHand+LeftHand" throwforce="3.0">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEB/Items/Weapons/BatHit.ogg"/>
+	    <sound file="Mods/BTEBB/Items/Weapons/BatHit.ogg"/>
         <Explosion range="70" damage="1" stun="2" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
     </Throwable>
@@ -346,7 +346,7 @@
 
 	<Throwable slots="RightHand+LeftHand" throwforce="3.0">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEB/Items/Weapons/BatHit.ogg"/>
+	    <sound file="Mods/BTEBB/Items/Weapons/BatHit.ogg"/>
         <Explosion range="70" damage="1" stun="2" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
     </Throwable>
@@ -575,7 +575,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEB/Items/Tools/Tools.png" sourcerect="31,130,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTEBB/Items/Tools/Tools.png" sourcerect="31,130,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
@@ -599,7 +599,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEB/Items/Tools/Tools.png" sourcerect="62,130,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTEBB/Items/Tools/Tools.png" sourcerect="62,130,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
@@ -623,7 +623,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEB/Items/Tools/Tools.png" sourcerect="62,99,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTEBB/Items/Tools/Tools.png" sourcerect="62,99,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
