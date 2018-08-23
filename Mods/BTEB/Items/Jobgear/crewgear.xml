@@ -582,4 +582,53 @@
       <Containable name="smallitem"/>
     </ItemContainer>
   </Item>
+	 
+	 <Item
+    name="Trilby A"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic fiber trilby hat."
+	>
+
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="Trilby.png" depth="0.6" sourcerect="4,4,38,15"/>
+
+    <Body width="42" height="15" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="Trilby.png" limb="Head" depthlimb="RightArm" origin="0.5,1.15" sourcerect="4,4,38,15"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+
+    <Item
+    name="Trilby B"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic fiber trilby hat."
+	>
+
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="Trilby.png" depth="0.6" sourcerect="49,4,38,15"/>
+
+    <Body width="42" height="15" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="Trilby.png" limb="Head" depthlimb="RightArm" origin="0.5,1.15" sourcerect="49,4,38,15"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+	 
 </Items>
