@@ -1,5 +1,23 @@
 ﻿<Items>
 <Item
+  name="Utility Access"
+  category="Electrical"
+  tags="smallitem">
+
+  <Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="0,64,16,32" depth="0.79"/>
+
+  <Controller direction="None" canbepicked="true" msg="Press [E]">
+    <RequiredItem name="Wrench" type="Equipped" msg="Wrench Needed"/>
+    <sound file="Mods/BTE/Items/Electricity/Lever.ogg" type="OnUse" range="500"/>
+  </Controller>
+
+  <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+    <RequiredItem name="Pliers,Screwdriver" type="Equipped"/>
+    <output name="signal_out"/>
+  </ConnectionPanel>
+</Item>
+
+<Item
   name="Access Panel"
   aliases="Button"
   category="Electrical"
@@ -19,7 +37,7 @@
 
   <Controller direction="None" canbepicked="true" msg="Press [E]">
     <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
-    <sound file="Content/Items/Button/beep.ogg" type="OnUse" range="500.0"/>
+    <sound file="Content/Items/Button/beep.ogg" type="OnUse" range="500"/>
   </Controller>
 
   <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -27,7 +45,7 @@
     <output name="signal_out"/>
   </ConnectionPanel>
 
-  <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="Detach [Wrench]" PickingTime="10.0"
+  <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="Detach [Wrench]" PickingTime="10"
             aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
     <requireditem name="Wrench" type="Equipped"/>
   </Holdable>
@@ -51,7 +69,7 @@
   <Body width="16" height="16" density="20"/>
 
   <Controller direction="None" canbepicked="true" msg="Press [E]">
-    <sound file="Content/Items/Button/switch.ogg" type="OnUse" range="250.0"/>
+    <sound file="Content/Items/Button/switch.ogg" type="OnUse" range="250"/>
   </Controller>
 
   <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
@@ -59,7 +77,7 @@
     <output name="signal_out"/>
   </ConnectionPanel>
 
-  <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="Detach [Wrench]" PickingTime="10.0"
+  <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="Detach [Wrench]" PickingTime="10"
             aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
     <requireditem name="Wrench" type="Equipped"/>
   </Holdable>
