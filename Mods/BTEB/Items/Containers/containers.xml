@@ -1,5 +1,21 @@
 ﻿<Items>
   <Item
+    name="Steel Cabinet"
+	Tags="cntnr"
+    pickdistance="150">
+    
+    <Sprite texture="Content/Items/Containers/locker.png" sourcerect="0,0,128,128" depth="0.79"/>
+	
+	<Controller direction="None" canbepicked="true">
+	  <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+    </Controller>
+
+    <ItemContainer capacity="20" canbeselected="true" hideitems="true">
+	  <Containable name="smallitem,meditem,sawammo"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
     name="Steel Locker"
 	Tags="cntnr"
     pickdistance="150">
