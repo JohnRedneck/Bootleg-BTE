@@ -1152,7 +1152,6 @@
 
   <Item
     name="Shotgun Taser Round"
-	aliases="Taser Round,Shock Round"
     category="Equipment"
 	Tags="smallitem,weapon"
 	description="A shell containing a self-propelled electrified slug."
@@ -1356,66 +1355,6 @@
 	    <sound file="Mods/BTEB/Items/Weapons/MagHit.ogg"/>
 	  </StatusEffect>
 	</Throwable>
-  </Item>
-
-  <Item
-    name="Tec-9"
-    category="Equipment"
-	tags="bigitem,weapon"
-    description="The Tec-9 is a pocket SMG normaly used as a side weapon that can be easily one handed, it uses 9mm magazines."
-    impacttolerance="3">
-
-    <Deconstruct time="20">
-      <Item name="Spare Parts"/>
-	  <Item name="Spare Parts"/>
-	  <Item name="Fulgurium Bar"/>
-	  <Item name="FPGA Circuit"/>
-    </Deconstruct>
-
-    <Sprite texture="Mods/BTEB/Items/Weapons/GaussGuns.png" sourcerect="0,39,99,26" depth="0.55"/>
-
-    <Body width="97" height="24" density="35"/>
-
-	<ItemContainer capacity="1" itempos="3,-6" hideitems="false">
-      <Containable name="9mm Magazine"/>
-    </ItemContainer>
-
-	<RepairTool structurefixamount="-2" limbfixamount="-8" range="2000" barrelpos="57,6" particles="arfire">
-	  <ParticleEmitter particle="arfire" particlespersecond="50"/>
-	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
-      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
-	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
-      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
-      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
-      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
-	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
-      <sound file="Mods/BTEB/Items/Weapons/A.ogg" type="OnUse" range="800" loop="true"/>
-	  <RequiredItems name="9mm Magazine" type="Contained" msg="The loaded magazine is depleted"/>
-      <RequiredSkill name="Weapons" level="40"/>
-	  <StatusEffect type="OnUse" target="This">
-	    <Explosion range="100" force="0.18" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Contained" Condition="-0.2" disabledeltatime="true"/>
-	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
-    </RepairTool>
-
-	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-              holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1">
-	  <StatusEffect type="OnUse" target="This" Condition="-112">
-	    <RequiredItems name="5.7x28mm Magazine" type="Contained"/>
-	  <StatusEffect type="Always" target="This" Condition="100"/>
-    </StatusEffect>
-	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="1">
-	  </StatusEffect>
-    <StatusEffect type="OnBroken" target="This">
-      <sound file="Mods/BTEB/Items/Weapons/reload.ogg"/>
-    </StatusEffect>
-
-	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
-	  </StatusEffect>
-	</Holdable>
   </Item>
 
   <Item
@@ -2722,7 +2661,7 @@ impacttolerance="3"
     name="Taser"
     category="Equipment"
 	tags="meditem,weapon"
-    description="A electroshock intendet to stun disobeying subjects."
+    description="A electroshock used to stun disobeying subjects."
 	cargocontainername="Weapons Shipping Box"
 	canuseonself="true"
 	impacttolerance="3"
@@ -2732,12 +2671,12 @@ impacttolerance="3"
 	  <Item name="Spare Parts"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEB/Items/Weapons/taser.png" sourcerect="0,0,0,0" depth="0.55"/>
+    <Sprite texture="Mods/BTEB/Items/Weapons/taser.png" sourcerect="0,0,48,28" depth="0.55"/>
 
     <Body width="40" height="20" density="25"/>
 
     <RangedWeapon barrelpos="37,3" spread="0" unskilledspread="2" reload="3">
-      <Sound file="Mods/BTEB/Items/Weapons/USPS.ogg" type="OnUse"/>
+      <Sound file="Mods/BTEB/Items/Weapons/Taser.ogg" type="OnUse"/>
       <RequiredItems name="Taser Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="40"/>
 	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
@@ -2751,8 +2690,8 @@ impacttolerance="3"
     </RangedWeapon>
 
 	<ItemComponent>
-      <StatusEffect type="OnUse" target="Character" Condition="-100" stun="10">
-        <sound file="Mods/BTEB/Items/Weapons/USPS.ogg"/>
+      <StatusEffect type="OnUse" target="Character" Condition="-10" stun="10">
+        <sound file="Mods/BTEB/Items/Weapons/Taser.ogg"/>
         <RequiredItems name="Taser Round" type="Contained"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="Contained">
@@ -2772,10 +2711,9 @@ impacttolerance="3"
 
 	<Item
     name="Taser Round"
-	aliases="Taser Round,Shock Round"
     category="Equipment"
 	Tags="smallitem,weapon"
-	description="A taser round designed for Taser."
+	description="A taser round designed to be used in a Taser."
     interactthroughwalls="true"
 	cargocontainername="Weapons Shipping Box"
 	price="150">
@@ -2833,5 +2771,4 @@ impacttolerance="3"
       </StatusEffect>
     </Projectile>
   </Item>
-
 </Items>
