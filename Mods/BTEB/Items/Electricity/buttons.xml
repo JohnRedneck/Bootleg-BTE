@@ -8,7 +8,7 @@
 
   <Controller direction="None" canbepicked="true" msg="Press [E]">
     <RequiredItem name="Wrench" type="Equipped" msg="Wrench Needed"/>
-    <sound file="Mods/BTE/Items/Electricity/Lever.ogg" type="OnUse" range="500"/>
+    <sound file="Mods/BTEB/Items/Electricity/Lever.ogg" type="OnUse" range="500"/>
   </Controller>
 
   <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
