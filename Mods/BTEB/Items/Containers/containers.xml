@@ -290,7 +290,7 @@
 
 	<Holdable slots="RightHand+LeftHand" holdpos="0,-80" aimpos="40,-20" handle1="-40,14" handle2="40,14" aimable="false" controlpose="false">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEBB/Items/Weapons/BatHit.ogg"/>
+	    <sound file="Mods/BTEB/Items/Weapons/BatHit.ogg"/>
         <Explosion range="75" damage="2" stun="3.8" force="12" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
 	</Holdable>
@@ -320,7 +320,7 @@
 
 	<Throwable slots="RightHand+LeftHand" throwforce="3.0">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEBB/Items/Weapons/BatHit.ogg"/>
+	    <sound file="Mods/BTEB/Items/Weapons/BatHit.ogg"/>
         <Explosion range="70" damage="1" stun="2" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
     </Throwable>
@@ -346,7 +346,7 @@
 
 	<Throwable slots="RightHand+LeftHand" throwforce="3.0">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEBB/Items/Weapons/BatHit.ogg"/>
+	    <sound file="Mods/BTEB/Items/Weapons/BatHit.ogg"/>
         <Explosion range="70" damage="1" stun="2" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
     </Throwable>
@@ -575,7 +575,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEBB/Items/Tools/Tools.png" sourcerect="31,130,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTEB/Items/Tools/Tools.png" sourcerect="31,130,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
@@ -599,7 +599,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEBB/Items/Tools/Tools.png" sourcerect="62,130,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTEB/Items/Tools/Tools.png" sourcerect="62,130,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
@@ -623,7 +623,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEBB/Items/Tools/Tools.png" sourcerect="62,99,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTEB/Items/Tools/Tools.png" sourcerect="62,99,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
