@@ -534,4 +534,39 @@
   <Holdable slots="RightHand,LeftHand,Any" controlpose="true"
             aimpos="30,18" handle1="0,0" handle2="0,0"/>
   </Item>
+	
+ <Item
+    name="Electric Lighter"
+	aliases="Lighter"
+    category="Misc"
+    Tags="smallitem"
+	description="Standard issue electric lighter with integrated battery."
+	cargocontainername="Cigarette Pack"
+    price="45">
+
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="Lighter.png" sourcerect="0,0,0,0" depth="0.55"/>
+
+    <Body width="16" height="28" density="9.9"/>
+
+    <!--<RepairTool structurefixamount="0" limbfixamount="0" range="0" barrelpos="-5,0">
+      <ParticleEmitter particle="cigsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+	  <sound file="Mods/BTEB/Items/Medical/Lighter.ogg" type="OnUse" range="300" loop="true"/>
+	  <StatusEffect type="OnUse" target="This,Hull" Condition="-2.0" oxygen="-950"/>
+    </RepairTool>-->
+
+	<LightComponent LightColor="1.0,0.5,0.5,0.7" Flicker="0.4" range="100" IsOn="false">
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+      <StatusEffect type="InWater" target="This" IsOn="false"/>
+	  <StatusEffect type="OnFire" target="This" Condition="-75"/>
+	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+    </LightComponent>
+
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              aimpos="50,18" handle1="0,0" handle2="0,0"/>
+   </Item>
+	
 </Items>
