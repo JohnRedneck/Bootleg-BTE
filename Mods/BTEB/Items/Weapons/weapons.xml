@@ -1255,87 +1255,8 @@
   </Item>
 
   <Item
-    name="9mm Magazine"
-	aliases="9mm Mag"
-    category="Equipment"
-    Tags="smallitem,weapon"
-	description="9mm magazines are used in the Tec-9."
-	impacttolerance="3">
-
-    <Deconstruct time="10">
-      <Item name="Steel Sliver"/>
-	  <Item name="Fulgurium Sliver"/>
-    </Deconstruct>
-
-    <Sprite texture="Mods/BTEB/Items/Weapons/GaussGuns.png" sourcerect="78,74,8,12" depth="0.55"/>
-
-    <Body width="6" height="10" density="14" friction="0.95"/>
-
-    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
-	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEB/Items/Weapons/MagHit.ogg"/>
-	  </StatusEffect>
-	</Throwable>
-  </Item>
-
-  <Item
-    name="Tec-9"
-    category="Equipment"
-	tags="meditem,weapon"
-    description="The Tec-9 is a pocket SMG normaly used as a side weapon that can be easily one handed, it uses 9mm magazines."
-    impacttolerance="3">
-
-    <Deconstruct time="20">
-      <Item name="Spare Parts"/>
-	  <Item name="Fulgurium Bar"/>
-	  <Item name="FPGA Circuit"/>
-    </Deconstruct>
-
-    <Sprite texture="Mods/BTEB/Items/Weapons/GaussGuns.png" sourcerect="0,68,49,20" depth="0.55"/>
-
-    <Body width="36" height="18" density="25"/>
-
-	<ItemContainer capacity="1" itempos="1,-6" hideitems="false">
-      <Containable name="9mm Magazine"/>
-    </ItemContainer>
-
-	<RepairTool structurefixamount="-6" limbfixamount="-30" range="2000" barrelpos="28,3" particles="arfire">
-	  <ParticleEmitter particle="arfire" particlespersecond="50"/>
-	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
-      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
-	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
-      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
-      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
-      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
-	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-0.7"/>
-      <sound file="Mods/BTEB/Items/Weapons/tec-9.ogg" type="OnUse" range="700"/>
-	  <RequiredItems name="9mm Magazine" type="Contained" msg="The loaded magazine is depleted"/>
-      <RequiredSkill name="Weapons" level="20"/>
-	  <StatusEffect type="OnUse" target="This">
-	    <Explosion range="65" force="0.9" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Contained" Condition="-0.4" disabledeltatime="true"/>
-	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
-    </RepairTool>
-
-	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
-              aimpos="75,18" handle1="-12,-3" handle2="-11,-4">
-	  <StatusEffect type="OnUse" target="This" Condition="-1" disabledeltatime="true">
-	    <RequiredItems name="9mm Magazine" type="Contained"/>
-	  </StatusEffect>
-	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="0.1">
-	    <sound file="Mods/BTEB/Items/Weapons/reload.ogg"/>
-	  </StatusEffect>
-	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
-	  </StatusEffect>
-	</Holdable>
-  </Item>
-
-  <Item
     name="5.7x28mm Magazine"
-	aliases="5.7x28mm Mag"
+	  aliases="5.7x28mm Mag"
     category="Equipment"
     Tags="smallitem,weapon"
 	description="5.7x28mm magazines are the main rounds used for the AR-15 thanks to their fabrication simplicity."
@@ -1401,7 +1322,7 @@
 
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
               holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1">
-	  <StatusEffect type="OnUse" target="This" Condition="-112">
+	  <StatusEffect type="OnUse" target="This" Condition="100">
 	    <RequiredItems name="5.7x28mm Magazine" type="Contained"/>
 	  <StatusEffect type="Always" target="This" Condition="100"/>
     </StatusEffect>
@@ -2576,7 +2497,7 @@ impacttolerance="3"
 	<Item
     name="MP5S"
     category="Equipment"
-	tags="bigitem,weapon"
+	  tags="bigitem,weapon"
     description="The MP5S is a burst fire SMG that uses 7.62x51mm magazines."
     impacttolerance="3">
 
@@ -2635,7 +2556,7 @@ impacttolerance="3"
 
 	<Item
     name="7.62x51mm Magazine"
-	aliases="5.7x28mm Mag"
+	  aliases="7.62x51mm Mag"
     category="Equipment"
     Tags="smallitem,weapon"
 	description="5.7x28mm magazines are the main rounds used for the MP5"
@@ -2809,54 +2730,171 @@ impacttolerance="3"
     </MeleeWeapon>
   </Item>
 
-   <Item
-   name="Auto 9"
-   category="Equipment"
-	 tags="meditem,weapon"
-   description="Robocop's gun, uses 9mm rounds, I'd buy that for a dollar!"
-	 cargocontainername="Weapons Shipping Box"
-	 canuseonself="true"
-	 impacttolerance="3"
-   price="100">
+  <Item
+    name="Auto 9"
+    category="Equipment"
+	  tags="meditem,weapon"
+    description="Robocop's gun, uses 9mm magazines, I'd buy that for a dollar!"
+    impacttolerance="3">
 
-    <Deconstruct time="10">
+    <Deconstruct time="20">
+      <Item name="Spare Parts"/>
 	  <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
     </Deconstruct>
 
     <Sprite texture="Mods/BTEB/Items/Weapons/Auto9.png" sourcerect="0,0,47,23" depth="0.55"/>
 
-    <Body width="40" height="20" density="25"/>
+    <Body width="97" height="24" density="35"/>
 
-    <RangedWeapon barrelpos="37,3" spread="0" unskilledspread="2" reload="0.3">
-      <Sound file="Mods/BTEB/Items/Weapons/Auto9.ogg" type="OnUse"/>
-      <RequiredItems name="9mm Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+	<ItemContainer capacity="1" itempos="3,-6" hideitems="true">
+      <Containable name="9mm Magazine"/>
+    </ItemContainer>
+
+	<RepairTool structurefixamount="-2" limbfixamount="-8" range="2000" barrelpos="57,6" particles="arfire">
+	  <ParticleEmitter particle="arfire" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1"/>
+      <sound file="Mods/BTEB/Items/Weapons/Auto9.ogg" type="OnUse" range="800" loop="true"/>
+	  <RequiredItems name="9mm Magazine" type="Contained" msg="The loaded magazine is depleted"/>
       <RequiredSkill name="Weapons" level="40"/>
-	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
-	  <StatusEffect type="Always" target="This" Condition="15"/>
-	  <StatusEffect type="OnUse">
-	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="100" force="0.18" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
       </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.2" disabledeltatime="true"/>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+    </RepairTool>
+
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+            holdpos="35,-10" aimpos="75,18" handle1="-12,-3" handle2="-1,-7">
+	  <StatusEffect type="OnUse" target="This" Condition="-112">
+	  <RequiredItems name="9mm Magazine" type="Contained"/>
+	  <StatusEffect type="Always" target="This" Condition="100"/>
+    </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="1">
+	  </StatusEffect>
+    <StatusEffect type="OnBroken" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/reload.ogg"/>
+    </StatusEffect>
+
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
 	  </StatusEffect>
-    </RangedWeapon>
+	</Holdable>
+  </Item>
 
-	<ItemComponent>
-      <StatusEffect type="OnUse" target="Character" Condition="-100" Health="-100" bleedingdamage="5">
-        <sound file="Mods/BTEB/Items/Weapons/Auto9.ogg"/>
-        <RequiredItems name="9mm Round" type="Contained"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Contained">
-	   <Remove/>
-       <RequiredItems name="9mm Round" type="Contained"/>
-	  </StatusEffect>
-    </ItemComponent>
+  <Item
+    name="9mm Magazine"
+    aliases="9mm Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+   description="9mm magazines are the main rounds used for Robocop's Auto 9"
+   impacttolerance="3">
 
-    <ItemContainer capacity="10" hideitems="true">
-      <Containable name="9mm Round"/>
+    <Deconstruct time="10">
+      <Item name="Steel Bar"/>
+    <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/MP5S.png" sourcerect="88,74,14,10" depth="0.55"/>
+
+    <Body width="12" height="8" density="16" friction="0.95"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+    <StatusEffect type="OnImpact" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/MagHit.ogg"/>
+    </StatusEffect>
+  </Throwable>
+  </Item>
+
+  <Item
+    name="AK-74"
+    category="Equipment"
+	  tags="bigitem,weapon"
+    description="The AK-74 is an assault rifle that uses 5.45x39mm magazines, it's used mostly used by pirates."
+    impacttolerance="3">
+
+    <Deconstruct time="20">
+    <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/AK.png" sourcerect="0,0,114,42" depth="0.55"/>
+
+    <Body width="97" height="24" density="35"/>
+
+	<ItemContainer capacity="1" itempos="3,-6" hideitems="false">
+      <Containable name="5.45x39mm Magazine"/>
     </ItemContainer>
 
+	<RepairTool structurefixamount="-2" limbfixamount="-8" range="2000" barrelpos="57,6" particles="arfire">
+	  <ParticleEmitter particle="arfire" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+      <sound file="Mods/BTEB/Items/Weapons/AK.ogg" type="OnUse" range="800" loop="true"/>
+	  <RequiredItems name="5.45x39mm Magazine" type="Contained" msg="The loaded magazine is depleted"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="100" force="0.18" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.2" disabledeltatime="true"/>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+    </RepairTool>
+
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-              aimpos="75,18" handle1="-12,-3" handle2="-1,-7"/>
+              holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1">
+	  <StatusEffect type="OnUse" target="This" Condition="100">
+	    <RequiredItems name="5.45x39mm Magazine" type="Contained"/>
+	  <StatusEffect type="Always" target="This" Condition="100"/>
+    </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="1">
+	  </StatusEffect>
+    <StatusEffect type="OnBroken" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/reload.ogg"/>
+    </StatusEffect>
+
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+
+  <Item
+    name="5.45x39mm Magazine"
+	  aliases="5.45x39mm Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	  description="5.45x39mm magazines are the main rounds used for the AK-74 thanks to their fabrication simplicity."
+	  impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Steel Bar"/>
+	  <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/AKmag.png" sourcerect="0,0,26,25" depth="0.55"/>
+
+    <Body width="12" height="8" density="16" friction="0.95"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTEB/Items/Weapons/MagHit.ogg"/>
+	  </StatusEffect>
+	</Throwable>
   </Item>
 </Items>

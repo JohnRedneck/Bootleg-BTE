@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
   <Item
-    name="Stabilozine"
+    name="Canister of Stabilozine"
+	aliases="Stabilozine"
     category="Material"
     spritecolor="1.0,1.0,0.7,1.0"
     Tags="smallitem,chem,medical"
     description="A mild stimulant which is used as an ingredient in the manufacture of various chemicals."
-	canuseonself="true"
 	cargocontainername="Medical Shipping Box"
     price="10">
 	
@@ -14,14 +14,9 @@
       <Item name="Stabilozine" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6" />
+	<Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
 
-    <Body width="8" height="17" density="10"/>
-	
-	<ItemComponent>
-      <StatusEffect tags="stabilozine,medical" type="OnUse" target="Character" Health="0.1" duration="20"/>
-      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+    <Body width="6" height="14" density="10"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="stabilozine,medical" type="OnUse" target="Character" Health="0.3" Oxygen="0.3" duration="10">
@@ -46,12 +41,44 @@
   </Item>
   
   <Item
-    name="Corrigodone"
+    name="Pill Bottle of Stabilozine"
+    category="Material"
+    spritecolor="1.0,1.0,0.7,1.0"
+    Tags="smallitem,medical"
+    description="A mild stimulant which is used as an ingredient in the manufacture of various chemicals."
+	canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Stabilozine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+
+    <Body width="8" height="16" density="10"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="stabilozine,medical" type="OnUse" target="Character" Health="0.1" delay="12" duration="30"/>
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="stabilozine,medical" type="OnUse" target="Character" Health="0.1" delay="12" duration="30">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Canister of Corrigodone"
+	aliases="Corrigodone"
     category="Material"
     spritecolor="0.8,0.0,0.0,1.0"
     Tags="smallitem,chem,medical"
 	description="Highly effective at treating various types of physical trauma."
-    canuseonself="true"
 	cargocontainername="Medical Shipping Box"
     price="50">
 	
@@ -61,12 +88,7 @@
 
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
 
-    <Body width="8" height="16" density="10.2"/>
-	
-	<ItemComponent>
-      <StatusEffect tags="corrigodone,medical" type="OnUse" target="Character" Health="0.5" duration="10"/>     
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+    <Body width="6" height="14" density="10.2"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="corrigodone,medical" type="OnUse" target="Character" Health="3.0" duration="5.0">
@@ -91,12 +113,44 @@
   </Item>
   
   <Item
-    name="Fibrinozine"
+    name="Pill Bottle of Corrigodone"
+    category="Material"
+    spritecolor="0.8,0.0,0.0,1.0"
+    Tags="smallitem,medical"
+	description="Highly effective at treating various types of physical trauma."
+    canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Corrigodone" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+
+    <Body width="8" height="16" density="10.2"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="corrigodone,medical" type="OnUse" target="Character" Health="1.0" delay="12" duration="15"/>     
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="corrigodone,medical" type="OnUse" target="Character" Health="1.0" delay="12" duration="15">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>    
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Canister of Fibrinozine"
+	aliases="Fibrinozine"
     category="Material"
     spritecolor="0.6,0.4,0.2,1.0"
     Tags="smallitem,chem,medical"
 	description="A hemostatic agent that slows down bleeding."
-    canuseonself="true"
 	cargocontainername="Medical Shipping Box"
     price="50">
 	
@@ -105,16 +159,8 @@
     </Deconstruct>
 
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.3"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="fibrinozine,medical" type="OnUse" target="Character" Bleeding="-0.05" duration="20"/>
-	  <StatusEffect tags="fibrinozine,medical" type="OnUse" target="Character" oxygen="-0.1" duration="20" disabledeltatime="true" checkconditionalalways="true">
-	    <Conditional oxygen="gt 0"/>
-	  </StatusEffect>
-      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="10.3"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="fibrinozine,medical" type="OnUse" target="Character" Health="0.1" Bleeding="-0.1" duration="5.0">
@@ -141,14 +187,49 @@
       </StatusEffect>
     </Throwable>
   </Item>
+  
+  <Item
+    name="Pill Bottle of Fibrinozine"
+    category="Material"
+    spritecolor="0.6,0.4,0.2,1.0"
+    Tags="smallitem,medical"
+	description="A hemostatic agent that slows down bleeding."
+    canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Fibrinozine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+
+    <Body width="8" height="16" density="10.3"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="fibrinozine,medical" type="OnUse" target="Character" Bleeding="-0.05" delay="12" duration="20"/>
+	  <StatusEffect type="OnUse" target="Character" oxygen="-0.1" delay="12" duration="20" disabledeltatime="true" checkconditionalalways="true">
+	    <Conditional oxygen="gt 0"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="fibrinozine,medical" type="OnUse" target="Character" Bleeding="-0.05" delay="12" duration="20">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
 
   <Item
-    name="Erythrozine"
+    name="Canister of Erythrozine"
+	aliases="Erythrozine"
     category="Material"
     spritecolor="0.5,0.5,1.0,1.0"
     Tags="smallitem,chem,medical"
     description="Most commonly used for treating oxygen deprivation."
-    canuseonself="true"
 	cargocontainername="Medical Shipping Box"
     price="50">
 	
@@ -156,14 +237,9 @@
       <Item name="Stabilozine" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6" />
-
-    <Body width="8" height="16" density="10.2"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="erythrozine,medical" type="OnUse" target="Character" duration="10"/>
-      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="10.2"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="erythrozine,medical" type="OnUse" target="Character" Health="-0.3" Oxygen="2.0" duration="10">
@@ -186,14 +262,46 @@
       </StatusEffect>
     </Throwable>
   </Item>
+  
+  <Item
+    name="Pill Bottle of Erythrozine"
+    category="Material"
+    spritecolor="0.5,0.5,1.0,1.0"
+    Tags="smallitem,medical"
+    description="Most commonly used for treating oxygen deprivation."
+    canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Erythrozine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="10.2"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="erythrozine,medical" type="OnUse" target="Character" delay="12" duration="20"/>
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="erythrozine,medical" type="OnUse" target="Character" delay="12" duration="20">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
 
   <Item
-    name="Auxiliorizine"
+    name="Canister of Auxiliorizine"
+	aliases="Auxiliorizine"
     category="Material"
     spritecolor="1.0,1.0,0.0,1.0"
     Tags="smallitem,chem,medical"
     description="A highly potent corrigodone-based stimulant."
-	canuseonself="true"
 	cargocontainername="Medical Shipping Box"
     price="150">
 	
@@ -202,13 +310,8 @@
     </Deconstruct>
 
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.4"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="auxiliorizine,medical" type="OnUse" target="Character" Health="0.1" Oxygen="0.25" Bleeding="-0.005" duration="30"/>     
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="10.4"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="auxiliorizine,medical" type="OnUse" target="Character" Health="0.5" Oxygen="0.5" Bleeding="-0.025" duration="60">
@@ -233,11 +336,43 @@
   </Item>
   
   <Item
-    name="Chloromydride"
+    name="Pill Bottle of Auxiliorizine"
+    category="Material"
+    spritecolor="1.0,1.0,0.0,1.0"
+    Tags="smallitem,medical"
+    description="A highly potent corrigodone-based stimulant."
+	canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Auxiliorizine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="10.4"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="auxiliorizine,medical" type="OnUse" target="Character" Health="0.1" Oxygen="0.25" Bleeding="-0.005" delay="12" duration="90"/>     
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="auxiliorizine,medical" type="OnUse" target="Character" Health="0.1" Oxygen="0.25" Bleeding="-0.005" delay="12" duration="90">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>     
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Canister of Chloromydride"
+	aliases="Chloromydride"
     category="Material"
     spritecolor="0.7,0.9,1.0,1.0"
     Tags="smallitem,chem,medical"  
-	canuseonself="true"
     description="A strong synaptic stimulant and cardiostimulant which is used as a preventative measure against critical condition. Should only be injected once every 30 seconds."
     cargocontainername="Medical Shipping Box"
 	price="50">
@@ -246,14 +381,9 @@
       <Item name="Stabilozine" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6" />
-
-    <Body width="8" height="16" density="20"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="chloromydride,medical" type="OnUse" target="Character" duration="30"/>
-      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="20"/>
     
     <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="chloromydride,medical" type="OnUse" target="Character" health="1.0" bleeding="-0.2" Oxygen="0.6" duration="30" stackable="false" checkconditionalalways="true">
@@ -284,12 +414,45 @@
   </Item>
   
   <Item
-    name="Biomass"
+    name="Pill Bottle of Chloromydride"
+    category="Material"
+    spritecolor="0.7,0.9,1.0,1.0"
+    Tags="smallitem,medical"  
+    description="A strong synaptic stimulant and cardiostimulant which is used as a preventative measure against critical condition. Should only be injected once every 30 seconds."
+    canuseonself="true">
+	 
+	<Deconstruct time="5">
+      <Item name="Chloromydride" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="20"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="chloromydride,medical" type="OnUse" target="Character" delay="12" duration="30"/>
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+    
+    <MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="chloromydride,medical" type="OnUse" target="Character" delay="12" duration="30">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Bottle of Biomass"
+	aliases="Biomass"
     category="Material"
     spritecolor="0.0,0.9,0.1,1.0"
-    Tags="smallitem,chem,medical"
+    Tags="smallitem,medical"
     canuseonself="true"
-	description="Carbon-based compounds composed of organic matter from the remains of organisms such as plants and animals."
+	description="Carbon-based compounds made of organic matter from the remains of organisms such as plants and animals."
 	cargocontainername="Chemical Shipping Box"
     price="15">
 	
@@ -298,20 +461,28 @@
     </Deconstruct>
 
     <ItemComponent>
-      <StatusEffect type="OnUse" target="Character" Health="0.01" duration="20"/>  
+      <StatusEffect type="OnUse" target="Character" Health="0.01" delay="12" duration="20"/>  
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
     </ItemComponent>
 
     <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
 	
-	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10"/>
+	<Body width="8" height="16" density="10.1"/>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect type="OnUse" target="Character" Health="0.01" delay="12" duration="20">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
   </Item>
 
   <Item
-    name="Ethanol"
-	aliases="Alcohol"
+    name="Vial of Ethanol"
+	aliases="Alcohol,Ethanol"
     category="Material"
     spritecolor="0.0,0.9,0.1,1.0"
     Tags="smallitem,chem,medical"
@@ -325,19 +496,19 @@
     </Deconstruct>
 
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
-
-    <Body width="8" height="7" density="10.01"/>
+	
+	<Body width="6" height="15" density="10.01"/>
 	
 	<ItemComponent>
-      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-      <StatusEffect tags="drunk3" type="OnUse" target="Character" SpeedMultiplier="-0.14" oxygen="-0.03" disabledeltatime="true" duration="50" checkconditionalalways="true">
+      <StatusEffect tags="drunk3" type="OnUse" target="Character" SpeedMultiplier="-0.14" oxygen="-0.03" delay="12" duration="50" disabledeltatime="true" checkconditionalalways="true">
 	    <Conditional oxygen="gt 0"/>
 	  </StatusEffect>
-	  <StatusEffect tags="drunk2" type="OnUse" target="Character" Health="-0.001" duration="50"/>
-	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="0.3" delay="12" disabledeltatime="true"/>
-	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="1" delay="22" disabledeltatime="true"/>
-	  <StatusEffect tags="drunk2" type="OnUse" target="Character" Stun="0.4" delay="34" disabledeltatime="true"/>
-	  <StatusEffect tags="drunk3" type="OnUse" target="Character" Stun="2" delay="45" disabledeltatime="true"/>
+	  <StatusEffect tags="drunk2" type="OnUse" target="Character" Health="-0.001" delay="12" duration="50"/>
+	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="0.3" delay="24" disabledeltatime="true"/>
+	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="1" delay="34" disabledeltatime="true"/>
+	  <StatusEffect tags="drunk2" type="OnUse" target="Character" Stun="0.4" delay="46" disabledeltatime="true"/>
+	  <StatusEffect tags="drunk3" type="OnUse" target="Character" Stun="2" delay="57" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
     </ItemComponent>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
@@ -411,7 +582,7 @@
       </StatusEffect>
 	  
 	  <StatusEffect type="OnFire" target="this">
-		<sound file="Mods/BTEB/Items/Weapons/ThermiteExplosion.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
 	    <Fire size="25"/>
 		<Remove/>
 	  </StatusEffect>
@@ -419,7 +590,8 @@
   </Item>
   
   <Item
-    name="Ethylzine"
+    name="Vial of Ethylzine"
+	aliases="Ethylzine"
     category="Material"
     Tags="smallitem,chem,medical"  
 	spritecolor="0.0,0.5,0.1,1.0"
@@ -432,22 +604,22 @@
       <Item name="Stabilozine" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
-      <StatusEffect type="OnUse" target="Character" delay="22">
+      <StatusEffect type="OnUse" target="Character" delay="15">
         <Conditional hasstatustag="drunk1">
           <CancelStatusEffect/>
         </Conditional>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" delay="41">
+	  <StatusEffect type="OnUse" target="Character" delay="21">
         <Conditional hasstatustag="drunk2">
           <CancelStatusEffect/>
         </Conditional>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" delay="64">
+	  <StatusEffect type="OnUse" target="Character" delay="30">
         <Conditional hasstatustag="drunk3">
           <CancelStatusEffect/>
         </Conditional>
@@ -507,7 +679,8 @@
   </Item>
   
   <Item
-    name="Chlorine"
+    name="Canister of Chlorine"
+	aliases="Chlorine"
     category="Material"
     spritecolor="1.0,1.0,1.0,0.6"
     Tags="smallitem,chem,medical"
@@ -519,9 +692,9 @@
       <Item name="Chlorine" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
-
-    <Body width="8" height="17" density="10.5"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
+	
+	<Body width="6" height="14" density="10.5"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="chlorine,poison" type="OnUse" target="Character" Health="-0.1" duration="20">
@@ -550,12 +723,12 @@
   </Item>
   
   <Item
-    name="Chloral Hydrate"
+    name="Canister of Chloral Hydrate"
+	aliases="Chloral Hydrate"
     category="Material"
     spritecolor="1.0,1.0,1.0,0.8"
     Tags="smallitem,chem,medical"
 	description="A chemical reagent with sedative properties. Might be lethal in high doses."
-	canuseonself="true"
 	cargocontainername="Chemical Shipping Box"
     price="20">
 	
@@ -563,14 +736,9 @@
       <Item name="Chloral Hydrate" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
-
-    <Body width="8" height="17" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="chloralhydrate,poisonweak" type="OnUse" target="Character" oxygen="-0.04" SpeedMultiplier="-0.1" disabledeltatime="true" delay="9" duration="12"/>
-      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="10.1"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="chloralhydrate,poisonweak" type="OnUse" target="Character" oxygen="-0.08" SpeedMultiplier="-0.1" disabledeltatime="true" delay="3" duration="14">
@@ -606,10 +774,42 @@
   </Item>
   
   <Item
-    name="Midazolam"
+    name="Pill Bottle of Chloral Hydrate"
+    category="Material"
+    spritecolor="1.0,1.0,1.0,0.8"
+    Tags="smallitem,medical"
+	description="A chemical reagent with sedative properties. Might be lethal in high doses."
+	canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Chloral Hydrate" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="10.1"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="chloralhydrate,poisonweak" type="OnUse" target="Character" oxygen="-0.04" SpeedMultiplier="-0.1" disabledeltatime="true" delay="9" duration="12"/>
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="chloralhydrate,poisonweak" type="OnUse" target="Character" oxygen="-0.04" SpeedMultiplier="-0.1" disabledeltatime="true" delay="9" duration="12">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Canister of Midazolam"
+	aliases="Midazolam"
     category="Material"
     Tags="smallitem,chem,medical"
-	canuseonself="true"
 	description="Medication used for anesthesia, procedural sedation, trouble sleeping, and severe agitation."
 	cargocontainername="Chemical Shipping Box"
     price="40">
@@ -618,15 +818,9 @@
       <Item name="Midazolam" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
-
-    <Body width="8" height="17" density="10.2"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="midazolam,poison" type="OnUse" target="Character" oxygen="-0.02" SpeedMultiplier="-0.1" disabledeltatime="true" delay="9" duration="15"/>
-	  <StatusEffect type="OnUse" target="Character" Stun="25" delay="22"/>
-      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="10.2"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="midazolam,poison" type="OnUse" target="Character" oxygen="-0.05" SpeedMultiplier="-0.2" disabledeltatime="true" delay="3" duration="60">
@@ -660,13 +854,48 @@
       </StatusEffect>
     </Throwable>
   </Item>
+  
+  <Item
+    name="Pill Bottle of Midazolam"
+    category="Material"
+    Tags="smallitem,medical"
+	description="Medication used for anesthesia, procedural sedation, trouble sleeping, and severe agitation."
+	canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Midazolam" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="10.2"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="midazolam,poison" type="OnUse" target="Character" oxygen="-0.02" SpeedMultiplier="-0.1" disabledeltatime="true" delay="15" duration="15"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="25" delay="22"/>
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="midazolam,poison" type="OnUse" target="Character" oxygen="-0.02" SpeedMultiplier="-0.1" disabledeltatime="true" delay="15" duration="15">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="25" delay="22">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
 
   <Item
-    name="Hyperzine"
+    name="Canister of Hyperzine"
+	aliases="Hyperzine"
     category="Material"
     spritecolor="0.8,0.3,0.8,1.0"
     Tags="smallitem,chem,medical"
-	canuseonself="true"
     description="This drug quickly increases blood flow to muscles, output of the heart and lungs, pupil dilation, and blood sugar."
 	cargocontainername="Chemical Shipping Box"
     price="150">
@@ -676,16 +905,8 @@
     </Deconstruct>
 
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="12"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="hyperzine,medical" type="OnUse" target="Character" SpeedMultiplier="0.1" oxygen="0.01" stun="-0.5" Health="-0.005" duration="30" disabledeltatime="true"/>
-	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="-0.05" oxygen="-0.02" OxygenAvailable="-1000" duration="30" disabledeltatime="true" checkconditionalalways="true">
-	    <Conditional hasstatustag="chloromydride"/>
-	  </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="12"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="hyperzine,medical" type="OnUse" target="Character" SpeedMultiplier="0.3" oxygen="0.03" stun="-1" Health="-0.01" duration="60" disabledeltatime="true">
@@ -722,14 +943,209 @@
       </StatusEffect>
     </Throwable>
   </Item>
+  
+  <Item
+    name="Pill Bottle of Hyperzine"
+    category="Material"
+    spritecolor="0.8,0.3,0.8,1.0"
+    Tags="smallitem,medical"
+    description="This drug quickly increases blood flow to muscles, output of the heart and lungs, pupil dilation, and blood sugar."
+	canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Hyperzine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="12"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="hyperzine,medical" type="OnUse" target="Character" SpeedMultiplier="0.1" oxygen="0.01" stun="-0.5" Health="-0.005" delay="12" duration="30" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="hyperzine,medical" type="OnUse" target="Character" SpeedMultiplier="0.1" oxygen="0.01" stun="-0.5" Health="-0.005" delay="12" duration="30" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Canister of Neurozinide"
+	aliases="Neurozinide"
+    category="Material"
+    spritecolor="0.5,0.1,0.1,1.0"
+    Tags="smallitem,chem,medical"
+    description="A highly potent neurotoxin that haywires neuro-cognitive functions."
+	cargocontainername="Chemical Shipping Box"
+    price="350">
+	
+	<Deconstruct time="5">
+      <Item name="Stabilozine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
+	
+	<Body width="6" height="14" density="12"/>
+	
+	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
+      <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-1.5" ObstructVision="true" duration="100" stackable="false" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="10" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="20" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.11" delay="30" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.14" delay="40" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="50" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.16" delay="60" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.19" delay="70" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.15" delay="80" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="90" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="100" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  
+	  <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-1.5" ObstructVision="true" duration="100" stackable="false" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.3" delay="10" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.36" delay="20" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.33" delay="30" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.42" delay="40" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.36" delay="50" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.48" delay="60" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.57" delay="70" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.45" delay="80" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.36" delay="90" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.3" delay="100" disabledeltatime="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  
+	  <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-0.004" ObstructVision="true" duration="100" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.3" stackable="false" delay="10" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.36" stackable="false" delay="20" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.33" stackable="false" delay="30" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.42" stackable="false" delay="40" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.36" stackable="false" delay="50" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.48" stackable="false" delay="60" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.57" stackable="false" delay="70" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.45" stackable="false" delay="80" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.36" stackable="false" delay="90" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.3" stackable="false" delay="100" disabledeltatime="true">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-15">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+    name="Pill Bottle of Neurozinide"
+    category="Material"
+    spritecolor="0.5,0.1,0.1,1.0"
+    Tags="smallitem,medical"
+    description="A highly potent neurotoxin that haywires neuro-cognitive functions."
+	canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Neurozinide" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="12"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-1.5" ObstructVision="true" delay="12" duration="25" stackable="false" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-1.5" ObstructVision="true" delay="12" duration="25" stackable="false" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
 
   <Item
-    name="Morbusine"
-	aliases="Morbu,Morbo"
+    name="Canister of Morbusine"
+	aliases="Morbu,Morbo,Morbusine"
     category="Material"
-    spritecolor="0.0,0.0,0.0,1.0"
+    spritecolor="0.0,0.0,0.1,1.0"
     Tags="smallitem,chem,medical"
-	canuseonself="true"
     description="A highly potent neurotoxin that reduces inhibitory transmissions in the nervous system resulting in muscular contractions and subsequent suffocation."
     cargocontainername="Chemical Shipping Box"
 	price="1000">
@@ -739,13 +1155,8 @@
     </Deconstruct>
 
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="12"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="morbusine,poisonstrong" type="OnUse" target="Character" SpeedMultiplier="-0.04" Health="-0.01" oxygen="-0.06" duration="100" disabledeltatime="true"/>
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="12"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="morbusine,poisonstrong" type="OnUse" target="Character" SpeedMultiplier="-0.08" Health="-0.02" oxygen="-0.09" duration="100" disabledeltatime="true">
@@ -862,23 +1273,96 @@
   </Item>
   
   <Item
-    name="Morbusanide"
+    name="Pill Bottle of Morbusine"
+    category="Material"
+    spritecolor="0.0,0.0,0.1,1.0"
+    Tags="smallitem,medical"
+    description="A highly potent neurotoxin that reduces inhibitory transmissions in the nervous system resulting in muscular contractions and subsequent suffocation."
+    canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Morbusine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="12"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="morbusine,poisonstrong" type="OnUse" target="Character" SpeedMultiplier="-0.04" Health="-0.01" oxygen="-0.06" delay="12" duration="100" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="22" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="32" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.11" delay="42" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.14" delay="52" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="62" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.16" delay="72" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.19" delay="82" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.15" delay="92" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="102" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="112" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="morbusine,poisonstrong" type="OnUse" target="Character" SpeedMultiplier="-0.04" Health="-0.01" oxygen="-0.06" delay="12" duration="100" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="22" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="32" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.11" delay="42" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.14" delay="52" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="62" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.16" delay="72" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.19" delay="82" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.15" delay="92" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="102" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="112" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Vial of Morbusanide"
+	aliases="Morbusanide"
     category="Material"
     spritecolor="0.0,0.0,0.2,1.0"
     Tags="smallitem,chem,medical"
-	canuseonself="true"
-    description="A morbusine antidote.">
+    description="A morbusine antidote. It deals with the most severe effects but muscular contractions will still occur."
+	canuseonself="true">
    
     <Deconstruct time="5">
       <Item name="Stabilozine" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10"/>
 	
 	<ItemComponent>
-      <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.02" Health="0.005" oxygen="0.03" duration="100" disabledeltatime="true">
+      <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.02" Health="0.005" oxygen="0.03" delay="12" duration="100" disabledeltatime="true">
 	    <Conditional hasstatustag="morbusine"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
@@ -916,11 +1400,11 @@
   </Item>
   
   <Item
-    name="Hematosine"
+    name="Canister of Hematosine"
+	aliases="Hematosine"
     category="Material"
     spritecolor="0.5,0.0,0.0,1.0"
     Tags="smallitem,chem,medical"
-	canuseonself="true"
     description="A highly potent neurotoxin that causes hemorrhage through all natural openings and wounds the victim might already have."
 	cargocontainername="Chemical Shipping Box"
     price="400">
@@ -932,11 +1416,6 @@
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
 
     <Body width="8" height="16" density="12"/>
-	
-	<ItemComponent>
-      <StatusEffect tags="hematosine,poisonstrong" type="OnUse" target="Character" bleeding="0.025" delay="16" duration="50"/>
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="hematosine,poisonstrong" type="OnUse" target="Character" bleeding="0.05" delay="4" duration="100">
@@ -961,134 +1440,75 @@
   </Item>
   
   <Item
-    name="Neurozinide"
+    name="Pill Bottle of Hematosine"
     category="Material"
     spritecolor="0.5,0.0,0.0,1.0"
-    Tags="smallitem,chem,medical"
-	canuseonself="true"
-    description="A highly potent neurotoxin that haywires neuro-cognitive functions."
-	cargocontainername="Chemical Shipping Box"
-    price="350">
+    Tags="smallitem,medical"
+    description="A highly potent neurotoxin that causes hemorrhage through all natural openings and wounds the victim might already have."
+	canuseonself="true">
 	
+	<Deconstruct time="5">
+      <Item name="Hematosine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="12"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="hematosine,poisonstrong" type="OnUse" target="Character" bleeding="0.025" delay="16" duration="50"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="hematosine,poisonstrong" type="OnUse" target="Character" bleeding="0.025" delay="16" duration="50">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Canister of Sufforin"
+	aliases="Sufforin"
+    category="Material"
+    spritecolor="1.0,0.3,0.3,1.0"
+    Tags="smallitem,chem,medical"   
+    description="A devious poison with a delayed effect.">
+    
 	<Deconstruct time="5">
       <Item name="Stabilozine" mincondition="0.99"/>
     </Deconstruct>
 
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
+	
+	<Body width="6" height="14" density="10"/>
 
-    <Body width="8" height="16" density="12"/>
-	
-	<ItemComponent>
-      <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-1.5" ObstructVision="true" duration="10" stackable="false" disabledeltatime="true"/>
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
-	
-	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
-      <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-1.5" ObstructVision="true" duration="100" stackable="false" disabledeltatime="true">
+    <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
+      <StatusEffect type="OnUse" target="Character" Health="-2.5">
         <RequiredItem name="Medical Syringe" type="Container"/>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="10" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="20" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.11" delay="30" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.14" delay="40" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="50" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.16" delay="60" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.19" delay="70" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.15" delay="80" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="90" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="100" disabledeltatime="true">
+      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-5.0" OxygenAvailable="-10000" delay="20" duration="60"> 
         <RequiredItem name="Medical Syringe" type="Container"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
         <RequiredItem name="Medical Syringe" type="Container"/>
       </StatusEffect>
 	  
-	  <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-1.5" ObstructVision="true" duration="100" stackable="false" disabledeltatime="true">
+	  <StatusEffect type="OnUse" target="Character" Health="-5.0">
         <RequiredItem name="Medical Dart" type="Container"/>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.3" delay="10" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.36" delay="20" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.33" delay="30" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.42" delay="40" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.36" delay="50" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.48" delay="60" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.57" delay="70" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.45" delay="80" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.36" delay="90" disabledeltatime="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.3" delay="100" disabledeltatime="true">
+      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-15" OxygenAvailable="-30000" delay="20" duration="60"> 
         <RequiredItem name="Medical Dart" type="Container"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Dart" type="Container"/>
       </StatusEffect>
 	  
-	  <StatusEffect tags="neurozinide,poison" type="OnUse" target="Character" SpeedMultiplier="-0.004" ObstructVision="true" duration="100" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.3" stackable="false" delay="10" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.36" stackable="false" delay="20" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.33" stackable="false" delay="30" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.42" stackable="false" delay="40" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.36" stackable="false" delay="50" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.48" stackable="false" delay="60" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.57" stackable="false" delay="70" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.45" stackable="false" delay="80" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.36" stackable="false" delay="90" disabledeltatime="true">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" Stun="0.3" stackable="false" delay="100" disabledeltatime="true">
+      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-0.015" OxygenAvailable="-3" delay="30" duration="60"> 
         <RequiredItem name="Medical Inhaler" type="Container"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-15">
@@ -1096,64 +1516,44 @@
       </StatusEffect>
     </Throwable>
   </Item>
-
+  
   <Item
-    name="Velonaceps Calyx Eggs"
-	aliases="Husk Eggs"
+    name="Pill Bottle of Sufforin"
     category="Material"
-    spritecolor="0.1,0.1,0.1,1.0"
-    Tags="smallitem,chem,medical"
-	canuseonself="true"
-    description="A viscous substance containing dormant eggs of the Europan lifeform colloquially referred to as 'husk parasite'."
-	cargocontainername="Biohazard Shipping Box"
-    price="2000">
-	
+    spritecolor="1.0,0.3,0.3,1.0"
+    Tags="smallitem,medical"   
+    description="A devious poison with a delayed effect."
+	canuseonself="true">
+    
 	<Deconstruct time="5">
-      <Item name="Biomass" mincondition="0.99"/>
+      <Item name="Sufforin" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="11"/>
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="10"/>
 	
 	<ItemComponent>
-      <StatusEffect type="OnUse" target="Character" HuskInfectionState="0.01" delay="22">
-        <Conditional HuskInfectionState="lt 0.01"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-5.0" OxygenAvailable="-10000" delay="32" duration="60"/>
+      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
     </ItemComponent>
-	
-	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
-      <StatusEffect type="OnUse" target="Character" HuskInfectionState="0.01">
-        <!-- HuskInfectionState must be less than 0.01 so you can't speed up the infection -->
-        <Conditional HuskInfectionState="lt 0.01"/>
-        <RequiredItem name="Medical Syringe" type="Container"/>
+
+    <MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-5.0" OxygenAvailable="-10000" delay="32" duration="60">
+        <Conditional stun="gt 0"/>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
+      <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" HuskInfectionState="0.01">
-        <Conditional HuskInfectionState="lt 0.01"/>
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" HuskInfectionState="0.01" delay="12">
-        <Conditional HuskInfectionState="lt 0.01"/>
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-15">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-    </Throwable>
+    </MeleeWeapon>
   </Item>
 
   <Item
-    name="Calyxanide"
-	aliases="Calyx,Husk Cure"
+    name="Vial of Calyxanide"
+	aliases="Calyxanide,Calyx,Husk Cure"
     category="Material"
-    spritecolor="0.2,0.2,0.2,1.0"
+    spritecolor="0.3,0.2,0.2,1.0"
     Tags="smallitem,chem,medical"
 	canuseonself="true"
     description="An antiparasitic drug used in the treatment of husk parasite infections. Might require higher dosage to cure the infection at later stages."
@@ -1164,21 +1564,21 @@
       <Item name="Stabilozine" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.7"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.7"/>
 	
 	<ItemComponent>
-      <StatusEffect type="OnUse" target="Character" HuskInfectionState="-0.2">
+      <StatusEffect type="OnUse" target="Character" HuskInfectionState="-0.2" delay="12">
         <Conditional HuskInfectionState="lt 1.0"/>
       </StatusEffect>
-	  <StatusEffect tags="calyxanide,poison" type="OnUse" target="Character" Health="-1.5" duration="10">
+	  <StatusEffect tags="calyxanide,poison" type="OnUse" target="Character" Health="-1.5" delay="12" duration="10">
         <Conditional HuskInfectionState="eq 1.0"/>
       </StatusEffect>
-	  <StatusEffect tags="calyxanide,poison" type="OnUse" target="Character" Health="-2.5" duration="10">
+	  <StatusEffect tags="calyxanide,poison" type="OnUse" target="Character" Health="-2.5" delay="12" duration="10">
         <Conditional SpeciesName="husk"/>
       </StatusEffect>
-	  <StatusEffect tags="calyxanide,poison" type="OnUse" target="Character" Health="-5.0" duration="10">
+	  <StatusEffect tags="calyxanide,poison" type="OnUse" target="Character" Health="-5.0" delay="12" duration="10">
         <Conditional SpeciesName="huskweak"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
@@ -1257,76 +1657,20 @@
   </Item>
   
   <Item
-    name="Sufforin"
-    category="Material"
-    spritecolor="1.0,0.3,0.3,1.0"
-    Tags="smallitem,chem,medical"   
-	canuseonself="true"
-    description="A devious poison with a delayed effect.">
-    
-	<Deconstruct time="5">
-      <Item name="Stabilozine" mincondition="0.99"/>
-    </Deconstruct>
-
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10"/>
-	
-	<ItemComponent>
-      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-5.0" OxygenAvailable="-10000" duration="60" delay="40"/>
-      <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
-
-    <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
-      <StatusEffect type="OnUse" target="Character" Health="-2.5">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-5.0" OxygenAvailable="-10000" duration="60" delay="20"> 
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-        <RequiredItem name="Medical Syringe" type="Container"/>
-      </StatusEffect>
-	  
-	  <StatusEffect type="OnUse" target="Character" Health="-5.0">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-15" OxygenAvailable="-30000" duration="60" delay="20"> 
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
-        <RequiredItem name="Medical Dart" type="Container"/>
-      </StatusEffect>
-	  
-      <StatusEffect tags="sufforin,poisonstrong" type="OnUse" target="Character" Oxygen="-0.015" OxygenAvailable="-3" duration="60" delay="30"> 
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-15">
-        <RequiredItem name="Medical Inhaler" type="Container"/>
-      </StatusEffect>
-    </Throwable>
-  </Item>
-  
-  <Item
-    name="Liquid Oxygenite"
+    name="Canister of Oxygenite"
+	aliases="Liquid Oxygenite"
     category="Material"
     spritecolor="0.6,0.8,1.0,1.0"
     Tags="smallitem,chem,medical"
-    canuseonself="true"
     description="A mildy toxic solution that slowly releases oxygen into the bloodstream when injected.">
 	
 	<Deconstruct time="5">
       <Item name="Liquid Oxygenite" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6" />
-
-    <Body width="8" height="16" density="10"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
 	
-	<ItemComponent>
-      <StatusEffect tags="oxygenite,medical" type="OnUse" target="Character" Oxygen="1" duration="15"/>
-	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
-    </ItemComponent>
+	<Body width="6" height="14" density="10"/>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect tags="oxygenite,medical" type="OnUse" target="Character" Health="-0.1" Oxygen="10" duration="60">
@@ -1351,8 +1695,40 @@
   </Item>
   
   <Item
-    name="Sulphuric Acid"
-	aliases="Sulfuric Acid"
+    name="Pill Bottle of Oxygenite"
+    category="Material"
+    spritecolor="0.6,0.8,1.0,1.0"
+    Tags="smallitem,medical"
+    description="A mildy toxic solution that slowly releases oxygen into the bloodstream."
+	canuseonself="true">
+	
+	<Deconstruct time="5">
+      <Item name="Liquid Oxygenite" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Medical.png" sourcerect="0,0,10,18" depth="0.6"/>
+	
+	<Body width="8" height="16" density="10"/>
+	
+	<ItemComponent>
+      <StatusEffect tags="oxygenite,medical" type="OnUse" target="Character" Oxygen="1" delay="12" duration="15"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
+    </ItemComponent>
+	
+	<MeleeWeapon characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand"
+              aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <StatusEffect tags="oxygenite,medical" type="OnUse" target="Character" Oxygen="1" delay="12" duration="15">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-25" disabledeltatime="true">
+        <Conditional stun="gt 0"/>
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Vial of Sulphuric Acid"
+	aliases="Sulphuric Acid,Sulfuric Acid"
     category="Material"
 	canuseonself="true"
     spritecolor="255.0,250.0,0.0,1.0"
@@ -1365,8 +1741,8 @@
     </Deconstruct>
 
     <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
-
-    <Body width="8" height="17" density="11"/>
+	
+	<Body width="6" height="15" density="11"/>
 	
 	<ItemComponent>
       <StatusEffect tags="acid,poisonstrong" type="OnUse" target="Character" Health="-0.5" duration="90"/>
@@ -1396,7 +1772,8 @@
   </Item>
   
   <Item
-    name="Potassium"
+    name="Vial of Potassium"
+	aliases="Potassium"
     category="Material"
 	canuseonself="true"
     spritecolor="0.8,0.8,0.8,1.0"
@@ -1408,37 +1785,38 @@
       <Item name="Potassium" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10"/>
 	
 	<ItemComponent> 
-	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
-	    <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-100" delay="4" setvalue="true">
+	    <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
 		<Explosion range="25" damage="10" bleedingdamage="4" stun="4" shockwave="false" flames="false" sparks="false" smoke="false" force="0.3"/>
       </StatusEffect>
     </ItemComponent>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
-      <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true">
+      <StatusEffect type="OnUse" target="This" Condition="-100" delay="1" setvalue="true">
         <RequiredItem name="Medical Syringe" type="Container"/>
-		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
 		<Explosion range="50" damage="15" bleedingdamage="3" stun="2" shockwave="false" flames="false" sparks="false" smoke="false" force="0.3"/>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
+	  <StatusEffect type="OnUse" target="This" Condition="-100" delay="1" setvalue="true">
         <RequiredItem name="Medical Dart" type="Container"/>
-		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
 		<Explosion range="100" damage="30" bleedingdamage="6" stun="6" shockwave="false" flames="false" sparks="false" smoke="false" force="0.3"/>
       </StatusEffect>
-      <StatusEffect type="InWater" target="This" Condition="-100" setvalue="true">
-	    <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+      <StatusEffect type="InWater" target="This" Condition="-100" delay="1" setvalue="true">
+	    <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
 	    <Explosion range="150" damage="10" stun="2" shockwave="false" flames="false" sparks="false" force="0.3"/>
 	  </StatusEffect>
     </Throwable>
   </Item>
   
   <Item
-    name="Phosphorus"
+    name="Vial of Phosphorus"
+	aliases="Phosphorus"
     category="Material"
     spritecolor="0.5,0.0,0.0,1.0"
     Tags="smallitem,chem,medical"
@@ -1450,12 +1828,12 @@
       <Item name="Phosphorus" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
-      <StatusEffect tags="phosphorus,poison" type="OnUse" target="Character" Health="-2.5" duration="12"/>
+      <StatusEffect tags="phosphorus,poison" type="OnUse" target="Character" Health="-2.5" delay="6" duration="12"/>
       <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
     </ItemComponent>
 	
@@ -1482,8 +1860,8 @@
   </Item>
   
   <Item
-    name="Aluminium Powder"
-	aliases="Aluminium,Aluminum Powder"
+    name="Vial of Aluminium Powder"
+	aliases="Aluminium,Aluminium Powder,Aluminum Powder"
     category="Material"
     spritecolor="0.7,0.7,0.7,1.0"
     Tags="smallitem,chem,medical"
@@ -1492,12 +1870,12 @@
     price="20">
 	
 	<Deconstruct time="5">
-      <Item name="Aluminium Powder" mincondition="0.99"/>
+      <Item name="Aluminium" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
       <StatusEffect tags="aluminium,poisonweak" type="OnUse" target="Character" Health="-0.1" oxygen="-0.1" duration="20"/>
@@ -1515,7 +1893,8 @@
   </Item>
   
   <Item
-    name="Copper Powder"
+    name="Vial of Copper Powder"
+	aliases="Copper Powder"
     category="Material"
     spritecolor="0.78,0.55,0.2,1.0"
     Tags="smallitem,chem,medical"
@@ -1527,9 +1906,9 @@
       <Item name="Copper Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
       <StatusEffect tags="copper,poisonweak" type="OnUse" target="Character" Health="-0.1" oxygen="-0.1" duration="20"/>
@@ -1547,7 +1926,8 @@
   </Item>
   
   <Item
-    name="Bronze Powder"
+    name="Vial of Bronze Powder"
+	aliases="Bronze Powder"
     category="Material"
     spritecolor="0.8,0.7,0.2,1.0"
     Tags="smallitem,chem,medical"
@@ -1559,9 +1939,9 @@
       <Item name="Bronze Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
       <StatusEffect tags="bronze,poisonweak" type="OnUse" target="Character" Health="-0.1" oxygen="-0.1" duration="20"/>
@@ -1579,9 +1959,10 @@
   </Item>
 
   <Item
-    name="Iron Powder"
+    name="Vial of Iron Powder"
+	aliases="Iron Powder"
     category="Material"
-    Tags="smallitem,chem"
+    Tags="smallitem,chem,medical"
 	canuseonself="true"
 	cargocontainername="Chemical Shipping Box"
     price="30">
@@ -1590,9 +1971,9 @@
       <Item name="Iron Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6" color="0.2,0.2,0.2,1.0"/>
-
-    <Body width="8" height="16" density="10.5"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.5"/>
 	
 	<ItemComponent>
       <StatusEffect tags="iron,poisonweak" type="OnUse" target="Character" Health="-0.1" oxygen="-0.1" duration="20"/>
@@ -1610,7 +1991,8 @@
   </Item>
   
   <Item
-    name="Uranium Powder"
+    name="Vial of Uranium Powder"
+	aliases="Uranium Powder"
     category="Material"
     spritecolor="0.2,0.35,0.06,1.0"
     Tags="smallitem,chem,medical"
@@ -1622,9 +2004,9 @@
       <Item name="Uranium Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="11"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="11"/>
 	
 	<ItemComponent>
       <StatusEffect tags="uranium" type="OnUse" target="Character" Health="-0.2" oxygen="-0.2" duration="40"/>
@@ -1642,7 +2024,8 @@
   </Item>
   
   <Item
-    name="Fulgurium Powder"
+    name="Vial of Fulgurium Powder"
+	aliases="Fulgurium Powder"
     category="Material"
 	canuseonself="true"
     spritecolor="1.0,0.7,0.05,1.0"
@@ -1652,9 +2035,9 @@
       <Item name="Fulgurium Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
       <StatusEffect tags="fulgurium" type="OnUse" target="Character" bleeding="0.1" oxygen="-0.2" duration="40"/>
@@ -1672,7 +2055,8 @@
   </Item>
   
   <Item
-    name="Flash Powder"
+    name="Vial of Flash Powder"
+	aliases="Flash Powder"
     category="Material"
 	canuseonself="true"
     spritecolor="0.2,0.2,1.0,1.0"
@@ -1685,9 +2069,9 @@
       <Item name="Flash Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
       <StatusEffect tags="flash,poisonweak" type="OnUse" target="Character" Health="-0.1" oxygen="-0.1" duration="20"/>
@@ -1697,12 +2081,12 @@
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Syringe" type="Container"/>
-		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="250" damage="5" stun="3" shockwave="false" flames="false" sparks="false" force="0.1"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Dart" type="Container"/>
-		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="250" damage="5" stun="3" shockwave="false" flames="false" sparks="false" force="0.1"/>
       </StatusEffect>
 	  <StatusEffect tags="flash,poisonweak" type="OnUse" target="Character" Health="-0.001" oxygen="-0.02" duration="20">
@@ -1713,19 +2097,19 @@
       </StatusEffect>
 	  
 	  <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
-        <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+        <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="250" damage="5" stun="3" shockwave="false" flames="false" sparks="false" force="0.1"/>
       </StatusEffect>
 	  <StatusEffect type="OnFire" target="this" Condition="-100" setvalue="true">
-        <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+        <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="250" damage="5" stun="3" shockwave="false" flames="false" sparks="false" force="0.1"/>
       </StatusEffect>
     </Throwable>
   </Item>
   
   <Item
-    name="Propellant Powder"
-	aliases="Gunpowder"
+    name="Vial of Propellant Powder"
+	aliases="Propellant Powder,Gunpowder"
     category="Material"
     Tags="smallitem,chem,explosive"
 	canuseonself="true"
@@ -1737,9 +2121,9 @@
       <Item name="Propellant Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
       <StatusEffect tags="propellant,poisonweak" type="OnUse" target="Character" Health="-0.1" oxygen="-0.1" duration="20"/>
@@ -1749,12 +2133,12 @@
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Syringe" type="Container"/>
-		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="150" damage="10" stun="3" shockwave="false" flames="false" sparks="false" force="0.5"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Dart" type="Container"/>
-		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="150" damage="10" stun="3" shockwave="false" flames="false" sparks="false" force="0.5"/>
       </StatusEffect>
 	  <StatusEffect tags="propellant,poisonweak" type="OnUse" target="Character" Health="-0.001" oxygen="-0.02" duration="20">
@@ -1765,18 +2149,19 @@
       </StatusEffect>
 	  
 	  <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
-        <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+        <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="150" damage="10" stun="3" shockwave="false" flames="false" sparks="false" force="0.5"/>
       </StatusEffect>
       <StatusEffect type="OnFire" target="this" Condition="-100" setvalue="true">
-        <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
+        <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="150" damage="10" stun="3" shockwave="false" flames="false" sparks="false" force="0.5"/>
       </StatusEffect>
     </Throwable>
   </Item>
   
   <Item
-    name="Thermite Powder"
+    name="Vial of Thermite Powder"
+	aliases="Thermite Powder"
     category="Material"
     spritecolor="1.0,0.2,0.2,1.0"
     Tags="smallitem,chem,medical"
@@ -1789,9 +2174,9 @@
       <Item name="Thermite Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="8" height="16" density="10.1"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10.1"/>
 	
 	<ItemComponent>
       <StatusEffect tags="thermite,poison" type="OnUse" target="Character" Health="-0.3" oxygen="-0.2" duration="30"/>
@@ -1819,11 +2204,11 @@
       </StatusEffect>
 	  
       <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
-        <sound file="Mods/BTEB/Items/Weapons/ThermiteExplosion.ogg"/>
+        <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
 	    <Fire size="35"/>
       </StatusEffect>
 	  <StatusEffect type="OnFire" target="This" Condition="-100" setvalue="true">
-        <sound file="Mods/BTEB/Items/Weapons/ThermiteExplosion.ogg"/>
+        <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
 	    <Fire size="35"/>
 		<Remove/>
       </StatusEffect>
@@ -1831,8 +2216,8 @@
   </Item>
   
   <Item
-    name="Nitroglycerin"
-	aliases="Nitro"
+    name="Vial of Nitroglycerin"
+	aliases="Nitroglycerin,Nitro"
     category="Material"
     description="A highly unstable liquid that may explode when subjected to heat or physical shock."
 	canuseonself="true"
@@ -1846,16 +2231,16 @@
       <Item name="Nitroglycerin" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="Content/Items/Medical/med.png" sourcerect="24,16,8,16" depth="0.6"/>
-
-    <Body width="25" height="5" density="10"/>
+    <Sprite texture="Content/Items/Medical/med.png" sourcerect="15,15,8,17" depth="0.6"/>
+	
+	<Body width="6" height="15" density="10"/>
 	
 	<ItemComponent>
-      <StatusEffect type="OnUse" target="Character">
+      <StatusEffect type="OnUse" target="Character" delay="2">
         <sound file="Content/Items/Reactor/explosion.ogg" range="3000"/>
         <Explosion range="400" structuredamage="150" damage="225" stun="14" force="25" severlimbsprobability="0.6" camerashake="6.5" decal="explosion" decalsize="0.4"/>
 	  </StatusEffect>
-      <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100" delay="2" setvalue="true"/>
     </ItemComponent>
 	
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
