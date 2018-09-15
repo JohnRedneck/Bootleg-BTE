@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Bootleg BTE 0.9.8" path="Data/ContentPackages/BTEB">
+<contentpackage name="Bootleg BTE 1.0" path="Data/ContentPackages/BTEB">
   <!-- <Item file="Content/Items/idcard.xml" /> -->
   <!-- <Item file="Content/Items/itemlabel.xml" /> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml" /> -->
@@ -102,7 +102,6 @@
   <Character file="Mods/BTEB/Characters/Fractalguardian2/fractalguardian2.xml" />
   <Character file="Mods/BTEB/Characters/Walker/walker.xml" />
   <Character file="Mods/BTEB/Characters/Carrier/carrier.xml" />
-  <Character file="Mods/BTEB/Characters/Elite/Elite.xml" />
   <Character file="Mods/BTEB/Characters/Sentinel/Sentinel.xml" />
   <Character file="Mods/BTEB/Characters/SynthElite/SynthElite.xml" />
   <Character file="Mods/BTEB/Characters/SynthSoldier1/SynthSoldier1.xml" />
@@ -111,6 +110,7 @@
   <Character file="Mods/BTEB/Characters/Teleglitchboss/teleglitchboss.xml" />
   <Character file="Mods/BTEB/Characters/GuardDog/guarddog.xml" />
   <Character file="Mods/BTEB/Characters/Robot/robot.xml" />
+  <Character file="Mods/BTEB/Characters/Robocop/Robocop.xml" />
   <Character file="Mods/BTEB/Characters/Connor/Connor.xml" />
   <Character file="Mods/BTEB/Characters/Synth/synth.xml" />
   <Character file="Mods/BTEB/Characters/Synthette/synthette.xml" />
@@ -139,6 +139,5 @@
   <Missions file="Mods/BTEB/Missions.xml" />
   <Jobs file="Mods/BTEB/Jobs.xml" />
   <Sounds file="Mods/BTEB/Sounds/sounds.xml" />
-
   <Executable file="Barotrauma.exe" />
 </contentpackage>
