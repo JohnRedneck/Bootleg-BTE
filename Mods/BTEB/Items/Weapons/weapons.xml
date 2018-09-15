@@ -1360,12 +1360,12 @@
   <Item
     name="AR-15"
     category="Equipment"
-	tags="bigitem,weapon"
+	  tags="bigitem,weapon"
     description="The AR-15 is an automatic carbine rifle that uses 5.7x28mm magazines, it's used by security officers instead of the more common shotgun."
     impacttolerance="3">
 
     <Deconstruct time="20">
-      <Item name="Spare Parts"/>
+    <Item name="Spare Parts"/>
 	  <Item name="Spare Parts"/>
 	  <Item name="Fulgurium Bar"/>
 	  <Item name="FPGA Circuit"/>
@@ -2708,7 +2708,6 @@ impacttolerance="3"
               aimpos="75,18" handle1="-12,-3" handle2="-1,-7"/>
   </Item>
 
-
 	<Item
     name="Taser Round"
     category="Equipment"
@@ -2771,7 +2770,7 @@ impacttolerance="3"
       </StatusEffect>
     </Projectile>
   </Item>
-	
+
 <Item
     name="Sledgehammer"
     category="Equipment"
@@ -2809,5 +2808,55 @@ impacttolerance="3"
 		</StatusEffect>
     </MeleeWeapon>
   </Item>
-	
+
+   <Item
+   name="Auto 9"
+   category="Equipment"
+	 tags="meditem,weapon"
+   description="Robocop's gun, uses 9mm rounds, I'd buy that for a dollar!"
+	 cargocontainername="Weapons Shipping Box"
+	 canuseonself="true"
+	 impacttolerance="3"
+   price="100">
+
+    <Deconstruct time="10">
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/Auto9.png" sourcerect="0,0,47,23" depth="0.55"/>
+
+    <Body width="40" height="20" density="25"/>
+
+    <RangedWeapon barrelpos="37,3" spread="0" unskilledspread="2" reload="0.3">
+      <Sound file="Mods/BTEB/Items/Weapons/Auto9.ogg" type="OnUse"/>
+      <RequiredItems name="9mm Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+	  <StatusEffect type="Always" target="This" Condition="15"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="Character" Condition="-100" Health="-100" bleedingdamage="5">
+        <sound file="Mods/BTEB/Items/Weapons/Auto9.ogg"/>
+        <RequiredItems name="9mm Round" type="Contained"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained">
+	   <Remove/>
+       <RequiredItems name="9mm Round" type="Contained"/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <ItemContainer capacity="10" hideitems="true">
+      <Containable name="9mm Round"/>
+    </ItemContainer>
+
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              aimpos="75,18" handle1="-12,-3" handle2="-1,-7"/>
+  </Item>
 </Items>
