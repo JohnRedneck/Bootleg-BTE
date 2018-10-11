@@ -379,7 +379,7 @@
 	  <Item name="Spare Electronics"/>
     </Deconstruct>
 
-    <Sprite texture ="Tools.png" sourcerect="0,104,49,19" depth="0.55"/>
+    <Sprite texture="Tools.png" sourcerect="0,104,49,19" depth="0.55"/>
 
     <Body width="47" height="17" density="40"/>
 
@@ -391,9 +391,10 @@
       <ParticleEmitterHitItem particle="weldsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <sound file="Content/Items/Tools/weldingTool.ogg" type="OnUse" range="500" loop="true"/>
-      <RequiredItems name="Thermite Tank,Sulphurite Tank,Oxygen Tank,Oxygenite Tank" type="Contained" msg="Welding fuel depleted"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-4"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-2"/>
+      <RequiredItems name="Thermite Tank,Sulphurite Tank,Hydrogen Tank,Oxygen Tank,Oxygenite Tank" type="Contained" msg="Welding fuel depleted"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-3"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Hydrogen Tank" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-1" oxygen="-2500"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-0.5"/>
       <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block" Stuck="20" Condition="5.0"/>
@@ -404,20 +405,20 @@
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
       </LightComponent>
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
 	  </StatusEffect>
     </RepairTool>
    
     <ItemContainer capacity="1" hideitems="false" itempos="8,-21">
       <Containable name="Oxygen Tank"/>
 	  <Containable name="Oxygenite Tank"/>
+	  <Containable name="Hydrogen Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
     </ItemContainer>
 	
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-              aimpos="50,0" handle1="-17,0" handle2="10,0"/>
-  </Item>
+             
   
   <Item
     name="Saw Cutter"
@@ -487,7 +488,7 @@
 	  <Item name="Spare Electronics"/>
     </Deconstruct>
     
-    <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="0,0,41,16" depth="0.55"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="0,0,41,16" depth="0.55"/>
 
     <Body width="41" height="16" density="40"/>
 
@@ -499,10 +500,11 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <sound file="Content/Items/Tools/plasmaCutter.ogg" type="OnUse" range="500" loop="true"/>
-	  <RequiredItems name="Oxygen Tank,Oxygenite Tank,Sulphurite Tank,Thermite Tank" type="Contained" msg="Gas tank depleted"/>
-      <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-1"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-0.5"/>
-	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-2" oxygen="-2750"/>
+	  <RequiredItems name="Oxygen Tank,Oxygenite Tank,Hydrogen Tank,Sulphurite Tank,Thermite Tank" type="Contained" msg="Gas tank depleted"/>
+      <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-2.0"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-1"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Hydrogen Tank" Condition="-0.5"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-3" oxygen="-2750"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-4"/>
       <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-5.0"/>
       <Fixable name="structure"/>
@@ -512,13 +514,14 @@
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
       </LightComponent>
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
 	  </StatusEffect>
     </RepairTool>
 
     <ItemContainer capacity="1" hideitems="false" itempos="-17,-21">
       <Containable name="Oxygen Tank"/>
 	  <Containable name="Oxygenite Tank"/>
+	  <Containable name="Hydrogen Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
     </ItemContainer>
@@ -717,5 +720,34 @@
     </ItemComponent>
 
     <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+   <Item
+    name="Hydrogen Tank"
+    category="Equipment"
+    Tags="meditem"
+	description="A tank with compressed hydrogen gas, which is used as fuel."
+	cargocontainername="Explosives Shipping Box"
+	impacttolerance="3"
+	price="75">
+
+    <Deconstruct time="10">
+      <Item name="Aluminium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="Tools.png" sourcerect="202,34,12,33" depth="0.55"/>
+
+    <Body width="12" height="33" density="8"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" handle1="0,5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+      <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Weapons/BlastExplosionSmall.ogg"/>
+        <Explosion range="250" structuredamage="15" damage="75" stun="5" force="4.0"/>
+		<Fire size="20"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GrenadeHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
   </Item>
 </Items>
