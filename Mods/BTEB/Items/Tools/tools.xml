@@ -418,9 +418,10 @@
     </ItemContainer>
 	
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-             
-  
-  <Item
+        
+	</Item>	
+		
+  <Item>	
     name="Saw Cutter"
     category="Equipment"
     Tags="meditem,tool"
