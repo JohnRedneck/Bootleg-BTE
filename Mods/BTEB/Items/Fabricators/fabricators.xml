@@ -193,15 +193,6 @@
 		<RequiredSkill name="Construction" level="50"/>
       </fabricableitem>
 
-	  <fabricableitem name="Tec-9" requireditems="Spare Parts" requiredtime="40">
-		<Item name="Blueprints - Auto Weapons" mincondition="0.0" usecondition="true"/>
-        <RequiredSkill name="Electrical Engineering" level="40"/>
-      </fabricableitem>
-	  <fabricableitem name="9mm Magazine" requireditems="Steel Sliver" requiredtime="30">
-		<Item name="Blueprints - Auto Weapons" mincondition="0.0" usecondition="true"/>
-        <RequiredSkill name="Construction" level="40"/>
-      </fabricableitem>
-
 	  <fabricableitem name="AR-15" requireditems="Spare Parts,Steel Sliver" requiredtime="50">
 		<Item name="Blueprints - Auto Weapons" mincondition="0.0" usecondition="true"/>
         <RequiredSkill name="Electrical Engineering" level="50"/>

@@ -233,4 +233,22 @@
 
   <Pickable slots="Card,Any"/>
   </Item>
+
+  <Item
+  name="Journalist ID Card"
+  aliases="ID Card"
+    category="Equipment"
+  Tags="smallitem,wllt,docs,nov,ID Card">
+
+  <Deconstruct time="80">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+    <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+  <Sprite texture="Mods/BTEB/Items/idcard.png" sourcerect="32,14,16,16" depth="0.82"/>
+
+  <Body width="16" height="16" density="10.1"/>
+
+  <Pickable slots="Card,Any"/>
+  </Item>
 </Items>

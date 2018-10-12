@@ -534,7 +534,7 @@
   </Job>
 
   <Job name="Diver" description="Divers are elite crew that have experience with going EVA and know the protocols in case of an Husk infection in and out of the submarine."
-     minkarma="0.1" allowalways="true">
+     minkarma="0.8" allowalways="true">
     <Skills>
       <Skill name="Weapons" level="50,80"/>
       <Skill name="Construction" level="20,40"/>
@@ -576,6 +576,45 @@
        <Item name="9mm Round"/>
        <Item name="9mm Round"/>
       </Item>
+    </Items>
+  </Job>
+
+  <Job name="Journalist" description="Journalists are specially sent to gather information on the situation in Europa's deepest and darkest depths, they don't have any particular skills."
+     minnumber="0" maxnumber="2" minkarma="0.8" initialcount="1">
+    <Skills>
+      <Skill name="Weapons" level="00,20"/>
+      <Skill name="Construction" level="15,30"/>
+      <Skill name="Electrical Engineering" level="10,20"/>
+      <Skill name="Science" level="00,20"/>
+    <Skill name="Medical" level="20,40"/>
+    <Skill name="Cooking" level="20,40"/>
+    </Skills>
+    <Items>
+      <Item name="Journalist ID Card" equip="true"/>
+    <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+    <Item name="Ration Stamp A"/>
+    <Item name="Ration Stamp A"/>
+    <Item name="Ration Stamp A"/>
+    <Item name="Ration Stamp B"/>
+    <Item name="Ration Stamp B"/>
+    <Item name="Ration Stamp B"/>
+    <Item name="Ration Stamp B"/>
+    <Item name="Ration Stamp C"/>
+    <Item name="Ration Stamp C"/>
+    <Item name="Ration Stamp C"/>
+    <Item name="Ration Stamp C"/>
+    <Item name="Ration Stamp D"/>
+    <Item name="Ration Stamp E"/>
+      </Item>
+    <Item name="Clipboard">
+    <Item name="Basic Emergency Protocol"/>
+      </Item>
+      <Item name="Crewmember Beanie"/>
+  	  <Item name="Crewmember Cargo Trousers A" equip="true"/>
+        <Item name="Camera">
+  	    <Item name="Battery Cell"/>
+  	  </Item>
     </Items>
   </Job>
 </Jobs>
