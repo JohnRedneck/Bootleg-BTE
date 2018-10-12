@@ -1261,4 +1261,50 @@
       <Containable name="tool,smallitem"/>
     </ItemContainer>
   </Item>
+
+  <Item
+    name="Camera"
+    category="Equipment"
+	  tags="smallitem"
+    description="The camera's the Journalist's best friend, it uses battery cells."
+    impacttolerance="3">
+
+    <Deconstruct time="20">
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Jobgear/Camera.png" sourcerect="0,0,36,21" depth="0.55"/>
+
+    <Body width="118" height="33" density="45"/>
+
+	<ItemContainer capacity="1" itempos="-8,-10" hideitems="true">
+      <Containable name="Battery Cell"/>
+    </ItemContainer>
+
+	<RepairTool structurefixamount="-10" limbfixamount="-100" range="4000" barrelpos="62,3" particles="arfire">
+	  <ParticleEmitter particle="arfire" particlespersecond="100"/>
+	  <Fixable name="structure"/>
+      <sound file="Mods/BTEB/Items/Weapons/EnergyBig.ogg" type="OnUse" range="900"/>
+	  <RequiredItems name="Battery Cell" type="Contained" msg="The loaded battery cell is depleted"/>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.6" disabledeltatime="true">
+	    <RequiredItems name="Battery Cell" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+    </RepairTool>
+
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="-15,-6">
+	  <StatusEffect type="OnUse" target="This" Condition="-99" disabledeltatime="true"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="1">
+	    <sound file="Mods/BTEB/Items/Weapons/EnergyOn.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
 </Items>
