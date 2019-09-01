@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Segway"
+    category="Equipment"
+    tags="diving"
+  fireproof="False"
+  description="A segway used to move faster in submarines."
+    price="1750">
+
+  <Deconstruct time="30">
+      <Item name="Spare Parts"/>
+    <Item name="Spare Parts"/>
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture="Segway.png" sourcerect="0,0,48,123" depth="0.55"/>
+
+    <Body width="37" height="113" density="20"/>
+
+    <StatusEffect type="Always" target="This" Voltage="1.0" setvalue="true"/>
+
+    <StatusEffect type="InWater" target="This" Voltage="0.0" setvalue="true"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <Wearable slots="RightHand+LeftHand">
+          <sprite texture="Segway.png" limb="RightHand" sourcerect="38,2,48,11" origin="0.5,-0.5"/>
+          <sprite texture="Segway.png" limb="LeftHand" sourcerect="74,89,1,1" origin="0.5,-0.5"/>
+          <sprite texture="Segway.png" limb="LeftFoot" sourcerect="0,0,48,123" origin="0.5,0.5" hidelimb="true" />
+
+          <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="5" lockhands="False" setvalue="true"/>
+
+
+      <StatusEffect type="OnWearing" target="Character"  disabledeltatime="true"/>
+
+    <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.4"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+</Items>

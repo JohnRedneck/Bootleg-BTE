@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Bootleg BTE 1.2.2" path="Data/ContentPackages/BTEB">
+<contentpackage name="Bootleg BTE 1.2.3" path="Data/ContentPackages/BTEB">
   <!-- <Item file="Content/Items/idcard.xml" /> -->
   <!-- <Item file="Content/Items/itemlabel.xml" /> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml" /> -->
@@ -69,6 +69,7 @@
   <Item file="Mods/BTEB/Items/Jobgear/crewgear.xml" />
   <Item file="Mods/BTEB/Items/Jobgear/miscgear.xml" />
   <Item file="Mods/BTEB/Items/Diving/divinggear.xml" />
+  <Item file="Mods/BTEB/Items/Vehicles/Vehicles.xml" />
   <Item file="Mods/BTEB/Items/Door/doors.xml" />
   <Item file="Mods/BTEB/Items/Electricity/buttons.xml" />
   <Item file="Mods/BTEB/Items/Electricity/lights.xml" />
