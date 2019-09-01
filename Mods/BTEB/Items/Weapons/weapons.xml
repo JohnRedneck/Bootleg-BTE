@@ -2818,7 +2818,7 @@ impacttolerance="3"
     name="AK-74"
     category="Equipment"
 	  tags="bigitem,weapon"
-    description="The AK-74 is an assault rifle that uses 5.45x39mm magazines, it's used mostly used by pirates."
+    description="The AK-74 is an assault rifle that uses 5.45x39mm magazines, it's mostly used by pirates."
     impacttolerance="3">
 
     <Deconstruct time="20">
@@ -2896,5 +2896,227 @@ impacttolerance="3"
 	    <sound file="Mods/BTEB/Items/Weapons/MagHit.ogg"/>
 	  </StatusEffect>
 	</Throwable>
+  </Item>
+
+  <Item
+    name="Plastic Explosive"
+    aliases="Plastic"
+    category="Equipment"
+    Tags="smallitem,explosive"
+   description="Plastic Explosive is a medium explosive charge designed to cause destruction over an area. It's impact sensitive so it's best to keep safely stored."
+   impacttolerance="6"
+   canuseonself="true"
+   cargocontainername="Explosives Shipping Box"
+    price="400">
+
+  <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
+    <Item name="Polycarbonate Sliver" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/Plastic.png" depth="0.8" sourcerect="0,0,24,13"/>
+
+    <Body width="16" height="7"/>
+
+  <ItemComponent characterusable="false">
+    <StatusEffect type="OnFire" target="This" Condition="-25"/>
+    <StatusEffect type="OnImpact" target="This" Condition="-25" setvalue="true"/>
+      <StatusEffect type="OnBroken" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+        <Explosion range="650" structuredamage="600" damage="250" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
+    <Remove/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="this">
+      <sound file="Mods/BTEB/Items/Weapons/C4.ogg"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="50.5">
+      <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+        <Explosion range="650" structuredamage="600" damage="250" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.5"/>
+    <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="Take off [Defusing Kit]"
+              aimpos="35,-10" handle1="0,0" attachable="true" aimable="true">
+     <requireditem name="Defusing Kit" type="Equipped"/>
+    </Holdable>
+    <Pickable slots="Any">
+        <StatusEffect type="OnFire" target="This" Condition="-25"/>
+        <StatusEffect type="OnImpact" target="This" Condition="-50" setvalue="true"/>
+          <StatusEffect type="OnBroken" target="This">
+          <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+            <Explosion range="650" structuredamage="600" damage="250" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
+        <Remove/>
+          </StatusEffect>
+        </Pickable>
+  </Item>
+
+  <Item
+    name="C-4"
+    category="Equipment"
+    Tags="smallitem,explosive"
+   description="C-4 is a highly explosive charge designed to cause a lot of destruction over an area."
+   impacttolerance="6"
+   canuseonself="true"
+   cargocontainername="Explosives Shipping Box"
+    price="750">
+
+  <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
+    <Item name="Polycarbonate Sliver" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/C4.png" depth="0.8" sourcerect="0,0,20,24"/>
+
+    <Body width="16" height="7"/>
+
+  <ItemComponent characterusable="false">
+    <StatusEffect type="OnFire" target="This" Condition="-25"/>
+      <StatusEffect type="OnBroken" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+        <Explosion range="750" structuredamage="800" damage="400" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
+    <Remove/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="this">
+      <sound file="Mods/BTEB/Items/Weapons/C4.ogg"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="50.5">
+      <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+        <Explosion range="750" structuredamage="800" damage="400" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
+    <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="Take off [Defusing Kit]"
+              aimpos="35,-10" handle1="0,0" attachable="true" aimable="true">
+              <requireditem name="Defusing Kit" type="Equipped"/>
+    </Holdable>
+
+    <Pickable slots="Any">
+        <StatusEffect type="OnFire" target="This" Condition="-25"/>
+          <StatusEffect type="OnBroken" target="This">
+          <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+            <Explosion range="750" structuredamage="800" damage="400" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
+        <Remove/>
+          </StatusEffect>
+        </Pickable>
+  </Item>
+
+  <Item
+    name="Modular bomb case"
+    aliases="Modular bomb,Mod bomb"
+    category="Equipment"
+    Tags="bigitem,explosive"
+   description="The modular bomb is an extremely highly explosive charge designed to cause a lot of destruction over an area, it's also very cumbersome and can be picked up by anyone."
+   impacttolerance="6"
+   canuseonself="true"
+   cargocontainername="Explosives Shipping Box"
+    price="750">
+
+  <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
+    <Item name="Polycarbonate Sliver" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/Modbomb.png" depth="0.8" sourcerect="0,0,82,37"/>
+
+    <Body width="16" height="7"/>
+
+  <ItemComponent characterusable="false">
+    <StatusEffect type="OnFire" target="This" Condition="-25"/>
+      <StatusEffect type="OnBroken" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+        <Explosion range="750" structuredamage="800" damage="400" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
+    <Remove/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="this">
+      <sound file="Mods/BTEB/Items/Weapons/C4.ogg"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="50.5">
+      <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+        <Explosion range="750" structuredamage="800" damage="400" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
+    <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="Pick up"
+              holdpos="0,-80" aimpos="20,-40" handle1="-30,14" handle2="30,14" attachable="true" aimable="true">
+    </Holdable>
+
+    <Pickable slots="Any">
+        <StatusEffect type="OnFire" target="This" Condition="-25"/>
+          <StatusEffect type="OnBroken" target="This">
+          <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
+            <Explosion range="750" structuredamage="800" damage="400" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
+        <Remove/>
+          </StatusEffect>
+        </Pickable>
+  </Item>
+
+  <Item
+    name="Nuclear Bomb"
+    aliases="Nuke"
+    category="Machine"
+    Tags="hugitem,explosive"
+   description="Nuclear Bombs are used as self-destruction devices, they can also be put on shuttle-sized torpedoes for Outpost and Endworm destruction."
+   impacttolerance="6"
+   canuseonself="true"
+   cargocontainername="Explosives Shipping Box"
+    price="10000">
+
+  <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
+    <Item name="Polycarbonate Sliver" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    <Item name="Propellant Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEB/Items/Weapons/Nuke.png" depth="0.8" sourcerect="0,0,250,70"/>
+
+    <Body width="16" height="7"/>
+
+  <ItemComponent characterusable="false">
+    <StatusEffect type="OnFire" target="This" Condition="-25"/>
+      <StatusEffect type="OnBroken" target="This">
+      <sound file="Mods/BTEB/Items/Weapons/NukeExplosion.ogg"/>
+        <Explosion range="3000" structuredamage="3000" damage="2000" bleedingdamage="5.0" stun="20" force="60" severlimbsprobability="1.0" camerashake="20.0" decal="explosion" decalsize="200.0"/>
+    <Remove/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="this">
+      <sound file="Mods/BTEB/Items/Weapons/Nuke.ogg"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="140.820">
+      <sound file="Mods/BTEB/Items/Weapons/NukeExplosion.ogg"/>
+        <Explosion range="3000" structuredamage="3000" damage="2000" bleedingdamage="5.0" stun="20" force="60" severlimbsprobability="1.0" camerashake="20.0" decal="explosion" decalsize="200.0"/>
+    <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable selectkey="Select" pickkey="Use" slots="None" aimpos="35,-10" handle1="0,0" attachable="true" aimable="false">
+      <requireditem name="None" type="Equipped"/>
+    </Holdable>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Pliers]">
+      <requireditem name="Pliers,Wire" type="Equipped"/>
+      <input name="activate">
+        <StatusEffect type="OnUse" target="This">
+          <Use/>
+        </StatusEffect>
+      </input>
+    </ConnectionPanel>
   </Item>
 </Items>

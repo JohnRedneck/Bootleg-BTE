@@ -25,14 +25,14 @@
 	    <Conditional oxygen="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" Health="0.03" delay="12" duration="50">
-	    <sound file="Mods/BTE/Items/Medical/FoodDrink.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodDrink.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true"/>
     </ItemComponent>
 
     <Throwable slots="RightHand,LeftHand,Any" canBeCombined="true" throwforce="3" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Tools/PlasticHit.ogg"/>
+	    <sound file="Mods/BTEB/Items/Tools/PlasticHit.ogg"/>
 	  </StatusEffect>
     </Throwable>
   </Item>
@@ -61,7 +61,7 @@
 	    <Conditional oxygen="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect tags="drunk2" type="OnUse" target="Character" Health="0.04" duration="60">
-	    <sound file="Mods/BTE/Items/Medical/FoodDrink.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodDrink.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="0.3" delay="32" disabledeltatime="true"/>
 	  <StatusEffect tags="drunk2" type="OnUse" target="Character" Stun="1" delay="42" disabledeltatime="true"/>
@@ -71,7 +71,7 @@
 
     <Throwable slots="RightHand,LeftHand,Any" canBeCombined="true" throwforce="3" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	    <sound file="Mods/BTEB/Items/Tools/GlassHit.ogg"/>
 	  </StatusEffect>
     </Throwable>
   </Item>
@@ -101,7 +101,7 @@
 	    <Conditional oxygen="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect tags="drunk2" type="OnUse" target="Character" Health="0.04" duration="80">
-	    <sound file="Mods/BTE/Items/Medical/FoodDrink.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodDrink.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="0.4" delay="32" disabledeltatime="true"/>
 	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="1" delay="44" disabledeltatime="true"/>
@@ -112,7 +112,7 @@
 
     <Throwable slots="RightHand,LeftHand,Any" canBeCombined="true" throwforce="3" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	    <sound file="Mods/BTEB/Items/Tools/GlassHit.ogg"/>
 	  </StatusEffect>
     </Throwable>
   </Item>
@@ -143,7 +143,7 @@
 	    <Conditional oxygen="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect tags="drunk2" type="OnUse" target="Character" Health="0.02" duration="110">
-	    <sound file="Mods/BTE/Items/Medical/FoodDrink.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodDrink.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="0.4" delay="32" disabledeltatime="true"/>
 	  <StatusEffect tags="drunk1" type="OnUse" target="Character" Stun="4" delay="42" disabledeltatime="true"/>
@@ -157,11 +157,11 @@
 
     <Throwable slots="RightHand,LeftHand,Any" canBeCombined="true" throwforce="3" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	    <sound file="Mods/BTEB/Items/Tools/GlassHit.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnFire" target="this" condition="-100">
-	    <sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
-		<sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
+	    <sound file="Mods/BTEB/Items/Tools/GlassBreak.ogg"/>
+		<sound file="Mods/BTEB/Items/Weapons/ThermiteExplosion.ogg"/>
 	    <Fire size="40"/>
 	  </StatusEffect>
     </Throwable>
@@ -252,7 +252,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-40" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 
@@ -281,7 +281,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 
@@ -309,7 +309,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -341,7 +341,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -380,7 +380,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -422,7 +422,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -461,7 +461,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -499,7 +499,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -540,7 +540,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -579,7 +579,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -615,7 +615,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -651,7 +651,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -687,7 +687,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -722,7 +722,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -758,7 +758,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -791,7 +791,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -824,7 +824,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -870,7 +870,7 @@
 	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="90" disabledeltatime="true"/>
 	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="100" disabledeltatime="true"/>
 	  <StatusEffect type="OnUse" target="This" Condition="-50" setvalue="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -906,7 +906,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -941,7 +941,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -977,7 +977,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1012,7 +1012,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1048,7 +1048,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1081,7 +1081,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1114,7 +1114,7 @@
 	<ItemComponent>
 	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.01" Health="0.003" disabledeltatime="true" delay="12" duration="20"/>
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1160,7 +1160,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 
@@ -1189,7 +1189,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1224,7 +1224,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1259,7 +1259,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1294,7 +1294,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -1330,7 +1330,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 
@@ -1362,7 +1362,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 
@@ -1397,7 +1397,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 
@@ -1463,7 +1463,7 @@
 	    <Conditional Health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 
@@ -1510,7 +1510,7 @@
 	  <StatusEffect type="OnUse" target="Character" Stun="0.12" delay="180" disabledeltatime="true"/>
 	  <StatusEffect type="OnUse" target="Character" Stun="0.1" delay="190" disabledeltatime="true"/>
 	  <StatusEffect type="OnUse" target="This" Condition="-20" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 
@@ -1545,7 +1545,7 @@
         <Conditional HuskInfectionState="lt 0.01"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
 	  </StatusEffect>
     </ItemComponent>
 

@@ -5,7 +5,7 @@
     category="Electrical"
     description="Serves as a hub for power distribution and relaying signals between devices."
 	>
-	
+
 	<Sprite texture="Content/Items/Electricity/junctionbox.png" sourcerect="0,0,70,84" depth="0.82" canflipx="false"/>
     <BrokenSprite texture="Content/Items/Electricity/junctionbox.png" sourcerect="70,0,70,84" depth="0.82" maxcondition="50" fadein="true"/>
     <BrokenSprite texture="Content/Items/Electricity/junctionbox.png" sourcerect="140,0,70,84" depth="0.82" maxcondition="0"/>
@@ -63,7 +63,7 @@
       </StatusEffect>
       <requireditem name="Pliers,Screwdriver" type="Equipped"/>
       <input name="power_out"/>
-      <input name="power_in"/>      
+      <input name="power_in"/>
     </ConnectionPanel>
 
     <ItemContainer capacity="3" canbeselected="true" hideitems="true">
@@ -118,5 +118,35 @@
     <ItemContainer capacity="4" canbeselected="true" hideitems="false" itempos="9,9" iteminterval="14,0" itemrotation="90">
       <Containable name="loadable"/>
     </ItemContainer>
+  </Item>
+
+  <Item
+    name="Fusion Core"
+    category="Equipment,Electrical"
+    description="Creates fusion without any kind of energy headstart because science."
+    tags="meditem,loadable"
+    cargocontainername="Electronics Shipping Box"
+    price="1000">
+
+    <Deconstruct time="10">
+      <Item name="Aluminium Sliver"/>
+      <Item name="Copper Sliver"/>
+    </Deconstruct>
+
+  <fixrequirement name="Electrical repairs">
+      <skill name="Electrical Engineering" level="70"/>
+      <item name="Screwdriver"/>
+      <item name="Pliers"/>
+    </fixrequirement>
+
+  <LightComponent lightcolor="0.0,0.0,0.0,0.0" range="0" powerconsumption="0">
+      <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,0,0,0" alpha="1.0"/>
+    </LightComponent>
+
+    <Sprite texture="Mods/BTEB/Items/Electricity/FusionCore.png" sourcerect="0,0,102,145" depth="0.8"/>
+
+    <Body width="20" height="9" density="30"/>
+
+    <Pickable slots="Any,RightHand,LeftHand"/>
   </Item>
 </Items>

@@ -582,7 +582,7 @@
       </StatusEffect>
 	  
 	  <StatusEffect type="OnFire" target="this">
-		<sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
+		<sound file="Mods/BTEB/Items/Weapons/ThermiteExplosion.ogg"/>
 	    <Fire size="25"/>
 		<Remove/>
 	  </StatusEffect>
@@ -1791,7 +1791,7 @@
 	
 	<ItemComponent> 
 	  <StatusEffect type="OnUse" target="This" Condition="-100" delay="4" setvalue="true">
-	    <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+	    <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
 		<Explosion range="25" damage="10" bleedingdamage="4" stun="4" shockwave="false" flames="false" sparks="false" smoke="false" force="0.3"/>
       </StatusEffect>
     </ItemComponent>
@@ -1799,16 +1799,16 @@
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect type="OnUse" target="This" Condition="-100" delay="1" setvalue="true">
         <RequiredItem name="Medical Syringe" type="Container"/>
-		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
 		<Explosion range="50" damage="15" bleedingdamage="3" stun="2" shockwave="false" flames="false" sparks="false" smoke="false" force="0.3"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-100" delay="1" setvalue="true">
         <RequiredItem name="Medical Dart" type="Container"/>
-		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
 		<Explosion range="100" damage="30" bleedingdamage="6" stun="6" shockwave="false" flames="false" sparks="false" smoke="false" force="0.3"/>
       </StatusEffect>
       <StatusEffect type="InWater" target="This" Condition="-100" delay="1" setvalue="true">
-	    <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+	    <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
 	    <Explosion range="150" damage="10" stun="2" shockwave="false" flames="false" sparks="false" force="0.3"/>
 	  </StatusEffect>
     </Throwable>
@@ -2081,12 +2081,12 @@
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Syringe" type="Container"/>
-		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="250" damage="5" stun="3" shockwave="false" flames="false" sparks="false" force="0.1"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Dart" type="Container"/>
-		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="250" damage="5" stun="3" shockwave="false" flames="false" sparks="false" force="0.1"/>
       </StatusEffect>
 	  <StatusEffect tags="flash,poisonweak" type="OnUse" target="Character" Health="-0.001" oxygen="-0.02" duration="20">
@@ -2097,11 +2097,11 @@
       </StatusEffect>
 	  
 	  <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
-        <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+        <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="250" damage="5" stun="3" shockwave="false" flames="false" sparks="false" force="0.1"/>
       </StatusEffect>
 	  <StatusEffect type="OnFire" target="this" Condition="-100" setvalue="true">
-        <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+        <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="250" damage="5" stun="3" shockwave="false" flames="false" sparks="false" force="0.1"/>
       </StatusEffect>
     </Throwable>
@@ -2133,12 +2133,12 @@
 	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
       <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Syringe" type="Container"/>
-		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="150" damage="10" stun="3" shockwave="false" flames="false" sparks="false" force="0.5"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" Condition="-100" setvalue="true">
         <RequiredItem name="Medical Dart" type="Container"/>
-		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+		<sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="150" damage="10" stun="3" shockwave="false" flames="false" sparks="false" force="0.5"/>
       </StatusEffect>
 	  <StatusEffect tags="propellant,poisonweak" type="OnUse" target="Character" Health="-0.001" oxygen="-0.02" duration="20">
@@ -2149,11 +2149,11 @@
       </StatusEffect>
 	  
 	  <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
-        <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+        <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="150" damage="10" stun="3" shockwave="false" flames="false" sparks="false" force="0.5"/>
       </StatusEffect>
       <StatusEffect type="OnFire" target="this" Condition="-100" setvalue="true">
-        <sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+        <sound file="Mods/BTEB/Items/Weapons/ChemExplosion.ogg"/>
         <Explosion range="150" damage="10" stun="3" shockwave="false" flames="false" sparks="false" force="0.5"/>
       </StatusEffect>
     </Throwable>
@@ -2204,11 +2204,11 @@
       </StatusEffect>
 	  
       <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
-        <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
+        <sound file="Mods/BTEB/Items/Weapons/ThermiteExplosion.ogg"/>
 	    <Fire size="35"/>
       </StatusEffect>
 	  <StatusEffect type="OnFire" target="This" Condition="-100" setvalue="true">
-        <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
+        <sound file="Mods/BTEB/Items/Weapons/ThermiteExplosion.ogg"/>
 	    <Fire size="35"/>
 		<Remove/>
       </StatusEffect>
