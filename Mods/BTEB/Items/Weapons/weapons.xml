@@ -2763,19 +2763,15 @@ impacttolerance="3"
 	  <Fixable name="structure"/>
 	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1"/>
       <sound file="Mods/BTEB/Items/Weapons/Auto9.ogg" type="OnUse" range="800" loop="true"/>
-	  <RequiredItems name="9mm Magazine" type="Contained" msg="The loaded magazine is depleted"/>
       <RequiredSkill name="Weapons" level="40"/>
 	  <StatusEffect type="OnUse" target="This">
 	    <Explosion range="100" force="0.18" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="Contained" Condition="-0.2" disabledeltatime="true"/>
-	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
     </RepairTool>
 
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
             holdpos="35,-10" aimpos="75,18" handle1="-12,-3" handle2="-1,-7">
 	  <StatusEffect type="OnUse" target="This" Condition="-112">
-	  <RequiredItems name="9mm Magazine" type="Contained"/>
 	  <StatusEffect type="Always" target="This" Condition="100"/>
     </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="1">
@@ -3119,4 +3115,118 @@ impacttolerance="3"
       </input>
     </ConnectionPanel>
   </Item>
+
+    <Item
+      name="Flashball"
+      category="Equipment"
+  	  tags="bigitem,weapon"
+      description="The MP5S is a burst fire SMG that uses 7.62x51mm magazines."
+      impacttolerance="3">
+
+      <Deconstruct time="20">
+        <Item name="Spare Parts"/>
+  	  <Item name="Spare Parts"/>
+  	  <Item name="Fulgurium Bar"/>
+  	  <Item name="FPGA Circuit"/>
+      </Deconstruct>
+
+      <Sprite texture="Mods/BTEB/Items/Weapons/Flashball.png" sourcerect="0,39,99,26" depth="0.55"/>
+
+      <Body width="97" height="24" density="35"/>
+
+      <RangedWeapon barrelpos="37,3" spread="0" unskilledspread="2" reload="3">
+        <Sound file="Mods/BTEB/Items/Weapons/Flashball.ogg" type="OnUse"/>
+        <RequiredItems name="Flashball Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+        <RequiredSkill name="Weapons" level="40"/>
+  	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+  	  <StatusEffect type="Always" target="This" Condition="15"/>
+  	  <StatusEffect type="OnUse">
+  	    <Explosion range="500" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+        </StatusEffect>
+  	  <StatusEffect type="OnImpact" target="This">
+  	    <sound file="Mods/BTEB/Items/Weapons/GunHit.ogg"/>
+  	  </StatusEffect>
+      </RangedWeapon>
+
+  	<ItemComponent>
+        <StatusEffect type="OnUse" target="Character" Condition="-10" stun="10">
+          <sound file="Mods/BTEB/Items/Weapons/Flashball.ogg"/>
+          <RequiredItems name="Flashball Round" type="Contained"/>
+        </StatusEffect>
+  	  <StatusEffect type="OnUse" target="Contained">
+  	   <Remove/>
+          <RequiredItems name="Flashball Round" type="Contained"/>
+  	  </StatusEffect>
+      </ItemComponent>
+
+      <ItemContainer capacity="1" hideitems="true">
+        <Containable name="Flashball Round"/>
+      </ItemContainer>
+
+  	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+                holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1">
+  	</Holdable>
+  </Item>
+
+    <Item
+      name="Flashball Round"
+      category="Equipment"
+      Tags="smallitem,weapon"
+      description="A flashball round designed to be used in a Flashball gun."
+      interactthroughwalls="true"
+      cargocontainername="Weapons Shipping Box"
+      price="150">
+
+        <Deconstruct time="10">
+          <Item name="Steel Bar"/>
+    	  <Item name="Fulgurium Sliver"/>
+        </Deconstruct>
+
+        <Sprite texture="Mods/BTEB/Items/Weapons/Flashball.png" sourcerect="88,74,14,10" depth="0.55"/>
+
+        <Body width="12" height="8" density="16" friction="0.95"/>
+
+        <Pickable slots="Any"/>
+          <Projectile hitscan="true" removeonhit="true">
+            <Attack damage="0" stun="10" structuredamage="0" targetforce="800" damagetype="Burn"/>
+      	  <StatusEffect type="OnImpact" target="Character">
+      		  <Explosion range="50" force="5" shockwave="false" flames="false" smoke="false" camerashake="0.5"/>
+      		  <Sound file="Mods/BTEB/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+      		</StatusEffect>
+      	  <StatusEffect type="OnImpact" target="Character">
+      		  <Conditional SpeciesName="watcher"/>
+      		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+      		</StatusEffect>
+      		<StatusEffect type="OnImpact" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+      		  <Conditional SpeciesName="watcher"/>
+      		  <Sound file="Mods/BTEB/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+      		</StatusEffect>
+      		<StatusEffect type="OnImpact" target="Character">
+      		  <Conditional SpeciesName="scorpion"/>
+      		  <Explosion range="250" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+      		  <Sound file="Mods/BTEB/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+      	  </StatusEffect>
+      	  <StatusEffect type="OnImpact" target="Character" stun="-20" health="-80" disabledeltatime="true">
+      	    <Conditional SpeciesName="robot"/>
+            </StatusEffect>
+      	  <StatusEffect type="OnImpact" target="Character" stun="-20" health="-40" disabledeltatime="true">
+      	    <Conditional SpeciesName="synth"/>
+            </StatusEffect>
+      	  <StatusEffect type="OnImpact" target="Character" stun="-20" health="-40" disabledeltatime="true">
+      	    <Conditional SpeciesName="synthette"/>
+            </StatusEffect>
+      	  <StatusEffect type="OnImpact" target="Character" stun="-20" health="-40" disabledeltatime="true">
+      	    <Conditional SpeciesName="fractalguardian"/>
+            </StatusEffect>
+      	  <StatusEffect type="OnImpact" target="Character" stun="-20" health="-40" disabledeltatime="true">
+      	    <Conditional SpeciesName="fractalguardian2"/>
+            </StatusEffect>
+      	  <StatusEffect type="OnImpact" target="Character" stun="-20" health="-40" disabledeltatime="true">
+      	    <Conditional SpeciesName="walker"/>
+            </StatusEffect>
+      	  <StatusEffect type="OnImpact" target="Character" stun="-20" health="-40" disabledeltatime="true">
+      	    <Conditional SpeciesName="carrier"/>
+            </StatusEffect>
+          </Projectile>
+      </Item>
 </Items>
