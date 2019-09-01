@@ -21,6 +21,63 @@
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
 
+
+
+
+  <Item
+    name="Tritium Vial"
+    category="Material"
+    Tags="smallitem"
+    description="Tritium is a rare and radioactive isotope of hydrogen and is used along with fulgurium, as a fuel for nuclear fusion reactions"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="5000">
+
+    <Sprite texture="materials.png" sourcerect="25,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="9.5"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+
+
+  <Item
+    name="Tungsten Bar"
+    category="Material"
+    Tags="smallitem"
+    description="Tungsten has the highest melting point and lowest vapor pressure of all metals and has the highest tensile strength. It has excellent corrosion resistance and is barely attacked by acids."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="1000">
+
+    <Sprite texture="materials.png" sourcerect="25,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="9.5"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+
+  <Item
+    name="Tungsten Casing"
+    category="Material"
+    Tags="smallitem"
+    description="Tungsten has the highest melting point and lowest vapor pressure of all metals and has the highest tensile strength. It has excellent corrosion resistance and is barely attacked by acids."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="3000">
+
+    <Deconstruct time="5">
+      <Item name="Tungsten Bar"/>
+	  <Item name="Tungsten Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="FusionCore.png" sourcerect="0,0,102,145" depth="0.55"/>
+
+    <Body width="24" height="12" density="9.5"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+
   <Item
     name="Polycarbonate Bar"
 	aliases="Plastic Bar"

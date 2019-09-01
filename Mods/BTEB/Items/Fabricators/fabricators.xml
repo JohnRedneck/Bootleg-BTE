@@ -56,6 +56,8 @@
 	  <fabricableitem name="Steel Saw" requireditems="Steel Bar" requiredtime="14"/>
 	  <fabricableitem name="Uranium Saw" requireditems="Uranium Bar" requiredtime="16"/>
 	  <fabricableitem name="Fulgurium Saw" requireditems="Fulgurium Bar" requiredtime="18"/>
+		<fabricableitem name="Tungsten Casing" requireditems="Tungsten Bar, Tungsten Bar"/>
+		<fabricableitem name="Fusion Core" requireditems="Fulgurium Bar, Tungsten Casing, Tritium vial" requiredtime="18"/>
 
 	  <fabricableitem name="Handgun Ammo Box" requireditems="Polycarbonate Bar,Aluminium Sliver" requiredtime="15">
         <RequiredSkill name="Construction" level="15"/>

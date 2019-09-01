@@ -126,7 +126,7 @@
     description="Creates fusion without any kind of energy headstart because science."
     tags="meditem,loadable"
     cargocontainername="Electronics Shipping Box"
-    price="1000">
+    price="10000">
 
     <Deconstruct time="10">
       <Item name="Aluminium Sliver"/>
