@@ -258,7 +258,7 @@
 
     <Throwable slots="RightHand,LeftHand" holdpos="0,0" handle1="-13,-2" handle2="-13,-2" throwforce="2.5" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Reactor/DieselCan.ogg"/>
+	    <sound file="Mods/BTEB/Items/Reactor/DieselCan.ogg"/>
 	  </StatusEffect>
 	</Throwable>
   </Item>
@@ -286,7 +286,7 @@
 
     <Throwable slots="RightHand,LeftHand" holdpos="0,0" handle1="-13,-2" handle2="-13,-2" throwforce="2.5" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Reactor/DieselCan.ogg"/>
+	    <sound file="Mods/BTEB/Items/Reactor/DieselCan.ogg"/>
 	  </StatusEffect>
 	</Throwable>
   </Item>
@@ -316,7 +316,7 @@
       <sound file="DieselGen.ogg" type="OnActive" range="3000" volume="Temperature" volumemultiplier="0.02" loop="true"/>
 
       <StatusEffect type="OnBroken" target="This,Hull" FissionRate="0" oxygen="-60000" disabledeltatime="true">
-	    <sound file="Mods/BTE/Items/Reactor/DieselGenGone.ogg"/>
+	    <sound file="Mods/BTEB/Items/Reactor/DieselGenGone.ogg"/>
 	    <Explosion range="250" stun="0.05" force="5" shockwave="false" flames="false" sparks="false"/>
       </StatusEffect>
     </Reactor>
@@ -368,10 +368,10 @@
 
     <Throwable slots="RightHand,LeftHand" holdpos="0,0" handle1="-13,-2" handle2="-13,-2" throwforce="2.5" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Reactor/DieselCan.ogg"/>
+	    <sound file="Mods/BTEB/Items/Reactor/DieselCan.ogg"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnFire" target="this" condition="-100">
-	    <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
+	    <sound file="Mods/BTEB/Items/Weapons/ThermiteExplosion.ogg"/>
 	    <Fire size="200"/>
 	  </StatusEffect>
 	</Throwable>

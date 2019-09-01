@@ -1,0 +1,56 @@
+<Items>
+  <Item
+      name="Tape-We All Lift Together"
+      Category="Misc"
+      Tags="smallitem"
+      description="A tape that plays We All Lift Together when put in a radio, aimed at Engineering."
+      cargocontainername="Standard Shipping Box"
+      price="10">
+
+        <Sprite texture="Tape.png" sourcerect="0,0,26,16" depth="0.55"/>
+
+        <Body width="14" height="1" density="9.9"/>
+
+    	<Holdable slots="RightHand,LeftHand,Any" controlpose="false"/>
+  </Item>
+
+  <Item
+      name="Engineering radio"
+      category="Machine"
+      description="A radio belonging to the Engineering department, made to play tapes."
+      Tags="cntnr">
+
+        <Sprite texture="EngiRadio1.png" depth="0.54" sourcerect="0,0,68,49"/>
+
+        <Body width="60" height="55" density="50"/>
+
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.15,0.7" slotsperrow="1">
+
+
+
+
+
+
+
+<RequiredItems name="Tape-We All Lift Together" type="Contained" msg="The shard inside is depleted">
+  <sound file="Mods/BTEB/Items/Radios/We All Lift Together.ogg" range="1000"/>
+</RequiredItems>
+
+
+
+
+
+
+
+
+
+
+
+          <Containable name="Tape-We All Lift Together">
+
+            </Containable>
+      </ItemContainer>
+
+     <Holdable slots="RightHand,LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-17,14" handle2="17,14"/>
+    </Item>
+  </Items>

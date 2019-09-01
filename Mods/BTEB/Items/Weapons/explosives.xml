@@ -8,8 +8,8 @@
 	description="A non-lethal explosive designed to stun targets instead of killing them."
 	cargocontainername="Explosives Shipping Box"
     price="250">
-	
-	<Deconstruct time="5"> 
+
+	<Deconstruct time="5">
 	  <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
       <Item name="Flash Powder" mincondition="0.99"/>
@@ -21,7 +21,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -35,7 +35,7 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Propellant Charge"
 	aliases="Gunpowder Charge"
@@ -43,8 +43,8 @@
     Tags="smallitem,explosive"
 	description="A weak explosive charge usually crafted to be used in the Deconstructor to get it back as powder units and craft ammo or other explosives."
     >
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -56,7 +56,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -70,7 +70,7 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Concussion Charge"
     category="Equipment"
@@ -79,8 +79,8 @@
 	description="An anti-personnel explosive designed to deal damage to one or more targets with explosive power alone."
 	cargocontainername="Explosives Shipping Box"
     price="250">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -91,7 +91,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -105,18 +105,17 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Blast Charge"
-	aliases="C-4 Block"
     category="Equipment"
     Tags="smallitem,explosive"
 	spritecolor="0.4,1.0,0.3,1.0"
 	description="A standard explosive charge used as payload for Railgun Shells, Depth Charges and Mines."
 	cargocontainername="Explosives Shipping Box"
     price="500">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -128,7 +127,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -142,7 +141,7 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Destroyer Charge"
 	aliases="Compound N"
@@ -153,8 +152,8 @@
 	impacttolerance="7"
 	cargocontainername="Explosives Shipping Box"
     price="650">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -166,7 +165,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -181,7 +180,7 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Demolition Charge"
 	aliases="Volatile Compound N"
@@ -192,8 +191,8 @@
 	impacttolerance="6"
 	cargocontainername="Explosives Shipping Box"
     price="750">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -205,7 +204,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -220,7 +219,7 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Shrapnel Charge"
 	aliases="Frag Charge"
@@ -230,8 +229,8 @@
 	description="An anti-personnel explosive designed to deal damage to one or more targets with both explosive power and dispersed lethal fragments."
 	cargocontainername="Explosives Shipping Box"
     price="275">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Steel Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Steel Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -242,7 +241,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -257,7 +256,7 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Flak Charge"
 	aliases="Grapeshot"
@@ -267,8 +266,8 @@
 	description="A submarine anti-creature payload designed to deal damage to one or more targets with both explosive power and dispersed lethal fragments."
 	cargocontainername="Explosives Shipping Box"
     price="350">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Steel Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Steel Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -280,7 +279,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -295,7 +294,7 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Shockwave Charge"
     category="Equipment"
@@ -303,21 +302,21 @@
 	description="An electronic device designed to release an ultra-sonic audio wave that causes superfluous amounts of damage to living organisms."
 	cargocontainername="Explosives Shipping Box"
 	price="600">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Aluminium Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Aluminium Sliver" mincondition="0.99"/>
 	  <Item name="Copper Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Copper Sliver" mincondition="0.99"/>
 	  <Item name="FPGA Circuit" mincondition="0.99"/>
     </Deconstruct>
-	
+
 	<fixrequirement name="Electrical repairs">
       <skill name="Electrical Engineering" level="50"/>
       <item name="Screwdriver"/>
       <item name="Pliers"/>
     </fixrequirement>
-	
+
 	<LightComponent lightcolor="0.0,0.0,0.0,0.0" range="0" powerconsumption="0">
       <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,0,0,0" alpha="1.0"/>
     </LightComponent>
@@ -325,7 +324,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="109,160,19,9"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100">
 	    <sound file="Mods/BTEB/Items/Weapons/SonicExplosion.ogg" range="3000"/>
@@ -337,15 +336,15 @@
 	  <StatusEffect type="OnFire" target="This" Condition="-25"/>
     </Pickable>
   </Item>
-  
+
   <Item
     name="EMP Charge"
     category="Equipment"
     Tags="smallitem,explosive"
 	description="An electronic device designed to release an EMP field that causes a lot of damage to electronic devices."
 	price="500">
-	
-	<Deconstruct time="5"> 
+
+	<Deconstruct time="5">
 	  <Item name="Aluminium Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Aluminium Sliver" mincondition="0.99"/>
 	  <Item name="Fulgurium Sliver"/>
@@ -355,7 +354,7 @@
    <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="109,160,19,9"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100">
 	    <sound file="Mods/BTEB/Characters/Teleglitch/TeleHit2.ogg"/>
@@ -367,7 +366,7 @@
 	  <StatusEffect type="OnFire" target="This" Condition="-25"/>
     </Pickable>
   </Item>
-  
+
   <Item
     name="WetBomb Charge"
     category="Equipment"
@@ -375,8 +374,8 @@
 	spritecolor="0.6,0.6,1.0,1.0"
 	description="An explosive charge designed to be set off when in contact with water. It's an obvious traitor-made explosive."
     >
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -388,7 +387,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7" density="11"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -412,8 +411,8 @@
 	spritecolor="1.0,0.2,0.2,1.0"
 	description="An incendiary explosive charge designed to start fires. This is an illegal explosive usually used in sabotage."
     impacttolerance="5">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
 	  <Item name="Propellant Powder" mincondition="0.99"/>
@@ -425,7 +424,7 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
@@ -441,15 +440,15 @@
       </StatusEffect>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Chemgas Charge"
     category="Equipment"
     Tags="smallitem,explosive"
 	spritecolor="255.0,250.0,0.0,1.0"
 	description="An illegal payload usually used by saboteurs. It releases a colourless gas that quickly absorbs oxygen. Deadly in small rooms.">
-	
-	<Deconstruct time="5"> 
+
+	<Deconstruct time="5">
 	  <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
       <Item name="Sulphuric Acid" mincondition="0.99"/>
@@ -459,11 +458,11 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
 	  <StatusEffect type="OnUse" target="This" IsOn="true"/>
     </ItemComponent>
-	
+
 	<LightComponent LightColor="0.0,0.0,0.0,0.0" Flicker="0.0" range="0" IsOn="false">
 	  <StatusEffect type="OnActive" target="Hull" oxygen="-40000"/>
       <StatusEffect type="OnActive" target="This" Condition="-2">
@@ -479,7 +478,7 @@
 	  <StatusEffect type="OnFire" target="This" IsOn="true" Condition="-5"/>
     </Pickable>
   </Item>
-  
+
   <Item
     name="Dye Charge"
 	aliases="Smoke Charge"
@@ -489,8 +488,8 @@
 	description="A non-lethal explosive designed to release clouds of particles that act like an octopus-like ink spray in water and a dense cloud in air."
 	cargocontainername="Explosives Shipping Box"
     price="150">
-	
-	<Deconstruct time="5"> 
+
+	<Deconstruct time="5">
 	  <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
 	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
       <Item name="Potassium" mincondition="0.99"/>
@@ -500,11 +499,11 @@
     <Sprite texture="Mods/BTEB/Items/Weapons/weapons.png" depth="0.8" sourcerect="112,174,16,8"/>
 
     <Body width="16" height="7"/>
-	
+
 	<ItemComponent characterusable="false">
 	  <StatusEffect type="OnUse" target="This" IsOn="true"/>
     </ItemComponent>
-	
+
 	<LightComponent LightColor="0.2,0.1,0.1,0.1" Flicker="0.5" range="100" IsOn="false">
 	  <StatusEffect type="OnActive" target="Hull" oxygen="-1000"/>
       <StatusEffect type="OnActive" target="This" Condition="-1">
@@ -526,8 +525,8 @@
     description="A device that detonates any contained explosive when receiving a signal."
     category="Equipment"
     Tags="smallitem">
-	
-	<Deconstruct time="5">      
+
+	<Deconstruct time="5">
       <Item name="Aluminium Sliver"/>
 	  <Item name="Copper Sliver"/>
     </Deconstruct>

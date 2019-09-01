@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Bootleg BTE 1.2" path="Data/ContentPackages/BTEB">
+<contentpackage name="Bootleg BTE 1.2.2" path="Data/ContentPackages/BTEB">
   <!-- <Item file="Content/Items/idcard.xml" /> -->
   <!-- <Item file="Content/Items/itemlabel.xml" /> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml" /> -->
@@ -81,6 +81,7 @@
   <Item file="Mods/BTEB/Items/Medical/medical.xml" />
   <Item file="Mods/BTEB/Items/Medical/chems.xml" />
   <Item file="Mods/BTEB/Items/Medical/food.xml" />
+  <Item file="Mods/BTEB/Items/Radios/Radios.xml" />
   <Item file="Mods/BTEB/Items/Terminals/terminals.xml" />
   <Item file="Mods/BTEB/Items/OxygenGenerator/oxygengenerator.xml" />
   <Item file="Mods/BTEB/Items/Pump/pump.xml" />

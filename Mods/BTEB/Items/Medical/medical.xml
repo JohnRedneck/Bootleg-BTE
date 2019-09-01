@@ -490,11 +490,11 @@
 
   <Item
     name="Coffee Cup"
-	aliases="Coffee"
+	  aliases="Coffee"
     category="Misc"
     Tags="smallitem"
-	description="A cup of nice coffee, damn I want it now."
-	cargocontainername="Standard Shipping Box"
+  	description="A nice cup of coffee, damn I want some now."
+	  cargocontainername="Standard Shipping Box"
     price="45">
 
 	<Deconstruct time="10">
@@ -511,7 +511,33 @@
     </RepairTool>
 
 	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
-            holdpos="35,-10"  aimpos="30,18" handle1="0,0" handle2="0,0"/>
+            holdpos="35,-10" holdangle="10"  aimpos="30,18" handle1="0,0" handle2="0,0"/>
+  </Item>
+
+  <Item
+    name="Water Cup"
+	  aliases="Water"
+    category="Misc"
+    Tags="smallitem"
+  	description="A nice cup of cold water, refreshing."
+	  cargocontainername="Standard Shipping Box"
+    price="45">
+
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="WaterCup.png" sourcerect="0,0,14,15" depth="0.55"/>
+
+    <Body width="14" height="1" density="9.9"/>
+
+    <RepairTool structurefixamount="0" limbfixamount="0" range="0" barrelpos="-5,0">
+	  <sound file="Mods/BTEB/Items/Medical/Sip.ogg" type="OnUse" range="3000" loop="true"/>
+	  <StatusEffect type="OnUse" target="This,Hull" Condition="-2.0" oxygen="-950"/>
+    </RepairTool>
+
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+            holdpos="35,-10" holdangle="10"  aimpos="30,18" handle1="0,0" handle2="0,0"/>
   </Item>
 
   <Item
@@ -519,7 +545,7 @@
   aliases="Empty Cup"
     category="Misc"
     Tags="smallitem"
-  description="An empty cup, fill it with coffee !"
+  description="An empty cup, fill it with coffee or water !"
   cargocontainername="Standard Shipping Box"
     price="45">
 
@@ -534,7 +560,7 @@
   <Holdable slots="RightHand,LeftHand,Any" controlpose="true"
             aimpos="30,18" handle1="0,0" handle2="0,0"/>
   </Item>
-	
+
  <Item
     name="Electric Lighter"
 	aliases="Lighter"
@@ -568,5 +594,5 @@
 	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
               aimpos="50,18" handle1="0,0" handle2="0,0"/>
    </Item>
-	
+
 </Items>

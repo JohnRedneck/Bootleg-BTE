@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Items>
   <Item
     name="Oxygen Tank"
@@ -283,7 +283,6 @@
 
   <Item
     name="Assault Exosuit"
-	aliases="Power Armor"
     category="Equipment"
     tags="diving"
 	fireproof="true"
@@ -596,6 +595,74 @@
       <Containable name="Oxygenite Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Power Armor"
+    category="Equipment"
+    tags="diving"
+    fireproof="true"
+    description="A big fucking bulky suit. War never changes."
+    price="10000">
+
+  <Deconstruct time="30">
+      <Item name="Spare Parts"/>
+    <Item name="Spare Parts"/>
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture="PowerArmor.png" sourcerect="129,0,128,128" depth="0.55"/>
+
+    <Body width="37" height="113" density="20"/>
+
+    <Wearable slots="Head+Torso+Legs">
+      <sprite texture="PowerArmor.png" limb="Head" sourcerect="0,0,1,1" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="PowerArmor.png" limb="Torso" sourcerect="74,31,42,97" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" depthlimb="Head" hidelimb="true">
+          <LightComponent range="100" lightcolor="1.0,1.0,1.0,0.1" powerconsumption="10" IsOn="true">
+            <sprite texture="Mods/BTEB/Items/Diving/DivingSuitLight2.png" depth="0.025" origin="0.1,0.82" alpha="1.0"/>
+          </LightComponent>
+        </sprite>
+
+        <sprite texture="PowerArmor.png" limb="RightHand" sourcerect="0,78,15,50" origin="0.45,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+        <sprite texture="PowerArmor.png" limb="LeftHand" sourcerect="0,78,15,50" origin="0.45,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+        <sprite texture="PowerArmor.png" limb="RightArm" sourcerect="0,0,19,43" origin="0.5,0.4" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+        <sprite texture="PowerArmor.png" limb="LeftArm" sourcerect="0,0,19,43" origin="0.5,0.4" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+        <sprite texture="PowerArmor.png" limb="RightThigh" sourcerect="22,0,18,44" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
+        <sprite texture="PowerArmor.png" limb="LeftThigh" sourcerect="22,0,18,44" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+        <sprite texture="PowerArmor.png" limb="RightLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
+        <sprite texture="PowerArmor.png" limb="LeftLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+        <sprite texture="PowerArmor.png" limb="RightFoot" sound="footstep_armor" sourcerect="2,97,24,128" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+        <sprite texture="PowerArmor.png" limb="LeftFoot" sound="footstep_armor" sourcerect="2,97,24,128" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+
+      <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" PressureProtection="100" SpeedMultiplier="-1.0" LowPassMultiplier="0.2" disabledeltatime="true"/>
+    <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1500">
+      <RequiredItem type="Contained" name="Fusion Core"/>
+      </StatusEffect>
+    <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-1.0">
+      <Conditional HuskInfectionState="lt 1.0"/>
+      </StatusEffect>
+    <StatusEffect type="OnWearing" target="Contained" targetnames="Fusion Core" Condition="-0.01">
+        <RequiredItem type="Contained" name="loadable"/>
+      </StatusEffect>
+    <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.4" disabledeltatime="true">
+        <RequiredItem type="Contained" name="loadable"/>
+      </StatusEffect>
+
+    <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="1.0"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+    <Containable name="Fusion Core">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+      </Containable>
     </ItemContainer>
   </Item>
 </Items>
