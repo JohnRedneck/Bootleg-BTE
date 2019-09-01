@@ -655,8 +655,8 @@
       </StatusEffect>
 
     <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="1.0"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="1.0" bleedingmultiplier="1.0" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="1.0" bleedingmultiplier="1.0" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
 
     <ItemContainer capacity="1" hideitems="true">

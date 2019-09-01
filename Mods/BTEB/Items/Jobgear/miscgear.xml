@@ -470,14 +470,14 @@
       </StatusEffect>
     </LightComponent>
 
-	<ItemComponent characterusable="false">
-      <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
-        <Conditional IsDead="true"/>
-      </StatusEffect>
-	  <StatusEffect type="OnWearing" target="This,Character" IsOn="false">
-        <Conditional IsDead="false"/>
-      </StatusEffect>
-    </ItemComponent>
+    <ItemComponent characterusable="false">
+        <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
+          <Conditional IsDead="true"/>
+        </StatusEffect>
+  	  <StatusEffect type="OnWearing" target="This,Character" IsOn="false">
+          <Conditional IsDead="false"/>
+        </StatusEffect>
+      </ItemComponent>
 
     <Wearable slots="Any,Torso">
       <sprite texture="engigear.png" limb="Torso" sourcerect="0,77,32,51" origin="0.5,0.48" depthlimb="Head"/>
@@ -1309,7 +1309,7 @@
     name="Suicide Vest"
     category="Equipment"
     Tags="smallitem,explosive"
-   description="A vest with integrated explosive charges, obliterates the wearer and everyone near when no life signs are detected."
+   description="A vest with integrated explosive charges, obliterates the wearer and everyone near if life signs cess."
    impacttolerance="6"
    canuseonself="true"
    cargocontainername="Explosives Shipping Box"
@@ -1324,38 +1324,35 @@
     <Item name="Propellant Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="engigear.png" sourcerect="53,50,51,21" depth="0.6"/>
+    <Sprite texture="SuicideVest.png" sourcerect="0,0,55,56" depth="0.6"/>
 
     <Body width="16" height="7"/>
-  <ItemComponent characterusable="false">
-    <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
-      <Conditional IsDead="true"/>
-    </StatusEffect>
-  <StatusEffect type="OnWearing" target="This,Character" IsOn="false">
-      <Conditional IsDead="false"/>
-    </StatusEffect>
-    <StatusEffect type="OnActive" target="This">
+
+    <ItemComponent characterusable="false">
+   <StatusEffect type="OnActive" target="This">
       <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
         <Explosion range="650" structuredamage="600" damage="250" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
     <Remove/>
     </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-      <sound file="Mods/BTEB/Items/Weapons/BlastExplosionBig.ogg"/>
-        <Explosion range="650" structuredamage="600" damage="250" bleedingdamage="3.0" stun="10" force="20" severlimbsprobability="0.7" camerashake="7.0" decal="explosion" decalsize="0.6"/>
-    <Remove/>
-      </StatusEffect>
-    </ItemComponent>
+
+      <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
+          <Conditional IsDead="true"/>
+        </StatusEffect>
+  	  <StatusEffect type="OnWearing" target="This,Character" IsOn="false">
+          <Conditional IsDead="false"/>
+        </StatusEffect>
+      </ItemComponent>
 
     <Wearable slots="Any,Torso">
-      <sprite texture="engigear.png" limb="Torso" sourcerect="0,77,32,51" origin="0.5,0.48" depthlimb="Head"/>
+      <sprite texture="SuicideVest.png" limb="Torso" sourcerect="0,0,55,56" origin="0.57,0.5" depthlimb="Head"/>
     </Wearable>
   </Item>
 
   <Item
-    name="Head Lamp"
+    name="Headlamp"
     category="Equipment"
     tags="smallitem,clothing"
-	description="An atmospheric suit capable of withstanding the immense pressure under Europa's crust."
+	  description="A headlamp for engineers to be able to see while fixing up the sub."
     price="1750">
 
 	<Deconstruct time="30">
@@ -1369,19 +1366,18 @@
       <Body width="14" height="6" radius="8" density="10.1"/>
 
       <Wearable limbtype="Head" slots="Any,Head">
-        <sprite texture="HeadLamp.png" limb="Head" depthlimb="RightArm" origin="0.6,0.7" sourcerect="0,0,46,15">
+        <sprite texture="HeadLamp.png" limb="Head" depthlimb="RightArm" origin="0.5,1" sourcerect="0,0,46,15">
           <LightComponent range="100" lightcolor="1.0,1.0,1.0,0.1" powerconsumption="10" IsOn="true">
-            <sprite texture="Mods/BTEB/Items/Diving/DivingSuitLight.png" depth="0.025" origin="0.1,0.82" alpha="1.0"/>
+            <sprite texture="Mods/BTEB/Items/Jobgear/jobgearLight.png" depth="0.025" origin="-0.048,0.53" alpha="1.0"/>
           </LightComponent>
         </sprite>
-      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
 
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-0.02">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
 
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
-        <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="1" bleedingmultiplier="1" deflectprojectiles="false"/>
+        <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="1" bleedingmultiplier="1" deflectprojectiles="false"/>
       </Wearable>
 
     <ItemContainer capacity="1" hideitems="true">

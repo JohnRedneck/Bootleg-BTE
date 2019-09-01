@@ -416,9 +416,10 @@
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
     </ItemContainer>
-
-	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"/>
   </Item>
+
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+  aimpos="50,0" handle1="-17,0" handle2="10,0"/>
 
   <Item
     name="Saw Cutter"
