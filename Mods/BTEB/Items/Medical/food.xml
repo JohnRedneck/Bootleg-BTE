@@ -1551,4 +1551,366 @@
 
     <Holdable slots="Any,RightHand,LeftHand" canBeCombined="true"/>
   </Item>
+
+	<Item
+    name="Cheese Pizza"
+    category="Misc"
+    Tags="mediumitem,food"
+    canuseonself="true"
+    description="Good old pizza filled with delicious cheese.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.8"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="67,31,29,29" depth="0.6"/>
+
+    <Body width="29" height="29" radius="14" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.05" Health="0.008" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-10" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Cheese Pizza Slice"
+    category="Misc"
+    Tags="smallitem,food"
+    canuseonself="true"
+    description="A slice of cheese pizza.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.4"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="13,32,10,14" depth="0.6"/>
+
+    <Body width="14" height="10" radius="8" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.03" Health="0.004" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Margherita Pizza"
+    category="Misc"
+    Tags="mediumitem,food"
+    canuseonself="true"
+    description="Good old pizza.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.8"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="67,1,29,29" depth="0.6"/>
+
+    <Body width="29" height="29" radius="14" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.05" Health="0.008" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-10" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Margherita Pizza Slice"
+    category="Misc"
+    Tags="smallitem,food"
+    canuseonself="true"
+    description="A slice of margherita pizza.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.4"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="24,32,10,14" depth="0.6"/>
+
+    <Body width="14" height="10" radius="8" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.03" Health="0.004" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Tomato Pizza"
+    category="Misc"
+    Tags="mediumitem,food"
+    canuseonself="true"
+    description="Good old pizza filled with extra tomatoes.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.8"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="37,31,29,29" depth="0.6"/>
+
+    <Body width="29" height="29" radius="14" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.05" Health="0.008" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-10" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Tomato Pizza Slice"
+    category="Misc"
+    Tags="smallitem,food"
+    canuseonself="true"
+    description="A slice of tomato pizza.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.4"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="12,47,10,14" depth="0.6"/>
+
+    <Body width="14" height="10" radius="8" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.03" Health="0.004" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Vegetarian Pizza"
+    category="Misc"
+    Tags="mediumitem,food"
+    canuseonself="true"
+    description="Good old pizza but now vegtarian.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.8"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="5,1,29,29" depth="0.6"/>
+
+    <Body width="29" height="29" radius="14" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.05" Health="0.008" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-10" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Vegetarian Pizza Slice"
+    category="Misc"
+    Tags="smallitem,food"
+    canuseonself="true"
+    description="A slice of vegetarian pizza.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.4"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="1,32,10,14" depth="0.6"/>
+
+    <Body width="14" height="10" radius="8" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.03" Health="0.004" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Mushroom Pizza"
+    category="Misc"
+    Tags="mediumitem,food"
+    canuseonself="true"
+    description="Good old mushroom pizza.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.8"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="36,0,29,29" depth="0.6"/>
+
+    <Body width="29" height="29" radius="14" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.05" Health="0.008" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-10" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+	<Item
+    name="Mushroom Pizza Slice"
+    category="Misc"
+    Tags="smallitem,food"
+    canuseonself="true"
+    description="A slice of mushroom pizza.">
+
+	<Deconstruct time="5">
+	  <Item name="Biomass" outcondition="0.4"/>
+	  <Item name="Salt" outcondition="0.1"/>
+    </Deconstruct>
+
+    <Sprite texture="pizzas.png" sourcerect="24,32,10,14" depth="0.6"/>
+
+    <Body width="14" height="10" radius="8" density="11"/>
+
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.03" Health="0.004" disabledeltatime="true" delay="12" duration="50" checkconditionalalways="true">
+	    <Conditional Health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-25" disabledeltatime="true">
+	    <sound file="Mods/BTEB/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand">
+	  <StatusEffect type="Always" target="This" Condition="-0.04"/>
+	  <StatusEffect type="Always" target="This" Condition="0.02">
+        <RequiredItem name="Refrigerator" type="Container"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+
 </Items>
