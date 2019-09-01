@@ -1,57 +1,148 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Items>
   <Item
-      name="Tape-We All Lift Together"
-      Category="Misc"
-      Tags="smallitem"
-      description="A tape that plays We All Lift Together when put in a radio, aimed at Engineering."
-      cargocontainername="Standard Shipping Box"
-      price="10">
-
-        <Sprite texture="Tape.png" sourcerect="0,0,26,16" depth="0.55"/>
-
-        <Body width="14" height="1" density="9.9"/>
-
-    	<Holdable slots="RightHand,LeftHand,Any" controlpose="false"/>
-  </Item>
-
-  <Item
       name="Engineering radio"
       category="Machine"
       description="A radio belonging to the Engineering department, made to play tapes."
+      canuseonself="true"
       Tags="cntnr">
 
-        <Sprite texture="EngiRadio1.png" depth="0.54" sourcerect="0,0,68,49"/>
+        <Sprite texture="EngiRadio.png" depth="0.54" sourcerect="0,0,68,49"/>
 
         <Body width="60" height="55" density="50"/>
 
       <ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.15,0.7" slotsperrow="1">
 
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/We All Lift Together.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-We All Lift Together"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/Cruel, Cruel World.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-Cruel, Cruel World"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/That's The Way It Is.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-That's The Way It Is"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/The City Must Survive.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="The City Must Survive"/>
+        </StatusEffect>
 
 
-
-
-
-
-<RequiredItems name="Tape-We All Lift Together" type="Contained" msg="The shard inside is depleted">
-  <sound file="Mods/BTEB/Items/Radios/We All Lift Together.ogg" range="1000"/>
-</RequiredItems>
-
-
-
-
-
-
-
-
-
-
-
-          <Containable name="Tape-We All Lift Together">
-
-            </Containable>
+        <Containable name="Tape-We All Lift Together"/>
+        <Containable name="Tape-Cruel, Cruel World"/>
+        <Containable name="Tape-That's The Way It Is"/>
+        <Containable name="Tape-The City Must Survive"/>
       </ItemContainer>
 
      <Holdable slots="RightHand,LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-17,14" handle2="17,14"/>
     </Item>
+
+    <Item
+        name="Common radio"
+        category="Machine"
+        description="A common radio found on the sub, made to play tapes."
+        canuseonself="true"
+        Tags="cntnr">
+
+          <Sprite texture="CommonRadio.png" depth="0.54" sourcerect="0,0,68,49"/>
+
+          <Body width="60" height="55" density="50"/>
+
+        <ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.15,0.7" slotsperrow="1">
+
+            <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+              <sound file="Mods/BTEB/Items/Radios/We All Lift Together.ogg" range="1000"/>
+              <RequiredItem type="Contained" name="Tape-We All Lift Together"/>
+            </StatusEffect>
+
+            <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+              <sound file="Mods/BTEB/Items/Radios/Cruel, Cruel World.ogg" range="1000"/>
+              <RequiredItem type="Contained" name="Tape-Cruel, Cruel World"/>
+            </StatusEffect>
+
+            <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+              <sound file="Mods/BTEB/Items/Radios/That's The Way It Is.ogg" range="1000"/>
+              <RequiredItem type="Contained" name="Tape-That's The Way It Is"/>
+            </StatusEffect>
+
+            <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+              <sound file="Mods/BTEB/Items/Radios/The City Must Survive.ogg" range="1000"/>
+              <RequiredItem type="Contained" name="The City Must Survive"/>
+            </StatusEffect>
+
+
+            <Containable name="Tape-We All Lift Together"/>
+            <Containable name="Tape-Cruel, Cruel World"/>
+            <Containable name="Tape-That's The Way It Is"/>
+            <Containable name="Tape-The City Must Survive"/>
+        </ItemContainer>
+
+       <Holdable slots="RightHand,LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-17,14" handle2="17,14"/>
+      </Item>
+
+      <Item
+          name="Tape-We All Lift Together"
+          Category="Misc"
+          Tags="smallitem"
+          description="A tape that plays We All Lift Together when put in a radio, aimed at Engineering."
+          cargocontainername="Standard Shipping Box"
+          price="10">
+
+            <Sprite texture="Tape.png" sourcerect="0,0,26,16" depth="0.55"/>
+
+            <Body width="14" height="1" density="9.9"/>
+
+          <Holdable slots="RightHand,LeftHand,Any" controlpose="false"/>
+      </Item>
+
+      <Item
+          name="Tape-Cruel, Cruel World"
+          Category="Misc"
+          Tags="smallitem"
+          description="A tape that plays Cruel, Cruel World when put in a radio, mainly used by prisoners."
+          cargocontainername="Standard Shipping Box"
+          price="10">
+
+            <Sprite texture="Tape.png" sourcerect="0,0,26,16" depth="0.55"/>
+
+            <Body width="14" height="1" density="9.9"/>
+
+          <Holdable slots="RightHand,LeftHand,Any" controlpose="false"/>
+      </Item>
+
+      <Item
+          name="Tape-That's The Way It Is"
+          Category="Misc"
+          Tags="smallitem"
+          description="A tape that plays That's The Way It Is when put in a radio, mainly used by prisoners."
+          cargocontainername="Standard Shipping Box"
+          price="10">
+
+            <Sprite texture="Tape.png" sourcerect="0,0,26,16" depth="0.55"/>
+
+            <Body width="14" height="1" density="9.9"/>
+
+          <Holdable slots="RightHand,LeftHand,Any" controlpose="false"/>
+      </Item>
+
+      <Item
+          name="Tape-The City Must Survive"
+          Category="Misc"
+          Tags="smallitem"
+          description="A tape that plays The City Must Survive when put in a radio, mainly used by prisoners."
+          cargocontainername="Standard Shipping Box"
+          price="10">
+
+            <Sprite texture="Tape.png" sourcerect="0,0,26,16" depth="0.55"/>
+
+            <Body width="14" height="1" density="9.9"/>
+
+          <Holdable slots="RightHand,LeftHand,Any" controlpose="false"/>
+      </Item>
   </Items>
