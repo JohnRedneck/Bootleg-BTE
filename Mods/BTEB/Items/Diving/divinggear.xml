@@ -599,7 +599,7 @@
   </Item>
 
   <Item
-    name="Power Armor"
+    name="T-60 Power Armor"
     category="Equipment"
     tags="diving"
     fireproof="true"
@@ -619,7 +619,7 @@
     <Wearable slots="Head+Torso+Legs">
       <sprite texture="PowerArmor.png" limb="Head" sourcerect="0,0,1,1" origin="0.5,0.5" hidelimb="true"/>
 
-      <sprite texture="PowerArmor.png" limb="Torso" sourcerect="74,31,42,97" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" depthlimb="Head" hidelimb="true">
+      <sprite texture="PowerArmor.png" limb="Torso" sourcerect="42,0,42,97" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" depthlimb="Head" hidelimb="true">
           <LightComponent range="100" lightcolor="1.0,1.0,1.0,0.1" powerconsumption="10" IsOn="true">
             <sprite texture="Mods/BTEB/Items/Diving/DivingSuitLight2.png" depth="0.025" origin="0.1,0.82" alpha="1.0"/>
           </LightComponent>

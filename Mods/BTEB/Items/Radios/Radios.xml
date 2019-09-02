@@ -42,6 +42,135 @@
 
      <Holdable slots="RightHand,LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-17,14" handle2="17,14"/>
     </Item>
+	
+  <Item
+      name="Old Engineering radio"
+      category="Machine"
+      description="An old and broken radio belonging to the Engineering department, made to play tapes."
+      canuseonself="true"
+      Tags="cntnr">
+
+        <Sprite texture="EngiRadioOld.png" depth="0.54" sourcerect="0,0,68,49"/>
+
+        <Body width="60" height="55" density="50"/>
+
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.15,0.7" slotsperrow="1">
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/We All Lift Together.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-We All Lift Together"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/Cruel, Cruel World.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-Cruel, Cruel World"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/That's The Way It Is.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-That's The Way It Is"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/The City Must Survive.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="The City Must Survive"/>
+        </StatusEffect>
+
+
+        <Containable name="Tape-We All Lift Together"/>
+        <Containable name="Tape-Cruel, Cruel World"/>
+        <Containable name="Tape-That's The Way It Is"/>
+        <Containable name="Tape-The City Must Survive"/>
+      </ItemContainer>
+
+     <Holdable slots="RightHand,LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-17,14" handle2="17,14"/>
+    </Item>
+
+  <Item
+      name="Prison radio"
+      category="Machine"
+      description="A crappy old surplus radio given to prisoners, made to play tapes."
+      canuseonself="true"
+      Tags="cntnr">
+
+        <Sprite texture="PrisonRadio.png" depth="0.54" sourcerect="0,0,68,49"/>
+
+        <Body width="60" height="55" density="50"/>
+
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.15,0.7" slotsperrow="1">
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/We All Lift Together.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-We All Lift Together"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/Cruel, Cruel World.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-Cruel, Cruel World"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/That's The Way It Is.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-That's The Way It Is"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/The City Must Survive.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="The City Must Survive"/>
+        </StatusEffect>
+
+
+        <Containable name="Tape-We All Lift Together"/>
+        <Containable name="Tape-Cruel, Cruel World"/>
+        <Containable name="Tape-That's The Way It Is"/>
+        <Containable name="Tape-The City Must Survive"/>
+      </ItemContainer>
+
+     <Holdable slots="RightHand,LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-17,14" handle2="17,14"/>
+    </Item>
+	
+  <Item
+      name="Command radio"
+      category="Machine"
+      description="A state of the art radio, only made for high class transport submarines and commanding personnel, plays tapes just as well as any other radio."
+      canuseonself="true"
+      Tags="cntnr">
+
+        <Sprite texture="CommandRadio.png" depth="0.54" sourcerect="0,0,68,49"/>
+
+        <Body width="60" height="55" density="50"/>
+
+      <ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.15,0.7" slotsperrow="1">
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/We All Lift Together.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-We All Lift Together"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/Cruel, Cruel World.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-Cruel, Cruel World"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/That's The Way It Is.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="Tape-That's The Way It Is"/>
+        </StatusEffect>
+
+        <StatusEffect type="OnUse" target="Contained,This" disabledeltatime="true" >
+          <sound file="Mods/BTEB/Items/Radios/The City Must Survive.ogg" range="1000"/>
+          <RequiredItem type="Contained" name="The City Must Survive"/>
+        </StatusEffect>
+
+
+        <Containable name="Tape-We All Lift Together"/>
+        <Containable name="Tape-Cruel, Cruel World"/>
+        <Containable name="Tape-That's The Way It Is"/>
+        <Containable name="Tape-The City Must Survive"/>
+      </ItemContainer>
+
+     <Holdable slots="RightHand,LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-17,14" handle2="17,14"/>
+    </Item>
 
     <Item
         name="Common radio"
